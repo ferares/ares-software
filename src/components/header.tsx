@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+
 import Image from 'next/image'
 
 import { useBackgroundContext } from '@/context/background'
@@ -8,7 +10,6 @@ import { useScreenReaderContext } from '@/context/screenReader'
 import meImg from '@/../public/imgs/me.jpg'
 import gitHubLogo from '@/../public/imgs/github.svg'
 import linkedinLogo from '@/../public/imgs/linkedin.svg'
-import { useEffect } from 'react'
 
 function Header() {
   const { newBackground, loadingBg } = useBackgroundContext()

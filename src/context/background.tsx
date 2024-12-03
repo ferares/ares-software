@@ -14,14 +14,14 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
   const [bg, setBg] = useState<string>()
   const [loadingBg, setLoadingBg] = useState<boolean>(true)
 
-  async function getBackground() {
+  const getBackground = useCallback(async () => {
     try {
       const response = await fetch('https://postales.ares.uy/random').then((response) => response.json())
       return `https://postales.ares.uy/${response.url}`
     } catch (error) {
       console.error('Error fetching background image', error)
     }
-  }
+  }, [])
 
   const newBackground = useCallback(() => {
     setLoadingBg(true)
@@ -36,7 +36,7 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
         imgElement.src = url
       })
     }).finally(() => setLoadingBg(false))
-  }, [])
+  }, [getBackground])
 
   const value = { bg, newBackground, loadingBg }
 
