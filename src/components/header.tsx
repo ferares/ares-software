@@ -22,8 +22,8 @@ function Header() {
   return (
     <header className="header">
       <nav className="navbar max-width">
-        <button className="navbar__btn" type="button" onClick={newBackground}>
-          <Image className="navbar__img" src={meImg} alt="Ares Software - Software Developer (Cambiar imagen de fondo)" />
+        <button className="navbar__btn" type="button" onClick={newBackground} title="Cambiar imagen de fondo">
+          <Image className="navbar__img" src={meImg} alt="" />
         </button>
         <ul className="navbar__menu">
           <li className="navbar__menu__item">

@@ -7,8 +7,7 @@ import { useBackgroundContext } from '@/context/background'
 function Home() {
   const { bg, loadingBg, newBackground } = useBackgroundContext()
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(newBackground, [])
+  useEffect(newBackground, [newBackground])
 
   return (
     <main className="main">
@@ -16,7 +15,7 @@ function Home() {
         <div className="max-width intro-content">
           <h1 className="intro-title">
             <span className="intro-name">Ares</span><br />
-            <b className="intro-subtitle">Software Boutique</b>
+            <b className="intro-subtitle">Software Development</b>
           </h1>
         </div>
       </section>

@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useCallback, useContext, useState } from 'react'
 
 declare type ContextProps = {
   newBackground: () => void
@@ -23,7 +23,7 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
     }
   }
 
-  function newBackground() {
+  const newBackground = useCallback(() => {
     setLoadingBg(true)
     getBackground().then((url) => {
       setBg(url)
@@ -36,7 +36,7 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
         imgElement.src = url
       })
     }).finally(() => setLoadingBg(false))
-  }
+  }, [])
 
   const value = { bg, newBackground, loadingBg }
 
