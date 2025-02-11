@@ -2,8 +2,11 @@
 
 import { type MouseEvent, type PropsWithChildren, useCallback, useEffect, useRef, useState } from "react"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+
 import { useCallOnEscContext } from "@/context/CallOnEsc"
-import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 export interface ModalProps {
   id: string
@@ -18,6 +21,7 @@ export default function Modal({ id, className, open, onClose, title, children, l
   const { pushCallOnEsc, removeCallOnEsc } = useCallOnEscContext()
   const [hiding, setHiding] = useState(false)
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const t = useTranslations("Labels")
 
   // Show closing animation before closing
   const startClosing = useCallback(() => setHiding(true), [])
@@ -55,8 +59,8 @@ export default function Modal({ id, className, open, onClose, title, children, l
               {title}
             </h3>
           )}
-          <button type="button" className="modal-close" aria-label="Close" onClick={startClosing}>
-            <Image src="/icons/close.svg" alt="" width={25} height={25} />
+          <button type="button" className="modal-close" aria-label={t("close")} onClick={startClosing}>
+            <FontAwesomeIcon icon={faXmark} />
           </button>
         </div>
         <div className="modal-body">

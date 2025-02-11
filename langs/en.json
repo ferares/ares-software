@@ -1,0 +1,15 @@
+{
+  "Labels": {
+    "developed": "Developed",
+    "in": "in",
+    "scroll-down": "Scroll down",
+    "change-background": "Change background image",
+    "close": "Close"
+  },
+  "Sections": {
+    "About": {
+      "title": "About Me",
+      "content": ""
+    }
+  }
+}

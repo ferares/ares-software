@@ -1,12 +1,20 @@
 import type { Metadata, Viewport } from "next"
 import { Nunito, Open_Sans } from "next/font/google"
 
+import { NextIntlClientProvider } from "next-intl"
+import { getLocale, getMessages } from "next-intl/server"
+
+import { config } from "@fortawesome/fontawesome-svg-core"
+
 import { BackgroundProvider } from "@/context/background"
 import { ScreenReaderProvider } from "@/context/screenReader"
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import SRAnnouncer from "@/components/srAnnouncemer"
+
+// We load FA's styles on app.css to prevent FOUC
+config.autoAddCss = false
 
 import "@/styles/main.css"
 
@@ -33,27 +41,32 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+
   return (
-    <html lang="en" className={`${nunito.variable} ${openSans.variable}`}>
+    <html lang={locale} className={`${nunito.variable} ${openSans.variable}`}>
       <head>
         <link rel="shortcut icon" href="/imgs/me.jpg" type="image/jpeg" />
       </head>
       <body>
-        <ScreenReaderProvider>
-          <BackgroundProvider>
-            <Header />
-            <main className="main">
-              {children}
-            </main>
-            <Footer />
-            <SRAnnouncer />
-          </BackgroundProvider>
-        </ScreenReaderProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ScreenReaderProvider>
+            <BackgroundProvider>
+              <Header />
+              <main className="main">
+                {children}
+              </main>
+              <Footer />
+              <SRAnnouncer />
+            </BackgroundProvider>
+          </ScreenReaderProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

@@ -148,7 +148,7 @@ body {
 
 .navbar__menu__icon {
   display: block;
-  width: 2rem;
+  height: 2rem;
 }
 
 /* Main container */
@@ -189,7 +189,6 @@ body {
 }
 
 /* Intro */
-
 .intro-content {
   align-items: center;
   color: #fff;
@@ -224,6 +223,11 @@ body {
 
 .intro-btn:hover {
   animation-play-state: paused;
+}
+
+.scroll-down {
+  height: 2rem;
+  color: #fff;
 }
 
 /* About */
@@ -289,6 +293,7 @@ body {
 
 .footer__icon {
   display: block;
+  color: #fff;
   width: 1.25rem;
 }
 

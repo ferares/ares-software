@@ -2,13 +2,17 @@
 
 import { type RefObject } from "react"
 
-import Image from "next/image"
+import { useTranslations } from "next-intl"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 import BgImage from "@/components/bgImage"
 
 interface IntroProps { projectsSectionRef: RefObject<HTMLDivElement | null> }
 
 function Intro({ projectsSectionRef }: IntroProps) {
+  const t = useTranslations("Labels")
   return (
     <BgImage>
       <div className="max-width intro-content">
@@ -17,7 +21,7 @@ function Intro({ projectsSectionRef }: IntroProps) {
           <b className="intro-subtitle">Software Development</b>
         </h1>
         <button type="button" className="btn intro-btn" onClick={() => projectsSectionRef.current?.scrollIntoView({ behavior: "smooth" })}>
-          <Image alt="Scroll down" src="/icons/chevron-down.svg" width="50" height="50" />
+          <FontAwesomeIcon className="scroll-down" icon={faChevronDown} aria-label={t("scroll-down")} />
         </button>
       </div>
     </BgImage>

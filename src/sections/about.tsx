@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl"
+
 function About() {
+  const t = useTranslations("Sections.About")
   return (
     <section className="about-section">
       <div className="max-width about-content">
         <h2 className="section-title">
-          About me
+          {t("title")}
         </h2>
         <p className="about-paragraph">
           I&apos;m Fermín, a Freelance Software Developer working from La Paloma, Uruguay 🏖️
