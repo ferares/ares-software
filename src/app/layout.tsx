@@ -1,24 +1,24 @@
-import type { Metadata, Viewport } from 'next'
-import { Nunito, Open_Sans } from 'next/font/google'
+import type { Metadata, Viewport } from "next"
+import { Nunito, Open_Sans } from "next/font/google"
 
-import { BackgroundProvider } from '@/context/background'
-import { ScreenReaderProvider } from '@/context/screenReader'
+import { BackgroundProvider } from "@/context/background"
+import { ScreenReaderProvider } from "@/context/screenReader"
 
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import SRAnnouncer from '@/components/srAnnouncemer'
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import SRAnnouncer from "@/components/srAnnouncemer"
 
-import '@/styles/main.css'
+import "@/styles/main.css"
 
-const nunito = Nunito({ subsets: ['latin'], display: 'swap', weight: ['400'], style: ['italic', 'normal'], variable: '--font-nunito' })
-const openSans = Open_Sans({ subsets: ['latin'], display: 'swap', weight: ['400'], variable: '--font-open-sans' })
+const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400"], style: ["italic", "normal"], variable: "--font-nunito" })
+const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400"], variable: "--font-open-sans" })
 
-const metadataBase = new URL(process.env.NEXT_PUBLIC_BASE_URL || '')
-const title = 'Ares Software'
-const description = 'Ares Software'
+const metadataBase = new URL(process.env.NEXT_PUBLIC_BASE_URL ?? "")
+const title = "Ares Software"
+const description = "Ares Software"
 
 export const viewport: Viewport = {
-  themeColor: 'black',
+  themeColor: "black",
 }
 
 export const metadata: Metadata = {
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   description,
   metadataBase,
   openGraph: {
-    type: 'website',
+    type: "website",
     description,
     title,
-    images: '/imgs/me.jpg',
+    images: "/imgs/me.jpg",
   }
 }
 
@@ -47,7 +47,9 @@ export default function RootLayout({
         <ScreenReaderProvider>
           <BackgroundProvider>
             <Header />
-            {children}
+            <main className="main">
+              {children}
+            </main>
             <Footer />
             <SRAnnouncer />
           </BackgroundProvider>

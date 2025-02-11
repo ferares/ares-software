@@ -1,8 +1,10 @@
-'use client'
+"use client"
 
-import { createContext, useCallback, useContext, useState } from 'react'
+import { createContext, useCallback, useContext, useState } from "react"
 
-declare type ContextProps = {
+type BackgroundImage = { url: string }
+
+interface ContextProps {
   newBackground: () => void
   loadingBg: boolean
   bg?: string
@@ -16,10 +18,10 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
 
   const getBackground = useCallback(async () => {
     try {
-      const response = await fetch('https://postales.ares.uy/random').then((response) => response.json())
+      const response = await fetch("https://postales.ares.uy/random").then((response) => response.json()) as BackgroundImage
       return `https://postales.ares.uy/${response.url}`
     } catch (error) {
-      console.error('Error fetching background image', error)
+      console.error("Error fetching background image", error)
     }
   }, [])
 
@@ -28,14 +30,14 @@ export function BackgroundProvider({ children }: { children: React.ReactNode }) 
     getBackground().then((url) => {
       setBg(url)
       return new Promise((resolve, reject) => {
-        if (!url) return reject()
+        if (!url) return reject(new Error("No background image URL"))
         // Load image
-        const imgElement = document.createElement('img')
-        imgElement.addEventListener('load', () => resolve(url))
-        imgElement.addEventListener('error', reject)
+        const imgElement = document.createElement("img")
+        imgElement.addEventListener("load", () => resolve(url))
+        imgElement.addEventListener("error", reject)
         imgElement.src = url
       })
-    }).finally(() => setLoadingBg(false))
+    }).catch(console.error).finally(() => setLoadingBg(false))
   }, [getBackground])
 
   const value = { bg, newBackground, loadingBg }

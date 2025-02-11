@@ -1,25 +1,20 @@
-'use client'
+"use client"
 
-import { useEffect } from 'react'
+import { useRef } from "react"
 
-import { useBackgroundContext } from '@/context/background'
+import Intro from "@/sections/intro"
+import Projects from "@/sections/projects"
+import About from "@/sections/about"
 
 function Home() {
-  const { bg, loadingBg, newBackground } = useBackgroundContext()
-
-  useEffect(newBackground, [newBackground])
+  const projectsSectionRef = useRef<HTMLDivElement>(null)
 
   return (
-    <main className="main">
-      <section id="intro" className={`section ${loadingBg ? '' : 'image-loaded'}`} style={{ backgroundImage: bg ? `url(${bg})`: '' }}>
-        <div className="max-width intro-content">
-          <h1 className="intro-title">
-            <span className="intro-name">Ares</span><br />
-            <b className="intro-subtitle">Software Development</b>
-          </h1>
-        </div>
-      </section>
-    </main>
+    <>
+      <Intro projectsSectionRef={projectsSectionRef} />
+      <About />
+      <Projects projectsSectionRef={projectsSectionRef} />
+    </>
   )
 }
 

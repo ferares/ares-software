@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { Dispatch, SetStateAction, createContext, useContext, useState } from 'react'
+import { type Dispatch, type SetStateAction, createContext, useContext, useState } from "react"
 
 declare type ContextProps = {
   setMessage: Dispatch<SetStateAction<string | undefined>>

@@ -1,13 +1,11 @@
-import Image from 'next/image'
-
-import codeImg from '@/../public/imgs/code.svg'
+import Image from "next/image"
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="max-width">
         <div className="footer__content">
-          <Image className="footer__icon" src={codeImg} alt="Desarrollado" />
+          <Image className="footer__icon" width={20} height={16} src="icons/code.svg" alt="Desarrollado" />
           <span className="footer__text">
             in La Paloma, Rocha, Uruguay 
           </span>

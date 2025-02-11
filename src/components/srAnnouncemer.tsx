@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { useScreenReaderContext } from '@/context/screenReader'
+import { useScreenReaderContext } from "@/context/screenReader"
 
 function SRAnnouncer() {
   const { message } = useScreenReaderContext()
