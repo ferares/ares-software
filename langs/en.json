@@ -4,7 +4,8 @@
     "in": "in",
     "scroll-down": "Scroll down",
     "change-background": "Change background image",
-    "close": "Close"
+    "close": "Close",
+    "change-language": "Change language"
   },
   "Sections": {
     "About": {

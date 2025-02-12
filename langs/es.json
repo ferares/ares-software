@@ -1,0 +1,16 @@
+{
+  "Labels": {
+    "developed": "Desarrollado",
+    "in": "en",
+    "scroll-down": "Bajar",
+    "change-background": "Cambiar imagen de fondo",
+    "close": "Cerrar",
+    "change-language": "Cambiar idioma"
+  },
+  "Sections": {
+    "About": {
+      "title": "Acerca de mi",
+      "content": ""
+    }
+  }
+}

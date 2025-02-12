@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next"
+import { notFound } from "next/navigation"
 import { Nunito, Open_Sans } from "next/font/google"
 
 import { NextIntlClientProvider } from "next-intl"
-import { getLocale, getMessages } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { config } from "@fortawesome/fontawesome-svg-core"
+
+import { type LocaleOption, locales } from "@/i18n/routing"
 
 import { BackgroundProvider } from "@/context/background"
 import { ScreenReaderProvider } from "@/context/screenReader"
@@ -41,12 +44,15 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  const locale = await getLocale()
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+
+export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: LocaleOption }> }>) {
+  const { locale } = await params
+  if (!locales.includes(locale)) notFound()
+  setRequestLocale(locale)
+
   const messages = await getMessages()
 
   return (

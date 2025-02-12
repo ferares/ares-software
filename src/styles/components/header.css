@@ -1,0 +1,24 @@
+.header {
+  padding: 1rem;
+  background-color: #000;
+}
+
+.navbar__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.navbar__btn {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.navbar__img {
+  border-radius: 50%;
+  display: block;
+  width: 3rem;
+}
