@@ -35,6 +35,9 @@
 }
 
 .footer__menu__link {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
   color: #fff;
   display: block;
   font-size: 1.125rem;
@@ -44,4 +47,14 @@
 .footer__menu__icon {
   display: block;
   height: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .footer__content {
+    justify-content: center;
+  }
+
+  .footer__developed {
+    display: none;
+  }
 }

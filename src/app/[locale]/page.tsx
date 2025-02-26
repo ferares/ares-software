@@ -1,19 +1,19 @@
 "use client"
 
-import { useRef } from "react"
-
 import Intro from "@/sections/intro"
 import Projects from "@/sections/projects"
 import About from "@/sections/about"
+import Contact from "@/sections/contact"
+import Technologies from "@/sections/technologies"
 
 function Home() {
-  const projectsSectionRef = useRef<HTMLDivElement>(null)
-
   return (
     <>
-      <Intro projectsSectionRef={projectsSectionRef} />
+      <Intro />
       <About />
-      <Projects projectsSectionRef={projectsSectionRef} />
+      <Projects />
+      <Technologies />
+      <Contact />
     </>
   )
 }

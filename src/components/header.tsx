@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useCallback, useEffect } from "react"
 
 import Image from "next/image"
 
@@ -23,11 +23,16 @@ function Header() {
     else setMessage("Imagen de fondo cambiada")
   }, [loadingBg, setMessage])
 
+  const handleClick = useCallback(() => {
+    document.querySelector("#main")?.scrollTo({ behavior: "smooth", top: 0 })
+    newBackground()
+  }, [newBackground])
+
   return (
     <header className="header">
       <nav className="navbar max-width">
         <div className="navbar__content">
-          <button className="navbar__btn" type="button" onClick={newBackground} title={t("change-background")}>
+          <button className="navbar__btn" type="button" onClick={handleClick} title={t("change-background")}>
             <Image className="navbar__img" src={meImg} alt="" />
           </button>
           <LangMenu />

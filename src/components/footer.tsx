@@ -1,7 +1,9 @@
+"use client"
+
 import { useTranslations } from "next-intl"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
+import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 function Footer() {
@@ -11,7 +13,7 @@ function Footer() {
       <div className="max-width">
         <div className="footer__content">
           <div className="footer__developed">
-            <FontAwesomeIcon className="footer__icon" icon={faCode} title={t("developed")} />
+            <FontAwesomeIcon className="footer__icon" icon={faCode} aria-label={t("developed")} />
             <span className="footer__text">
               {t("in")} La Paloma, Rocha, Uruguay 
             </span>
@@ -28,6 +30,9 @@ function Footer() {
               </a>
             </li>
             <li className="footer__menu__item">
+              <button type="button" className="footer__menu__link" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+                <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label="Send me an email" />
+              </button>
             </li>
           </ul>
         </div>

@@ -1,0 +1,37 @@
+
+.intro-content {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  overflow: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.intro-content .section-title {
+  margin: 0;
+  line-height: 2rem;
+}
+
+.intro-name {
+  font-size: 4rem;
+}
+
+.intro-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.scroll-down {
+  height: 2rem;
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  .intro-name {
+    font-size: 3.5rem;
+  }
+}

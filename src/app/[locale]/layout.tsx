@@ -65,7 +65,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
           <ScreenReaderProvider>
             <BackgroundProvider>
               <Header />
-              <main className="main">
+              <main id="main" className="main">
                 {children}
               </main>
               <Footer />

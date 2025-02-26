@@ -1,25 +1,29 @@
+import Image from "next/image"
+
 import { useTranslations } from "next-intl"
+
+import NextBtn from "@/components/nextBtn"
+
+import aboutImg from "../../public/imgs/about.jpg"
 
 function About() {
   const t = useTranslations("Sections.About")
   return (
-    <section className="about-section">
-      <div className="max-width about-content">
-        <h2 className="section-title">
-          {t("title")}
-        </h2>
-        <p className="about-paragraph">
-          I&apos;m Fermín, a Freelance Software Developer working from La Paloma, Uruguay 🏖️
-        </p>
-        <p className="about-paragraph">
-          Most of my experience is in web development working on both simple projects like landing pages and complex ones like web apps, e-commerce sites, blogs, etc.
-        </p>
-        <p className="about-paragraph">
-          I&apos;ve worked both alone and with teams for different companies, and I have plenty of experience working remotely 👨‍💻
-        </p>
-        <p className="about-paragraph">
-          Keep scrolling to learn more about what kind of projects I&apos;m working on 🚀 some of my past client work and the technolgies I&apos;m familiar with 🛸
-        </p>
+    <section id="about" className="about">
+      <div className="about__content">
+        <div className="about__bio">
+          <h2 className="section-title about__title-mobile">
+            {t("title")}
+          </h2>
+          <Image className="about__img" src={aboutImg} alt="" />
+          <div>
+            <h2 className="section-title about__title-desktop">
+              {t("title")}
+            </h2>
+            {t.rich("content", { p: (chunks) => <p className="about__paragraph">{chunks}</p>, b: (chunks) => <strong>{chunks}</strong> })}
+          </div>
+        </div>
+        <NextBtn target="#projects" color="black" />
       </div>
     </section>
   )
