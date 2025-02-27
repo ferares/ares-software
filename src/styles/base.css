@@ -133,18 +133,6 @@ body {
   border: 0;
 }
 
-@keyframes jump {
-  0% {
-    padding-bottom: 0;
-  }
-  50% {
-    padding-bottom: .5rem;
-  }
-  100% {
-    padding-bottom: 0;
-  }
-}
-
 @media screen and (max-width: 576px) {
   .section-title {
     font-size: 2rem;

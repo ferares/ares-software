@@ -11,11 +11,17 @@
   width: 100%;
 }
 
-.input-field-row{ margin-bottom: 20px; }
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact__form .btn {
+  margin-left: auto;
+}
+
 .input-field-row label{ margin-bottom: 10px; display: block; font-size: .9em; }
-.legal{ font-size: .8em; }
-.captcha { line-height: 0; margin-bottom: 14px; min-height: 5.5px;}
-.captcha > *:focus { outline: none }
 
 /*inputs*/
 input,
@@ -37,4 +43,5 @@ textarea:hover{ border: 1px solid #a1a9c3; }
 /*invalid feedback*/
 .invalid-feedback{ color: #F00; font-size: .8em; display: none; margin-top: 10px; opacity: 0; visibility: hidden; max-height: 0; }
 .was-validated *:invalid + .invalid-feedback,
+.was-validated .invalid-feedback.show,
 .was-validated *[aria-invalid="true"] + .invalid-feedback{ opacity: 1; display: block; visibility: visible; max-height: unset; }

@@ -7,7 +7,7 @@ import Image from "next/image"
 import { useTranslations } from "next-intl"
 
 import { useBackgroundContext } from "@/context/background"
-import { useScreenReaderContext } from "@/context/screenReader"
+import { useAlertsContext } from "@/context/Alerts"
 
 import LangMenu from "./langMenu"
 
@@ -15,13 +15,13 @@ import meImg from "@/../public/icons/me.jpg"
 
 function Header() {
   const { newBackground, loadingBg } = useBackgroundContext()
-  const { setMessage } = useScreenReaderContext()
-  const t = useTranslations("Labels")
+  const { pushScreenReaderAlert } = useAlertsContext()
+  const t = useTranslations()
 
   useEffect(() => {
-    if (loadingBg) setMessage("Cambiando imagen de fondo")
-    else setMessage("Imagen de fondo cambiada")
-  }, [loadingBg, setMessage])
+    if (loadingBg) pushScreenReaderAlert("polite", t("Messages.changing-bg-img"))
+    else pushScreenReaderAlert("polite", t("Messages.bg-img-changed"))
+  }, [loadingBg, pushScreenReaderAlert, t])
 
   const handleClick = useCallback(() => {
     document.querySelector("#main")?.scrollTo({ behavior: "smooth", top: 0 })
@@ -32,7 +32,7 @@ function Header() {
     <header className="header">
       <nav className="navbar max-width">
         <div className="navbar__content">
-          <button className="navbar__btn" type="button" onClick={handleClick} title={t("change-background")}>
+          <button className="navbar__btn" type="button" onClick={handleClick} title={t("Labels.change-background")}>
             <Image className="navbar__img" src={meImg} alt="" />
           </button>
           <LangMenu />

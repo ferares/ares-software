@@ -12,23 +12,23 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 import { type LocaleOption, locales } from "@/i18n/routing"
 
 import { BackgroundProvider } from "@/context/background"
-import { ScreenReaderProvider } from "@/context/screenReader"
+import { AlertsProvider } from "@/context/Alerts"
+import { LoaderProvider } from "@/context/Loader"
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import SRAnnouncer from "@/components/srAnnouncemer"
-
-// We load FA's styles on app.css to prevent FOUC
-config.autoAddCss = false
 
 import "@/styles/main.css"
 
-const { GTM_ID } = process.env
+// We load FA's styles on main.css to prevent FOUC
+config.autoAddCss = false
+
+const { GTM_ID, APP_URL } = process.env
 
 const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400"], style: ["italic", "normal"], variable: "--font-nunito" })
 const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400"], variable: "--font-open-sans" })
 
-const metadataBase = new URL(process.env.NEXT_PUBLIC_BASE_URL ?? "")
+const metadataBase = new URL(APP_URL ?? "")
 const title = "Ares Software"
 const description = "Ares Software"
 
@@ -67,16 +67,17 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <ScreenReaderProvider>
-            <BackgroundProvider>
-              <Header />
-              <main id="main" className="main">
-                {children}
-              </main>
-              <Footer />
-              <SRAnnouncer />
-            </BackgroundProvider>
-          </ScreenReaderProvider>
+          <LoaderProvider>
+            <AlertsProvider>
+              <BackgroundProvider>
+                <Header />
+                <main id="main" className="main">
+                  {children}
+                </main>
+                <Footer />
+              </BackgroundProvider>
+            </AlertsProvider>
+          </LoaderProvider>
         </NextIntlClientProvider>
       </body>
     </html>

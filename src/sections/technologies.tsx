@@ -1,10 +1,13 @@
+"use client"
+
 import { useTranslations } from "next-intl"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 import { technologies, type TechnologyKey } from "@/constants/technologies"
 
 import Badge from "@/components/badge"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const technologiesList: { title: string, list: TechnologyKey[] }[] = [
   {
