@@ -45,3 +45,11 @@ textarea:hover{ border: 1px solid #a1a9c3; }
 .was-validated *:invalid + .invalid-feedback,
 .was-validated .invalid-feedback.show,
 .was-validated *[aria-invalid="true"] + .invalid-feedback{ opacity: 1; display: block; visibility: visible; max-height: unset; }
+
+@media (prefers-reduced-motion) {
+  input,
+  select,
+  textarea {
+    transition: none;
+  }
+}

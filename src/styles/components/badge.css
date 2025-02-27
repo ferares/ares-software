@@ -49,3 +49,14 @@
     width: 2rem;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .badge  {
+    transition: none;
+  }
+  
+  .badge:hover {
+    box-shadow: inherit;
+    transform: none;
+  }
+}

@@ -6,6 +6,8 @@ import Image from "next/image"
 
 import { useTranslations } from "next-intl"
 
+import { prefersReducedMotion } from "@/helpers/a11y"
+
 import { useBackgroundContext } from "@/context/background"
 import { useAlertsContext } from "@/context/Alerts"
 
@@ -24,7 +26,7 @@ function Header() {
   }, [loadingBg, pushScreenReaderAlert, t])
 
   const handleClick = useCallback(() => {
-    document.querySelector("#main")?.scrollTo({ behavior: "smooth", top: 0 })
+    document.querySelector("#main")?.scrollTo({ behavior: prefersReducedMotion() ? "instant" : "smooth", top: 0 })
     newBackground()
   }, [newBackground])
 

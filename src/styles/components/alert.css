@@ -18,3 +18,14 @@
 
 /*success*/
 .alert.alert-success{ border-color: #3bae59; }
+
+@media (prefers-reduced-motion) {
+  .alert {
+    animation: none;
+    transition: none;
+  }
+
+  .alert.hide {
+    animation: none;
+  }
+}

@@ -7,6 +7,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 import { technologies, type TechnologyKey } from "@/constants/technologies"
 
+import { scrollIntoView } from "@/helpers/scroll"
+
 import Badge from "@/components/badge"
 
 const technologiesList: { title: string, list: TechnologyKey[] }[] = [
@@ -62,7 +64,7 @@ function Technologies() {
           </div>
         ))}
         <div className="tech__contact">
-          <button type="button" className="btn about__btn" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+          <button type="button" className="btn about__btn" onClick={() => scrollIntoView("#contact")}>
             <FontAwesomeIcon icon={faEnvelope} />
             {t("Labels.contact-me")}
           </button>

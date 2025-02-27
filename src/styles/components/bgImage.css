@@ -20,3 +20,9 @@
 .bg-image.image-loaded::before {
   opacity: .4;
 }
+
+@media (prefers-reduced-motion) {
+  .bg-image::before {
+    transition: none;
+  }
+}

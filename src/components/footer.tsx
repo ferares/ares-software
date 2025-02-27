@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
+import { scrollIntoView } from "@/helpers/scroll"
+
 function Footer() {
   const t = useTranslations("Labels")
   return (
@@ -30,7 +32,7 @@ function Footer() {
               </a>
             </li>
             <li className="footer__menu__item">
-              <button type="button" className="footer__menu__link" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+              <button type="button" className="footer__menu__link" onClick={() => scrollIntoView("#contact")}>
                 <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label="Send me an email" />
               </button>
             </li>

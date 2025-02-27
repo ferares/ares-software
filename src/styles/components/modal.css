@@ -87,3 +87,17 @@
 .modal .action-buttons .btn {
   margin-left: 10px;
 }
+
+@media (prefers-reduced-motion) {
+  .modal {
+    /* transition: none */
+  }
+  
+  .modal.hide::backdrop {
+    animation: none;
+  }
+  
+  .modal.show::backdrop {
+    animation: none;
+  }
+}

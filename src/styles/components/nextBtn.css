@@ -2,10 +2,17 @@
   background-color: transparent;
   border: 0;
   bottom: 1rem;
+  font-size: 2.5rem;
   position: absolute;
   animation: jump 1.25s ease-in-out infinite;
 }
 
 .next-btn:hover {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion) {
+  .next-btn {
+    animation: none;
+  }
 }

@@ -138,3 +138,13 @@ body {
     font-size: 2rem;
   }
 }
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}

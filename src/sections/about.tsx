@@ -9,6 +9,8 @@ import { type RichTranslationValues, useTranslations } from "next-intl"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDownload, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
+import { scrollIntoView } from "@/helpers/scroll"
+
 import NextBtn from "@/components/nextBtn"
 
 import aboutImg from "../../public/imgs/about.jpg"
@@ -48,7 +50,7 @@ function About() {
                 <FontAwesomeIcon icon={faDownload} />
                 {t("Labels.download-cv")}
               </button>
-              <button type="button" className="btn about__btn" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+              <button type="button" className="btn about__btn" onClick={() => scrollIntoView("#contact")}>
                 <FontAwesomeIcon icon={faEnvelope} />
                 {t("Labels.contact-me")}
               </button>
