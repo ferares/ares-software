@@ -2,7 +2,7 @@
 
 import { type ComponentProps, type RefObject, useCallback, useEffect, useRef } from "react"
 
-import { useCallOnEscContext } from "@/context/CallOnEsc"
+import { useCallOnEscContext } from "@/context/callOnEsc"
 
 export interface DropdownProps extends Omit<ComponentProps<"div">, "className"> {
   open: boolean

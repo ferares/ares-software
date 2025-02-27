@@ -7,7 +7,7 @@ import { type PropsWithChildren, useEffect, useRef, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClose } from "@fortawesome/free-solid-svg-icons"
 
-import { type AlertType } from "@/context/Alerts"
+import { type AlertType } from "@/context/alerts"
 
 interface AlertComponentProps extends PropsWithChildren {
   type: AlertType

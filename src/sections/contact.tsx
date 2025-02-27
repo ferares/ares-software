@@ -7,8 +7,8 @@ import { useLocale, useTranslations } from "next-intl"
 import { emailPattern } from "@/helpers/strings"
 
 import HCaptcha from "@hcaptcha/react-hcaptcha"
-import { useAlertsContext } from "@/context/Alerts"
-import { useLoaderContext } from "@/context/Loader"
+import { useAlertsContext } from "@/context/alerts"
+import { useLoaderContext } from "@/context/loader"
 
 interface ContactProps { captchaSiteKey: string }
 

@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl"
 import { prefersReducedMotion } from "@/helpers/a11y"
 
 import { useBackgroundContext } from "@/context/background"
-import { useAlertsContext } from "@/context/Alerts"
+import { useAlertsContext } from "@/context/alerts"
 
 import LangMenu from "./langMenu"
 

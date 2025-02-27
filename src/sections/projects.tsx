@@ -42,7 +42,7 @@ function Projects() {
         { url: "https://buses.uy", label: t("Labels.try-it"), rel: "" },
       ],
       technologies: ["go", "next", "react", "html", "typescript", "css", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket" ,"cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
-      videos: { desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/busesuy/poster-desktop.png"}, mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/busesuy/poster-mobile.png"}},
+      videos: { desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png"}, mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png"}},
     },
     {
       title: "La Marche Du Crabe",
@@ -53,7 +53,7 @@ function Projects() {
         { url: "https://github.com/ferares/marche-du-crabe", label: t("Labels.view-project"), icon: faGithub },
       ],
       technologies: ["nodejs", "next", "react", "typescript", "css", "pwa", "websocket"],
-      videos: { desktop: { src: "/vids/crabe/desktop.webm", poster: "/imgs/crabe/poster-desktop.png" }, mobile: { src: "/vids/crabe/mobile.webm", poster: "/imgs/crabe/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/crabe/desktop.webm", poster: "/imgs/projects/crabe/poster-desktop.png" }, mobile: { src: "/vids/crabe/mobile.webm", poster: "/imgs/projects/crabe/poster-mobile.png" }},
     },
     {
       title: "Arbolado Urbano",
@@ -64,7 +64,7 @@ function Projects() {
         { url: "https://github.com/Arbolado-Urbano", label: t("Labels.view-project"), icon: faGithub },
       ],
       technologies: ["next", "react", "bootstrap", "sass", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
-      videos: { desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/arbolado/poster-desktop.png" }, mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/arbolado/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/projects/arbolado/poster-desktop.png" }, mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/projects/arbolado/poster-mobile.png" }},
     },
     {
       title: "Papelapp",
@@ -75,7 +75,7 @@ function Projects() {
         { url: "https://github.com/ferares/papelapp", label: t("Labels.view-project"), icon: faGithub },
       ],
       technologies: ["html", "css", "typescript", "pwa", "android"],
-      videos: { desktop: { src: "/vids/papelapp/desktop.webm", poster: "/imgs/papelapp/poster-desktop.png" }, mobile: { src: "/vids/papelapp/mobile.webm", poster: "/imgs/papelapp/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/papelapp/desktop.webm", poster: "/imgs/projects/papelapp/poster-desktop.png" }, mobile: { src: "/vids/papelapp/mobile.webm", poster: "/imgs/projects/papelapp/poster-mobile.png" }},
     },
     {
       title: "Écouter",
@@ -85,7 +85,7 @@ function Projects() {
         { url: "https://github.com/ferares/ecouter", label: t("Labels.view-project"), icon: faGithub },
       ],
       technologies: ["html", "sass", "typescript", "pwa"],
-      videos: { desktop: { src: "/vids/ecouter/desktop.webm", poster: "/imgs/ecouter/poster-desktop.png" }, mobile: { src: "/vids/ecouter/mobile.webm", poster: "/imgs/ecouter/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/ecouter/desktop.webm", poster: "/imgs/projects/ecouter/poster-desktop.png" }, mobile: { src: "/vids/ecouter/mobile.webm", poster: "/imgs/projects/ecouter/poster-mobile.png" }},
     },
   ], [t])
   
@@ -98,7 +98,7 @@ function Projects() {
         { url: "https://salamhello.com", label: t("Labels.visit-site") },
       ],
       technologies: ["shopify", "html", "css", "typescript", "liquid", "git"],
-      videos: { desktop: { src: "/vids/salam/desktop.webm", poster: "/imgs/salam/poster-desktop.png" }, mobile: { src: "/vids/salam/mobile.webm", poster: "/imgs/salam/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/salam/desktop.webm", poster: "/imgs/projects/salam/poster-desktop.png" }, mobile: { src: "/vids/salam/mobile.webm", poster: "/imgs/projects/salam/poster-mobile.png" }},
     },
     {
       title: "Grigadale",
@@ -108,7 +108,7 @@ function Projects() {
         { url: "https://grigadale.com", label: t("Labels.visit-site") },
       ],
       technologies: ["html", "css", "javascript", "wordpress", "bootstrap", "git"],
-      videos: { desktop: { src: "/vids/grigadale/desktop.webm", poster: "/imgs/grigadale/poster-desktop.png" }, mobile: { src: "/vids/grigadale/mobile.webm", poster: "/imgs/grigadale/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/grigadale/desktop.webm", poster: "/imgs/projects/grigadale/poster-desktop.png" }, mobile: { src: "/vids/grigadale/mobile.webm", poster: "/imgs/projects/grigadale/poster-mobile.png" }},
     },
     {
       title: "Ionic Themes",
@@ -118,7 +118,7 @@ function Projects() {
         { url: "https://ionic-themes.com", label: t("Labels.visit-site") },
       ],
       technologies: ["angular", "typescript", "html", "sass", "git"],
-      videos: { desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/ionic/poster-desktop.png" }, mobile: { src: "/vids/ionic/mobile.webm", poster: "/imgs/ionic/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/projects/ionic/poster-desktop.png" }, mobile: { src: "/vids/ionic/mobile.webm", poster: "/imgs/projects/ionic/poster-mobile.png" }},
     },
     {
       title: "Atlántico Desarrollos",
@@ -128,7 +128,7 @@ function Projects() {
         { url: "https://atlanticodesarrollos.uy/", label: t("Labels.visit-site") },
       ],
       technologies: ["php", "html", "sass", "bootstrap", "javascript", "git"],
-      videos: { desktop: { src: "/vids/atlantico/desktop.webm", poster: "/imgs/atlantico/poster-desktop.png" }, mobile: { src: "/vids/atlantico/mobile.webm", poster: "/imgs/atlantico/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/atlantico/desktop.webm", poster: "/imgs/projects/atlantico/poster-desktop.png" }, mobile: { src: "/vids/atlantico/mobile.webm", poster: "/imgs/projects/atlantico/poster-mobile.png" }},
     },
     {
       title: "Pipiña",
@@ -138,7 +138,7 @@ function Projects() {
         { url: "https://pipiña.uy/", label: t("Labels.visit-site") },
       ],
       technologies: ["php", "html", "sass", "bootstrap", "javascript", "git"],
-      videos: { desktop: { src: "/vids/pipina/desktop.webm", poster: "/imgs/pipina/poster-desktop.png" }, mobile: { src: "/vids/pipina/mobile.webm", poster: "/imgs/pipina/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/pipina/desktop.webm", poster: "/imgs/projects/pipina/poster-desktop.png" }, mobile: { src: "/vids/pipina/mobile.webm", poster: "/imgs/projects/pipina/poster-mobile.png" }},
     },
     {
       title: "Angular Templates",
@@ -148,7 +148,7 @@ function Projects() {
         { url: "https://angular-templates.io/", label: t("Labels.visit-site") },
       ],
       technologies: ["angular", "typescript", "html", "sass", "git"],
-      videos: { desktop: { src: "/vids/angular/desktop.webm", poster: "/imgs/angular/poster-desktop.png" }, mobile: { src: "/vids/angular/mobile.webm", poster: "/imgs/angular/poster-mobile.png" }},
+      videos: { desktop: { src: "/vids/angular/desktop.webm", poster: "/imgs/projects/angular/poster-desktop.png" }, mobile: { src: "/vids/angular/mobile.webm", poster: "/imgs/projects/angular/poster-mobile.png" }},
     },
   ]
 

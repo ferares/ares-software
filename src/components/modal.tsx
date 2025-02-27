@@ -5,7 +5,7 @@ import { type MouseEvent, type PropsWithChildren, useCallback, useEffect, useRef
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 
-import { useCallOnEscContext } from "@/context/CallOnEsc"
+import { useCallOnEscContext } from "@/context/callOnEsc"
 import { useTranslations } from "next-intl"
 
 export interface ModalProps {

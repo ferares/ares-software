@@ -7,6 +7,8 @@ import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPause, faPlay, type IconDefinition } from "@fortawesome/free-solid-svg-icons"
 
+import { usePrefersReducedMotionContext } from "@/context/reducedMotion"
+
 import macbookImage from "@/../public/imgs/macbook.png"
 import iphoneImage from "@/../public/imgs/iphone.png"
 
@@ -20,6 +22,7 @@ function VideoPlayer({ videos }: VideoPlayerProps) {
   const videoDesktopRef = useRef<HTMLVideoElement>(null)
   const videoMobileRef = useRef<HTMLVideoElement>(null)
   const [buttonIcon, setButtonIcon] = useState<IconDefinition>(faPlay)
+  const { prefersReducedMotion } = usePrefersReducedMotionContext()
 
   function handlePlay() { setButtonIcon(faPause) }
   function handlePause() { setButtonIcon(faPlay) }
@@ -46,7 +49,7 @@ function VideoPlayer({ videos }: VideoPlayerProps) {
             <FontAwesomeIcon icon={buttonIcon} />
           </button>
         </div>
-        <video ref={videoDesktopRef} className="video__player" poster={videos.desktop.poster} autoPlay muted loop>
+        <video ref={videoDesktopRef} className="video__player" poster={videos.desktop.poster} autoPlay={!prefersReducedMotion} muted loop>
           <source src={videos.desktop.src} type="video/webm" />
           <Image src={videos.desktop.poster} alt="" height={200} width={200} />
         </video> 
@@ -58,7 +61,7 @@ function VideoPlayer({ videos }: VideoPlayerProps) {
             <FontAwesomeIcon icon={buttonIcon} />
           </button>
         </div>
-        <video ref={videoMobileRef} className="video__player" poster={videos.mobile.poster} autoPlay muted loop>
+        <video ref={videoMobileRef} className="video__player" poster={videos.mobile.poster} autoPlay={!prefersReducedMotion} muted loop>
           <source src={videos.mobile.src} type="video/webm" />
           <Image src={videos.mobile.poster} alt="" height={200} width={200} />
         </video>

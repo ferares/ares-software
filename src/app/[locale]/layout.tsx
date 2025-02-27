@@ -12,8 +12,9 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 import { type LocaleOption, locales } from "@/i18n/routing"
 
 import { BackgroundProvider } from "@/context/background"
-import { AlertsProvider } from "@/context/Alerts"
-import { LoaderProvider } from "@/context/Loader"
+import { AlertsProvider } from "@/context/alerts"
+import { LoaderProvider } from "@/context/loader"
+import { PrefersReducedMotionProvider } from "@/context/reducedMotion"
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -67,17 +68,19 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <LoaderProvider>
-            <AlertsProvider>
-              <BackgroundProvider>
-                <Header />
-                <main id="main" className="main">
-                  {children}
-                </main>
-                <Footer />
-              </BackgroundProvider>
-            </AlertsProvider>
-          </LoaderProvider>
+          <PrefersReducedMotionProvider>
+            <LoaderProvider>
+              <AlertsProvider>
+                <BackgroundProvider>
+                  <Header />
+                  <main id="main" className="main">
+                    {children}
+                  </main>
+                  <Footer />
+                </BackgroundProvider>
+              </AlertsProvider>
+            </LoaderProvider>
+          </PrefersReducedMotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>
