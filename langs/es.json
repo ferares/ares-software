@@ -17,7 +17,14 @@
     "visit-site": "Ver sitio",
     "try-it": "Visitar",
     "download-cv": "Descargar CV",
-    "contact-me": "Contáctame"
+    "contact-me": "Contáctame",
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks",
+    "e-commerce": "E-commerce",
+    "databases": "Bases de datos",
+    "infrastructure": "Infraestructura",
+    "platforms": "Plataformas",
+    "tools": "Herramientas"
   },
   "Messages": {
     "changing-bg-img": "Cambiando imagen de fondo",

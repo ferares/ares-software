@@ -19,8 +19,12 @@
     "download-cv": "Download CV",
     "contact-me": "Contact Me",
     "languages": "Languages",
-    "frameworks-libraries": "Frameworks/Libraries",
-    "e-commerce": "E-commerce"
+    "frameworks": "Frameworks",
+    "e-commerce": "E-commerce",
+    "databases": "Databases",
+    "infrastructure": "Infrastructure",
+    "platforms": "Platforms",
+    "tools": "Tools"
   },
   "Messages": {
     "changing-bg-img": "Changing background image",

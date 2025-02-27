@@ -40,5 +40,18 @@
 @media screen and (max-width: 576px) {
   .tech__category__list {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tech .section-title {
+    font-size: 3rem;
+  }
+
+  .tech__category__title {
+    font-size: 2rem;
+  }
+
+  .project__carousel-wrapper {
+    margin-bottom: 2rem;
   }
 }

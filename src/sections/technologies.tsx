@@ -1,5 +1,7 @@
 "use client"
 
+import { useMemo } from "react"
+
 import { useTranslations } from "next-intl"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -11,39 +13,40 @@ import { scrollIntoView } from "@/helpers/scroll"
 
 import Badge from "@/components/badge"
 
-const technologiesList: { title: string, list: TechnologyKey[] }[] = [
-  {
-    title: "Languages",
-    list: [ "typescript", "javascript", "go", "python", "php", "html", "css", "sass", "liquid" ],
-  },
-  {
-    title: "Frameworks/Libraries",
-    list: [ "next", "react", "angular", "vue", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap" ],
-  },
-  {
-    title: "E-Commerce",
-    list: [ "shopify", "woocommerce", "paypal", "mercado" ],
-  },
-  {
-    title: "Databases",
-    list: [ "graphql", "postgresql", "mongodb", "redis", "valkey", "prisma", "mysql", "mariadb", "sqlite" ],
-  },
-  {
-    title: "Infrastructure",
-    list: [ "aws", "digitalocean", "cloudflare", "docker", "git", "bash", "websocket" ],
-  },
-  {
-    title: "Platforms",
-    list: [ "apple", "android", "linux", "windows", "pwa" ],
-  },
-  {
-    title: "Tools",
-    list: [ "analytics", "tagmanager", "recaptcha", "hcaptcha" ],
-  },
-]
-
 function Technologies() {
   const t = useTranslations()
+
+  const technologiesList: { title: string, list: TechnologyKey[] }[] = useMemo(() => [
+    {
+      title: t("Labels.languages"),
+      list: [ "typescript", "javascript", "go", "python", "php", "html", "css", "sass", "liquid" ],
+    },
+    {
+      title: t("Labels.frameworks"),
+      list: [ "next", "react", "angular", "vue", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap" ],
+    },
+    {
+      title: t("Labels.e-commerce"),
+      list: [ "shopify", "woocommerce", "paypal", "mercado" ],
+    },
+    {
+      title: t("Labels.databases"),
+      list: [ "graphql", "postgresql", "mongodb", "redis", "valkey", "prisma", "mysql", "mariadb", "sqlite" ],
+    },
+    {
+      title: t("Labels.infrastructure"),
+      list: [ "aws", "digitalocean", "cloudflare", "docker", "git", "bash", "websocket" ],
+    },
+    {
+      title: t("Labels.platforms"),
+      list: [ "apple", "android", "linux", "windows", "pwa" ],
+    },
+    {
+      title: t("Labels.tools"),
+      list: [ "analytics", "tagmanager", "recaptcha", "hcaptcha" ],
+    },
+  ], [t])
+
   return (
     <section id="technologies"className="tech">
       <div className="max-width tech__content">
