@@ -30,7 +30,7 @@ const technologies = {
   postgresql: { icon: "/icons/postgresql.svg", title: "PostgreSQL", iconSize },
   mongodb: { icon: "/icons/mongodb.svg", title: "MongoDB", iconSize: 40 },
   redis: { icon: "/icons/redis.svg", title: "REDIS", iconSize },
-  valkey: { icon: "icons/valkey.png", title: "Valkey", iconSize },
+  valkey: { icon: "/icons/valkey.png", title: "Valkey", iconSize },
   prisma: { icon: "/icons/prisma.svg", title: "Prisma", iconSize },
   mysql: { icon: "/icons/mysql.svg", title: "MySQL", iconSize },
   sqlite: { icon: "/icons/sqlite.svg", title: "SQLite", iconSize },
