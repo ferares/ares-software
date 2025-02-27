@@ -5,12 +5,52 @@
     "scroll-down": "Bajar",
     "change-background": "Cambiar imagen de fondo",
     "close": "Cerrar",
-    "change-language": "Cambiar idioma"
+    "change-language": "Cambiar idioma",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "required": "requerido",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "developed-using": "Desarrollado usando",
+    "view-details": "Ver detalles",
+    "view-project": "Ver proyecto",
+    "visit-site": "Ver sitio",
+    "try-it": "Visitar",
+    "download-cv": "Descargar CV",
+    "contact-me": "Contáctame"
+  },
+  "Messages": {
+    "input-an-email": "Ingrese un correo electrónico",
+    "input-a-message": "Ingrese un mensaje"
   },
   "Sections": {
     "About": {
       "title": "Acerca de mi",
-      "content": "<p>I'm Fermín, a Freelance Software Developer working from La Paloma, Uruguay 🏖️</p><p>Most of my experience is in web development working on both simple projects like landing pages and complex ones like web apps, e-commerce sites, blogs, etc.</p><p>I've worked both alone and with teams for different companies, and I have plenty of experience working remotely 👨‍💻</p><p>Keep scrolling to learn more about what kind of projects I'm working on 🚀 some of my past client work and the technolgies I'm familiar with 🛸</p>"
+      "content": "<p>Hola, soy Fermín, un desarrollador de software independiente con pasión por la <b>accesibilidad web</b> trabajando remoto desde <a>La Paloma, Uruguay</a> 🏖️</p><p>Mi experiencia está enfocada en el desarrollo web y de <b>web apps</b>, tanto para proyectos sencillos como <b>landing pages</b> y más complejos como <b>web apps</b>, <b>e-commerces</b>, <b>blogs</b>, <b>juegos</b>, etc.</p><p>Trabajo solo o en equipos para diferentes empresas y tengo amplia experiencia trabajando remoto 👨‍💻</p><p>Hablo <b>Español</b> 🇪🇸 <b>Inglés</b> 🇬🇧 e <b>Italiano</b> 🇮🇹 y un poco de <b>Fracés</b> 🇫🇷 y <b>Portugués</b> 🇵🇹</p><p>Continúa hacia abajo para saber más sobre los proyectos en los que trabajo 🚀 algunos de mis trabajos para clientes y las tecnologías que uso habitualmente 🛸</p>",
+      "cv-link": "/docs/fermin-ares.cv.es.pdf"
+    },
+    "Projects": {
+      "personal-projects": "Proyectos personales",
+      "client-projects": "Proyectos de clientes",
+      "projects": {
+        "busesuy": "Un buscador de líneas de ómnibus de mediana y larga distancia en Uruguay que calcula transbordos. El primero de su tipo en el país.",
+        "arbolado": "Una herramienta web interactiva para explorar los datos de distintos censos de arbolado urbano.",
+        "papelapp": "Una app web para calcular el costo por metro de rollos de papel higiénico.",
+        "ecouter": "Una app web para profesores y estudiantes de lenguas que permite acceder a los audios de sus libros de estudio con facilidad.",
+        "crabe": "Un juego para 2 jugadores remoto basado en el juego de mesa \"La Marche Du Crabe\"",
+        "salam": "Un tema para una tienda de Shopify desarrollado desde cero para un cliente.",
+        "grigadale": "Un sitio web para publicar la colección entera de árboles de un arboretum privado en Buenos Aires. Con una interfáz intuitiva, mapa interactivo y un blog.",
+        "angular": "Una tienda en línea personalizada para vender templates para desarrolladores que trabajan con Angular.",
+        "ionic": "Una tienda en línea personalizada para vender templates para desarrolladores que trabajan con Ionic.",
+        "atlantico": "Sitio web de negocios para una empresa de desarrollos inmobiliarios.",
+        "pipina": "Sitio web para una marca que desarrolla juegos para ayudar a niños con dificultades de lectura y/o escritura."
+      }
+    },
+    "Contact": {
+      "title": "Contacto"
+    },
+    "Technologies": {
+      "title": "Tecnologías"
     }
   }
 }

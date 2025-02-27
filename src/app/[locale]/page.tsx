@@ -12,8 +12,8 @@ function Home() {
       <Intro />
       <About />
       <Projects />
-      <Technologies />
       <Contact />
+      <Technologies />
     </>
   )
 }

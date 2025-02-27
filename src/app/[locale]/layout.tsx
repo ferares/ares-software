@@ -5,6 +5,8 @@ import { Nunito, Open_Sans } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
+import { GoogleTagManager } from "@next/third-parties/google"
+
 import { config } from "@fortawesome/fontawesome-svg-core"
 
 import { type LocaleOption, locales } from "@/i18n/routing"
@@ -20,6 +22,8 @@ import SRAnnouncer from "@/components/srAnnouncemer"
 config.autoAddCss = false
 
 import "@/styles/main.css"
+
+const { GTM_ID } = process.env
 
 const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400"], style: ["italic", "normal"], variable: "--font-nunito" })
 const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400"], variable: "--font-open-sans" })
@@ -58,7 +62,8 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   return (
     <html lang={locale} className={`${nunito.variable} ${openSans.variable}`}>
       <head>
-        <link rel="shortcut icon" href="/imgs/me.jpg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/icons/me.jpg" type="image/jpeg" />
+        {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>

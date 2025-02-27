@@ -41,8 +41,19 @@ function Projects() {
       links: [
         { url: "https://buses.uy", label: t("Labels.try-it"), rel: "" },
       ],
-      technologies: ["go", "next", "react", "html", "typescript", "css", "postgresql", "valkey", "android", "windows", "apple", "git", "pwa", "websocket" ,"cloudflare", "digitalocean"],
+      technologies: ["go", "next", "react", "html", "typescript", "css", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket" ,"cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
       videos: { desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/busesuy/poster-desktop.png"}, mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/busesuy/poster-mobile.png"}},
+    },
+    {
+      title: "La Marche Du Crabe",
+      images: { desktop: "/imgs/projects/crabe/desktop.png", mobile: "/imgs/projects/crabe/mobile.png" },
+      desc: t("Sections.Projects.projects.crabe"),
+      links: [
+        { url: "https://crabe.ares.uy", label: t("Labels.try-it"), rel: "" },
+        { url: "https://github.com/ferares/marche-du-crabe", label: t("Labels.view-project"), icon: faGithub },
+      ],
+      technologies: ["nodejs", "next", "react", "typescript", "css", "pwa", "websocket"],
+      videos: { desktop: { src: "/vids/crabe/desktop.webm", poster: "/imgs/crabe/poster-desktop.png" }, mobile: { src: "/vids/crabe/mobile.webm", poster: "/imgs/crabe/poster-mobile.png" }},
     },
     {
       title: "Arbolado Urbano",
@@ -52,7 +63,7 @@ function Projects() {
         { url: "https://arboladourbano.com", label: t("Labels.try-it"), rel: "" },
         { url: "https://github.com/Arbolado-Urbano", label: t("Labels.view-project"), icon: faGithub },
       ],
-      technologies: ["next", "react", "bootstrap", "sass", "php", "laravel", "wordpress", "mysql", "git"],
+      technologies: ["next", "react", "bootstrap", "sass", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
       videos: { desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/arbolado/poster-desktop.png" }, mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/arbolado/poster-mobile.png" }},
     },
     {
@@ -75,17 +86,6 @@ function Projects() {
       ],
       technologies: ["html", "sass", "typescript", "pwa"],
       videos: { desktop: { src: "/vids/ecouter/desktop.webm", poster: "/imgs/ecouter/poster-desktop.png" }, mobile: { src: "/vids/ecouter/mobile.webm", poster: "/imgs/ecouter/poster-mobile.png" }},
-    },
-    {
-      title: "La Marche Du Crabe",
-      images: { desktop: "/imgs/projects/crabe/desktop.png", mobile: "/imgs/projects/crabe/mobile.png" },
-      desc: t("Sections.Projects.projects.crabe"),
-      links: [
-        { url: "https://crabe.ares.uy", label: t("Labels.try-it"), rel: "" },
-        { url: "https://github.com/ferares/marche-du-crabe", label: t("Labels.view-project"), icon: faGithub },
-      ],
-      technologies: ["nodejs", "next", "react", "typescript", "css", "pwa", "websocket"],
-      videos: { desktop: { src: "/vids/crabe/desktop.webm", poster: "/imgs/crabe/poster-desktop.png" }, mobile: { src: "/vids/crabe/mobile.webm", poster: "/imgs/crabe/poster-mobile.png" }},
     },
   ], [t])
   

@@ -34,5 +34,18 @@
 }
 
 .badge--small .badge__icon  {
+  height: 2rem;
   width: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .badge {
+    flex-direction: row;
+    padding: .5rem 1rem;
+  }
+  
+  .badge .badge__icon  {
+    height: 2rem;
+    width: 2rem;
+  }
 }

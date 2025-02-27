@@ -13,4 +13,4 @@ export const labels: Record<LocaleOption, string> = { "es": "Español", "en": "E
  
 export const routing = defineRouting({ locales, defaultLocale })
  
-export const {Link, redirect, usePathname, useRouter, getPathname} = createNavigation(routing)
+export const { Link, redirect, usePathname, useRouter, getPathname } = createNavigation(routing)

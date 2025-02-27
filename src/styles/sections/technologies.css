@@ -47,6 +47,11 @@
   font-size: 1.25rem;
 }
 
+.tech__contact {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 992px) {
   .tech__category__list {
     grid-template-columns: repeat(3, 1fr);

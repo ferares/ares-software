@@ -3,7 +3,7 @@ const iconSize = 70
 const technologies = {
   go: { icon: "/icons/go.svg", title: "Go", iconSize },
   python: { icon: "/icons/python.svg", title: "Python", iconSize },
-  php: { icon: "/icons/php.svg", title: "PHP", iconSize },
+  php: { icon: "/icons/php.svg", title: "PHP", iconSize: 100 },
   html: { icon: "/icons/html5.svg", title: "HTML", iconSize },
   css: { icon: "/icons/css.svg", title: "CSS", iconSize },
   sass: { icon: "/icons/sass.svg", title: "SASS", iconSize },
@@ -11,11 +11,11 @@ const technologies = {
   typescript: { icon: "/icons/typescript.svg", title: "Typescript", iconSize },
   pwa: { icon: "/icons/pwa.svg", title: "PWA", iconSize },
   websocket: { icon: "/icons/websocket.svg", title: "Websocket", iconSize },
-  next: { icon: "/icons/next.svg", title: "Nextjs", iconSize },
+  next: { icon: "/icons/next.svg", title: "Next.js", iconSize },
   react: { icon: "/icons/react.svg", title: "React", iconSize },
   angular: { icon: "/icons/angular.svg", title: "Angular", iconSize },
   vue: { icon: "/icons/vue.svg", title: "Vue", iconSize },
-  nodejs: { icon: "/icons/nodejs.svg", title: "NodeJS", iconSize },
+  nodejs: { icon: "/icons/nodejs.svg", title: "Node.js", iconSize },
   wordpress: { icon: "/icons/wordpress.svg", title: "WordPress", iconSize },
   laravel: { icon: "/icons/laravel.svg", title: "Laravel", iconSize },
   django: { icon: "/icons/django.svg", title: "Django", iconSize },
@@ -46,6 +46,10 @@ const technologies = {
   windows: { icon: "/icons/windows.svg", title: "Windows", iconSize },
   android: { icon: "/icons/android.svg", title: "Android", iconSize },
   liquid: { icon: "/icons/liquid.png", title: "Liquid", iconSize },
+  recaptcha: { icon: "/icons/recaptcha.svg", title: "reCAPTCHA", iconSize },
+  hcaptcha: { icon: "/icons/hcaptcha.svg", title: "hCaptcha", iconSize },
+  analytics: { icon: "/icons/analytics.svg", title: "Google Analytics", iconSize },
+  tagmanager: { icon: "/icons/tagmanager.svg", title: "Google Tag Manager", iconSize },
 }
 
 type TechnologyKey = keyof typeof technologies

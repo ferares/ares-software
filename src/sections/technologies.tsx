@@ -1,12 +1,15 @@
 import { useTranslations } from "next-intl"
 
 import { technologies, type TechnologyKey } from "@/constants/technologies"
+
 import Badge from "@/components/badge"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const technologiesList: { title: string, list: TechnologyKey[] }[] = [
   {
     title: "Languages",
-    list: [ "go", "python", "php", "html", "css", "sass", "javascript", "typescript", "liquid" ],
+    list: [ "typescript", "javascript", "go", "python", "php", "html", "css", "sass", "liquid" ],
   },
   {
     title: "Frameworks/Libraries",
@@ -14,11 +17,11 @@ const technologiesList: { title: string, list: TechnologyKey[] }[] = [
   },
   {
     title: "E-Commerce",
-    list: [ "shopify", "woocommerce", "stripe", "paypal", "mercado" ],
+    list: [ "shopify", "woocommerce", "paypal", "mercado" ],
   },
   {
     title: "Databases",
-    list: [ "graphql", "postgresql", "mongodb", "redis", "valkey", "prisma", "mysql", "sqlite", "mariadb" ],
+    list: [ "graphql", "postgresql", "mongodb", "redis", "valkey", "prisma", "mysql", "mariadb", "sqlite" ],
   },
   {
     title: "Infrastructure",
@@ -26,17 +29,21 @@ const technologiesList: { title: string, list: TechnologyKey[] }[] = [
   },
   {
     title: "Platforms",
-    list: [ "linux", "apple", "windows", "android", "pwa" ],
-  }
+    list: [ "apple", "android", "linux", "windows", "pwa" ],
+  },
+  {
+    title: "Tools",
+    list: [ "analytics", "tagmanager", "recaptcha", "hcaptcha" ],
+  },
 ]
 
 function Technologies() {
-  const t = useTranslations("Sections.Technologies")
+  const t = useTranslations()
   return (
     <section id="technologies"className="tech">
       <div className="max-width tech__content">
         <h2 className="section-title">
-          {t("title")}
+          {t("Sections.Technologies.title")}
         </h2>
         {technologiesList.map((category, catIndex) => (
           <div className="tech__category" key={catIndex}>
@@ -51,6 +58,12 @@ function Technologies() {
             </ul>
           </div>
         ))}
+        <div className="tech__contact">
+          <button type="button" className="btn about__btn" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+            <FontAwesomeIcon icon={faEnvelope} />
+            {t("Labels.contact-me")}
+          </button>
+        </div>
       </div>
     </section>
   )

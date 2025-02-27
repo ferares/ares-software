@@ -32,12 +32,24 @@
 }
 
 .about__img {
-  width: 500px;
+  width: 600px;
 }
 
 .about__title-mobile {
   display: none;
   margin-bottom: 0;
+}
+
+.about__btns {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about__btn {
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 1328px) {
