@@ -2,13 +2,18 @@
 
 import { type FormEvent, useCallback, useRef, useState } from "react"
 
+import Script from "next/script"
+
 import { useLocale, useTranslations } from "next-intl"
 
 import { emailPattern } from "@/helpers/strings"
 
-import HCaptcha from "@hcaptcha/react-hcaptcha"
 import { useAlertsContext } from "@/context/alerts"
 import { useLoaderContext } from "@/context/loader"
+
+declare global {
+  interface Window { grecaptcha: { getResponse: () => string, reset: () => void } }
+}
 
 interface ContactProps { captchaSiteKey: string }
 
@@ -19,18 +24,19 @@ function Contact({ captchaSiteKey }: ContactProps) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [captchaToken, setCaptchaToken] = useState<string>()
+  const [noCaptcha, setNoCaptcha] = useState(false)
   const emailRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
-  const captchaRef = useRef<HCaptcha>(null)
   const t = useTranslations()
   const locale = useLocale()
 
   const handleSubmit = useCallback(async (event: FormEvent) => {
     event.preventDefault()
     event.stopPropagation()
+    const captchaToken = window.grecaptcha.getResponse()
     if ((!emailRef.current?.validity.valid) || (!messageRef.current?.validity.valid) || (!captchaToken)) {
       setWasValidated(true)
+      if (!captchaToken) setNoCaptcha(true)
       if (!emailRef.current?.validity.valid) emailRef.current?.focus()
       else if (!messageRef.current?.validity.valid) messageRef.current?.focus()
       else return pushAlert("danger", t("Messages.invalid-captcha"), 3000)
@@ -47,6 +53,7 @@ function Contact({ captchaSiteKey }: ContactProps) {
         setName("")
         setEmail("")
         setMessage("")
+        setNoCaptcha(false)
       } else {
         pushAlert("danger", t("Messages.error"), 3000)
       }
@@ -54,10 +61,10 @@ function Contact({ captchaSiteKey }: ContactProps) {
       console.error(error)
       pushAlert("danger", t("Messages.error"), 3000)
     } finally {
-      captchaRef.current?.resetCaptcha()
+      window.grecaptcha.reset()
     }
     setLoading(false)
-  }, [captchaToken, email, message, name, t, setLoading, pushAlert, pushScreenReaderAlert])
+  }, [email, message, name, t, setLoading, pushAlert, pushScreenReaderAlert])
 
   return (
     <section id="contact"className="contact-section">
@@ -81,14 +88,15 @@ function Contact({ captchaSiteKey }: ContactProps) {
             <div className="invalid-feedback">{t("Messages.input-a-message")}</div>
           </div>
           <div className="input-field-row">
-            <HCaptcha ref={captchaRef} sitekey={captchaSiteKey} onVerify={setCaptchaToken} languageOverride={locale} />
+            <div className="g-recaptcha" data-sitekey={captchaSiteKey}></div>
           </div>
-          {<div className={`invalid-feedback ${!captchaToken ? "show" : ""}`}>{t("Messages.invalid-captcha")}</div>}
+          {<div className={`invalid-feedback ${noCaptcha ? "show" : ""}`}>{t("Messages.invalid-captcha")}</div>}
           <button type="submit" className="btn btn-primary">
             {t("Labels.send")}
           </button>
         </form>
       </div>
+      <Script src={`https://www.google.com/recaptcha/api.js?hl=${locale}`} async defer />
     </section>
   )
 }
