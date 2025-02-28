@@ -24,7 +24,9 @@
     "databases": "Databases",
     "infrastructure": "Infrastructure",
     "platforms": "Platforms",
-    "tools": "Tools"
+    "tools": "Tools",
+    "accept": "Accept",
+    "decline": "Decline"
   },
   "Messages": {
     "changing-bg-img": "Changing background image",
@@ -35,7 +37,8 @@
     "invalid-form": "Form submission failed. Review the required fields",
     "error": "An error occurred, please try again later",
     "contact-success": "Thank you, message sent successfully",
-    "contact-submitting": "Sending message please wait"
+    "contact-submitting": "Sending message please wait",
+    "cookies": "We use optional cookies to enhance your experience and understand how you interact with our site.<br></br>These cookies are not required, and you can choose to decline them.<br></br>You can change your preferences anytime in our Cookie Settings"
   },
   "Metadata": {
     "description": "Accessibility focused web development"

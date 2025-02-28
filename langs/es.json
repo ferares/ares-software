@@ -24,7 +24,9 @@
     "databases": "Bases de datos",
     "infrastructure": "Infraestructura",
     "platforms": "Plataformas",
-    "tools": "Herramientas"
+    "tools": "Herramientas",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   },
   "Messages": {
     "changing-bg-img": "Cambiando imagen de fondo",
@@ -35,7 +37,8 @@
     "invalid-form": "Error al enviar el formulario. Revise los campos requeridos",
     "error": "Ocurrió un error, vuelva a intentarlo más tarde",
     "contact-success": "Gracias, mensaje enviado con éxito",
-    "contact-submitting": "Enviando mensaje, espere por favor"
+    "contact-submitting": "Enviando mensaje, espere por favor",
+    "cookies": "Usamos cookies opcionales para mejorar tu experiencia y entender cómo interactúas con nuestro sitio.<br></br>Estas cookies no son obligatorias, y puedes elegir rechazarlas.<br></br>Puedes cambiar tus preferencias en cualquier momento en nuestra Configuración de cookies."
   },
   "Metadata": {
     "description": "Desarrollo web enfocado en la accesibilidad"

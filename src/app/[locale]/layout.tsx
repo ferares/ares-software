@@ -5,8 +5,6 @@ import { Nunito, Open_Sans } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 
-import { GoogleTagManager } from "@next/third-parties/google"
-
 import { config } from "@fortawesome/fontawesome-svg-core"
 
 import { type LocaleOption, locales } from "@/i18n/routing"
@@ -15,12 +13,15 @@ import { BackgroundProvider } from "@/context/background"
 import { AlertsProvider } from "@/context/alerts"
 import { LoaderProvider } from "@/context/loader"
 import { PrefersReducedMotionProvider } from "@/context/reducedMotion"
+import { CallOnEscProvider } from "@/context/callOnEsc"
+import { CookieConsentProvider } from "@/context/cookieConsent"
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import GoogleTagManager from "@/components/googleTagManager"
+import CookieConsentBanner from "@/components/cookieConsentBanner"
 
 import "@/styles/main.css"
-import { CallOnEscProvider } from "@/context/callOnEsc"
 
 // We load FA's styles on main.css to prevent FOUC
 config.autoAddCss = false
@@ -78,25 +79,28 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
     <html lang={locale} className={`${nunito.variable} ${openSans.variable}`}>
       <head>
         <link rel="shortcut icon" href="/icons/me.jpg" type="image/jpeg" />
-        {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <PrefersReducedMotionProvider>
-            <CallOnEscProvider>
-              <LoaderProvider>
-                <AlertsProvider>
-                  <BackgroundProvider>
-                    <Header />
-                    <main id="main" className="main">
-                      {children}
-                    </main>
-                    <Footer />
-                  </BackgroundProvider>
-                </AlertsProvider>
-              </LoaderProvider>
-            </CallOnEscProvider>
-          </PrefersReducedMotionProvider>
+          <CookieConsentProvider>
+            <PrefersReducedMotionProvider>
+              <CallOnEscProvider>
+                <LoaderProvider>
+                  <AlertsProvider>
+                    <BackgroundProvider>
+                      <Header />
+                      <main id="main" className="main">
+                        {children}
+                      </main>
+                      {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
+                      <CookieConsentBanner />
+                      <Footer />
+                    </BackgroundProvider>
+                  </AlertsProvider>
+                </LoaderProvider>
+              </CallOnEscProvider>
+            </PrefersReducedMotionProvider>
+          </CookieConsentProvider>
         </NextIntlClientProvider>
       </body>
     </html>

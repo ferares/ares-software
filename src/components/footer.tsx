@@ -3,13 +3,16 @@
 import { useTranslations } from "next-intl"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faCode, faCookieBite, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 import { scrollIntoView } from "@/helpers/scroll"
 
+import { useCookieConsentContext } from "@/context/cookieConsent"
+
 function Footer() {
   const t = useTranslations("Labels")
+  const { setConsentGiven } = useCookieConsentContext()
   return (
     <footer className="footer">
       <div className="max-width">
@@ -34,6 +37,11 @@ function Footer() {
             <li className="footer__menu__item">
               <button type="button" className="footer__menu__link" onClick={() => scrollIntoView("#contact")}>
                 <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label="Send me an email" />
+              </button>
+            </li>
+            <li className="footer__menu__item">
+              <button type="button" className="footer__menu__link" onClick={() => setConsentGiven(null)}>
+                <FontAwesomeIcon className="footer__menu__icon" icon={faCookieBite} aria-label="Cookie settings" />
               </button>
             </li>
           </ul>
