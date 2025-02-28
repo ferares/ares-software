@@ -20,6 +20,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 import "@/styles/main.css"
+import { CallOnEscProvider } from "@/context/callOnEsc"
 
 // We load FA's styles on main.css to prevent FOUC
 config.autoAddCss = false
@@ -82,17 +83,19 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
       <body>
         <NextIntlClientProvider messages={messages}>
           <PrefersReducedMotionProvider>
-            <LoaderProvider>
-              <AlertsProvider>
-                <BackgroundProvider>
-                  <Header />
-                  <main id="main" className="main">
-                    {children}
-                  </main>
-                  <Footer />
-                </BackgroundProvider>
-              </AlertsProvider>
-            </LoaderProvider>
+            <CallOnEscProvider>
+              <LoaderProvider>
+                <AlertsProvider>
+                  <BackgroundProvider>
+                    <Header />
+                    <main id="main" className="main">
+                      {children}
+                    </main>
+                    <Footer />
+                  </BackgroundProvider>
+                </AlertsProvider>
+              </LoaderProvider>
+            </CallOnEscProvider>
           </PrefersReducedMotionProvider>
         </NextIntlClientProvider>
       </body>
