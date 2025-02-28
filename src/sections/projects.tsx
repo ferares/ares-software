@@ -198,7 +198,7 @@ function Projects() {
               <p className="project__paragraph">
                 {selectedProject.desc}
               </p>
-              <div className="project__links">
+              <div id={`project-${selectedProject.id}-links`} className="project__links">
                 {selectedProject.links.map((link, index) => (
                   <Link key={index} className="project__btn btn" href={link.url} target="_blank" rel={link.rel ?? "noopener noreferrer nofollow"}>
                     {link.label}
