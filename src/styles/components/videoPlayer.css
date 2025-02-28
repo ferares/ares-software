@@ -45,6 +45,9 @@
 
 .video-wrapper-mobile {
   display: none;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
 }
 
 @media screen and (max-width: 875px) {
@@ -62,12 +65,12 @@
   }
 
   .video__player {
-    left: 0;
+    left: 8px;
     top: 30px;
     height: 373px;
-    width: 100%;
-    border-bottom-right-radius: 340px;
-    border-bottom-left-radius: 340px;
+    width: unset;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     overflow: hidden;
   }
 
@@ -79,7 +82,7 @@
     left: 10px;
     width: 178px;
     border-top-right-radius: 0;
-    border-bottom-right-radius: 20%;
-    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
   }
 }

@@ -23,7 +23,7 @@ function ProjectsCarousel({ slides, options }: ProjectsCarouselProps) {
   return (
     <div className="project__carousel-wrapper">
       <div className="project__carousel-frame-wrapper">
-        <Image className="project__carousel-frame" src="/imgs/iphone.svg" alt="" height={550} width={270} />
+        <Image className="project__carousel-frame" src="/imgs/iphone.svg" alt="" height={550} width={254} />
         <button type="button" className="carousel__arrow carousel__arrow-left" onClick={() => carouselNav("prev")}>
           <FontAwesomeIcon icon={faChevronLeft} className="carousel__arrow__icon" />
         </button>
