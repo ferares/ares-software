@@ -19,6 +19,7 @@ import VideoPlayer, { type Videos } from "@/components/videoPlayer"
 import ProjectsCarousel from "@/components/projectsCarousel"
 
 type Project = {
+  id: string
   title: string
   images: { desktop: string, mobile: string }
   desc: string
@@ -35,6 +36,7 @@ function Projects() {
 
   const personalProjects: Project[] = useMemo(() => [
     {
+      id: "buses",
       title: "BusesUY",
       images: { desktop: "/imgs/projects/busesuy/desktop.png", mobile: "/imgs/projects/busesuy/mobile.png" },
       desc: t("Sections.Projects.projects.busesuy"),
@@ -45,6 +47,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png"}, mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png"}},
     },
     {
+      id: "crabe",
       title: "La Marche Du Crabe",
       images: { desktop: "/imgs/projects/crabe/desktop.png", mobile: "/imgs/projects/crabe/mobile.png" },
       desc: t("Sections.Projects.projects.crabe"),
@@ -56,6 +59,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/crabe/desktop.webm", poster: "/imgs/projects/crabe/poster-desktop.png" }, mobile: { src: "/vids/crabe/mobile.webm", poster: "/imgs/projects/crabe/poster-mobile.png" }},
     },
     {
+      id: "arbolado",
       title: "Arbolado Urbano",
       images: { desktop: "/imgs/projects/arbolado/desktop.png", mobile: "/imgs/projects/arbolado/mobile.png" },
       desc: t("Sections.Projects.projects.arbolado"),
@@ -67,6 +71,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/projects/arbolado/poster-desktop.png" }, mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/projects/arbolado/poster-mobile.png" }},
     },
     {
+      id: "papelapp",
       title: "Papelapp",
       images: { desktop: "/imgs/projects/papelapp/desktop.png", mobile: "/imgs/projects/papelapp/mobile.png" },
       desc: t("Sections.Projects.projects.papelapp"),
@@ -78,6 +83,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/papelapp/desktop.webm", poster: "/imgs/projects/papelapp/poster-desktop.png" }, mobile: { src: "/vids/papelapp/mobile.webm", poster: "/imgs/projects/papelapp/poster-mobile.png" }},
     },
     {
+      id: "ecouter",
       title: "Écouter",
       images: { desktop: "/imgs/projects/ecouter/desktop.png", mobile: "/imgs/projects/ecouter/mobile.png" },
       desc: t("Sections.Projects.projects.ecouter"),
@@ -91,6 +97,7 @@ function Projects() {
   
   const clientPorjects: Project[] = [
     {
+      id: "salam",
       title: "Salam Hello",
       images: { desktop: "/imgs/projects/salam/desktop.png", mobile: "/imgs/projects/salam/mobile.png" },
       desc: t("Sections.Projects.projects.salam"),
@@ -101,6 +108,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/salam/desktop.webm", poster: "/imgs/projects/salam/poster-desktop.png" }, mobile: { src: "/vids/salam/mobile.webm", poster: "/imgs/projects/salam/poster-mobile.png" }},
     },
     {
+      id: "grigadale",
       title: "Grigadale",
       images: { desktop: "/imgs/projects/grigadale/desktop.png", mobile: "/imgs/projects/grigadale/mobile.png" },
       desc: t("Sections.Projects.projects.grigadale"),
@@ -111,6 +119,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/grigadale/desktop.webm", poster: "/imgs/projects/grigadale/poster-desktop.png" }, mobile: { src: "/vids/grigadale/mobile.webm", poster: "/imgs/projects/grigadale/poster-mobile.png" }},
     },
     {
+      id: "ionic",
       title: "Ionic Themes",
       images: { desktop: "/imgs/projects/ionic/desktop.png", mobile: "/imgs/projects/ionic/mobile.png" },
       desc: t("Sections.Projects.projects.ionic"),
@@ -121,6 +130,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/projects/ionic/poster-desktop.png" }, mobile: { src: "/vids/ionic/mobile.webm", poster: "/imgs/projects/ionic/poster-mobile.png" }},
     },
     {
+      id: "atlantico",
       title: "Atlántico Desarrollos",
       images: { desktop: "/imgs/projects/atlantico/desktop.png", mobile: "/imgs/projects/atlantico/mobile.png" },
       desc: t("Sections.Projects.projects.atlantico"),
@@ -131,6 +141,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/atlantico/desktop.webm", poster: "/imgs/projects/atlantico/poster-desktop.png" }, mobile: { src: "/vids/atlantico/mobile.webm", poster: "/imgs/projects/atlantico/poster-mobile.png" }},
     },
     {
+      id: "pipina",
       title: "Pipiña",
       images: { desktop: "/imgs/projects/pipina/desktop.png", mobile: "/imgs/projects/pipina/mobile.png" },
       desc: t("Sections.Projects.projects.pipina"),
@@ -141,6 +152,7 @@ function Projects() {
       videos: { desktop: { src: "/vids/pipina/desktop.webm", poster: "/imgs/projects/pipina/poster-desktop.png" }, mobile: { src: "/vids/pipina/mobile.webm", poster: "/imgs/projects/pipina/poster-mobile.png" }},
     },
     {
+      id: "angular",
       title: "Angular Templates",
       images: { desktop: "/imgs/projects/angular/desktop.png", mobile: "/imgs/projects/angular/mobile.png" },
       desc: t("Sections.Projects.projects.angular"),
@@ -152,18 +164,16 @@ function Projects() {
     },
   ]
 
-  const projectToElement = useCallback((project: Project, key: number) => {
+  const projectToElement = useCallback((project: Project) => {
     return (
-      <div key={key} className="embla__slide">
-        <button type="button" className="project" onClick={() => setSelectedProject(project)}>
-          <h2 className="project__title">
-            <span className="btn btn--inverse">{t("Labels.view-details")}</span>
-            <span className="project__title__label">{project.title}</span>
-          </h2>
-          <Image className="project__img-desktop" src={project.images.desktop} alt="" height={500} width={500} />
-          <Image className="project__img-mobile" src={project.images.mobile} alt="" height={300} width={300} />
-        </button>
-      </div>
+      <button id={`project-${project.id}`} type="button" className="project" onClick={() => setSelectedProject(project)}>
+        <h2 className="project__title">
+          <span className="btn btn--inverse">{t("Labels.view-details")}</span>
+          <span className="project__title__label">{project.title}</span>
+        </h2>
+        <Image className="project__img-desktop" src={project.images.desktop} alt="" height={500} width={500} />
+        <Image className="project__img-mobile" src={project.images.mobile} alt="" height={300} width={300} />
+      </button>
     )
   }, [t])
 
