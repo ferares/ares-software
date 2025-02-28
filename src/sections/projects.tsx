@@ -124,7 +124,7 @@ function Projects() {
       images: { desktop: "/imgs/projects/ionic/desktop.png", mobile: "/imgs/projects/ionic/mobile.png" },
       desc: t("Sections.Projects.projects.ionic"),
       links: [
-        { url: "https://ionic-themes.com", label: t("Labels.visit-site") },
+        { url: "https://ionicthemes.com/", label: t("Labels.visit-site") },
       ],
       technologies: ["angular", "typescript", "html", "sass", "git"],
       videos: { desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/projects/ionic/poster-desktop.png" }, mobile: { src: "/vids/ionic/mobile.webm", poster: "/imgs/projects/ionic/poster-mobile.png" }},
