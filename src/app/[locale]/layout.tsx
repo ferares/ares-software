@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import { Nunito, Open_Sans } from "next/font/google"
 
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 
 import { GoogleTagManager } from "@next/third-parties/google"
 
@@ -29,23 +29,36 @@ const { GTM_ID, APP_URL } = process.env
 const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400"], style: ["italic", "normal"], variable: "--font-nunito" })
 const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400"], variable: "--font-open-sans" })
 
-const metadataBase = new URL(APP_URL ?? "")
-const title = "Ares Software"
-const description = "Ares Software"
 
 export const viewport: Viewport = {
+  colorScheme: "only light",
   themeColor: "black",
 }
 
-export const metadata: Metadata = {
-  title,
-  description,
-  metadataBase,
-  openGraph: {
-    type: "website",
-    description,
+export async function generateMetadata(props: { params: Promise<{ locale: LocaleOption }> }): Promise<Metadata> {
+  const { locale } = await props.params
+  const t = await getTranslations({ locale, namespace: "Metadata" })
+  const title = "Ares Software"
+  const description = t("description")
+  const appUrl = APP_URL
+  return {
     title,
-    images: "/imgs/me.jpg",
+    metadataBase: new URL(APP_URL ?? ""),
+    authors: [{ name: "Ares Software", url: "https://ares.uy" }],
+    description,
+    robots: "index,follow",
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: `${appUrl}/imgs/share-card.jpg"`
+    },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      images: `${appUrl}/imgs/share-card.jpg`
+    },
   }
 }
 

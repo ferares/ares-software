@@ -37,6 +37,9 @@
     "contact-success": "Thank you, message sent successfully",
     "contact-submitting": "Sending message please wait"
   },
+  "Metadata": {
+    "description": "Accessibility focused web development"
+  },
   "Sections": {
     "About": {
       "title": "About Me",

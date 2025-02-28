@@ -37,6 +37,9 @@
     "contact-success": "Gracias, mensaje enviado con éxito",
     "contact-submitting": "Enviando mensaje, espere por favor"
   },
+  "Metadata": {
+    "description": "Desarrollo web enfocado en la accesibilidad"
+  },
   "Sections": {
     "About": {
       "title": "Acerca de mi",
