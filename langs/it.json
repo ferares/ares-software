@@ -1,0 +1,73 @@
+{
+  "Labels": {
+    "developed": "Sviluppato",
+    "in": "in",
+    "scroll-down": "Scorri verso il basso",
+    "change-background": "Cambia immagine di sfondo",
+    "close": "Chiudi",
+    "change-language": "Cambia lingua",
+    "name": "Nome",
+    "email": "Email",
+    "required": "obbligatorio",
+    "message": "Messaggio",
+    "send": "Invia",
+    "developed-using": "Sviluppato utilizzando",
+    "view-details": "Visualizza Dettagli",
+    "view-project": "Visualizza Progetto",
+    "visit-site": "Visita il Sito",
+    "try-it": "Provalo",
+    "download-cv": "Scarica CV",
+    "contact-me": "Contattami",
+    "languages": "Lingue",
+    "frameworks": "Framework",
+    "e-commerce": "E-commerce",
+    "databases": "Database",
+    "infrastructure": "Infrastruttura",
+    "platforms": "Piattaforme",
+    "tools": "Strumenti"
+  },
+  "Messages": {
+    "changing-bg-img": "Cambio immagine di sfondo",
+    "bg-img-changed": "Immagine di sfondo cambiata",
+    "input-an-email": "Inserisci un'email valida",
+    "input-a-message": "Inserisci un messaggio",
+    "invalid-captcha": "Verifica Captcha fallita, esegui la verifica",
+    "invalid-form": "Invio del modulo fallito. Controlla i campi obbligatori",
+    "error": "Si è verificato un errore, riprova più tardi",
+    "contact-success": "Grazie, messaggio inviato con successo",
+    "contact-submitting": "Invio messaggio in corso, attendi"
+  },
+  "Metadata": {
+    "description": "Sviluppo web focalizzato sull'accessibilità"
+  },
+  "Sections": {
+    "About": {
+      "title": "Su di Me",
+      "content": "<p>Sono Fermín, uno Sviluppatore Software Freelance con una passione per <b>l'accessibilità web</b> e lavoro da <a>La Paloma, Uruguay</a> 🏖️</p><p>La maggior parte della mia esperienza è nello <b>sviluppo web</b>, lavorando sia su progetti semplici come <b>landing page</b> che su progetti complessi come <b>applicazioni web</b>, <b>siti e-commerce</b>, <b>blog</b>, <b>giochi</b>, ecc.</p><p>Ho lavorato sia da solo che in team per diverse aziende e ho molta esperienza nel lavoro remoto 👨‍💻</p><p>Parlo <b>spagnolo</b> 🇪🇸, <b>inglese</b> 🇬🇧 e <b>italiano</b> 🇮🇹, e un po' di <b>francese</b> 🇫🇷 e <b>portoghese</b> 🇵🇹</p><p>Continua a scorrere per saperne di più sui progetti su cui sto lavorando 🚀, alcuni dei miei lavori per clienti e le tecnologie con cui ho familiarità 🛸</p>",
+      "cv-link": "/docs/fermin-ares.cv.it.pdf"
+    },
+    "Projects": {
+      "personal-projects": "Progetti Personali",
+      "client-projects": "Progetti per Clienti",
+      "projects": {
+        "busesuy": "Un motore di ricerca per le linee di autobus a medio e lungo raggio in Uruguay che può calcolare i viaggi con trasferimenti. Il primo nel suo genere nel paese.",
+        "arbolado": "Uno strumento web interattivo per esplorare i dati raccolti da diversi censimenti sugli alberi nelle strade di diverse città.",
+        "papelapp": "Un'app web per calcolare il costo al metro dei rotoli di carta igienica.",
+        "ecouter": "Un'app web per insegnanti e studenti di lingue per accedere facilmente alle tracce audio dei loro libri di testo.",
+        "crabe": "Un gioco web per 2 giocatori a distanza basato sul gioco da tavolo \"La Marche Du Crabe\".",
+        "salam": "Un tema Shopify sviluppato da zero e personalizzato per un cliente.",
+        "grigadale": "Un sito web creato per pubblicare l'intera collezione di alberi di un arboreto privato. Con un'interfaccia intuitiva, una mappa interattiva e una sezione blog.",
+        "angular": "Un sito e-commerce personalizzato creato per vendere template per sviluppatori che lavorano con il framework Angular.",
+        "ionic": "Un sito e-commerce personalizzato creato per vendere template per sviluppatori che lavorano con il framework Ionic.",
+        "atlantico": "Un sito web aziendale sviluppato per una società di sviluppo immobiliare.",
+        "pipina": "Un sito web per un brand che sviluppa giochi per aiutare i bambini con difficoltà di scrittura e/o lettura."
+      }
+    },
+    "Contact": {
+      "title": "Contatto"
+    },
+    "Technologies": {
+      "title": "Tecnologie"
+    }
+  }
+}
