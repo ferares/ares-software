@@ -19,7 +19,6 @@ import { CookieConsentProvider } from "@/context/cookieConsent"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import GoogleTagManager from "@/components/googleTagManager"
-import CookieConsentBanner from "@/components/cookieConsentBanner"
 
 import "@/styles/main.css"
 
@@ -82,25 +81,24 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <CookieConsentProvider>
-            <PrefersReducedMotionProvider>
-              <CallOnEscProvider>
-                <LoaderProvider>
-                  <AlertsProvider>
-                    <BackgroundProvider>
+          <PrefersReducedMotionProvider>
+            <CallOnEscProvider>
+              <LoaderProvider>
+                <AlertsProvider>
+                  <BackgroundProvider>
+                    <CookieConsentProvider>
                       <Header />
                       <main id="main" className="main">
                         {children}
                       </main>
                       {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
-                      <CookieConsentBanner />
                       <Footer />
-                    </BackgroundProvider>
-                  </AlertsProvider>
-                </LoaderProvider>
-              </CallOnEscProvider>
-            </PrefersReducedMotionProvider>
-          </CookieConsentProvider>
+                    </CookieConsentProvider>
+                  </BackgroundProvider>
+                </AlertsProvider>
+              </LoaderProvider>
+            </CallOnEscProvider>
+          </PrefersReducedMotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

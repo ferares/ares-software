@@ -8,6 +8,7 @@ interface GoogleTagManagerProps { gtmId: string }
 
 function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
   const { consentGiven } = useCookieConsentContext()
+
   if (!consentGiven) return null
   return <Gtm gtmId={gtmId} />
 }

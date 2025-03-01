@@ -12,7 +12,7 @@ import { type AlertType } from "@/context/alerts"
 interface AlertComponentProps extends PropsWithChildren {
   type: AlertType
   timeout?: number
-  removeAlert: () => void
+  removeAlert?: () => void
 }
 
 export default function AlertComponent({ type, timeout, children, removeAlert }: AlertComponentProps) {
@@ -27,7 +27,7 @@ export default function AlertComponent({ type, timeout, children, removeAlert }:
   }, [timeout])
 
   return (
-    <div className={`alert alert-${type} ${hiding ? "hide" : ""}`} role="alert" onAnimationEnd={() => (hiding) && removeAlert()}>
+    <div className={`alert alert-${type} ${hiding ? "hide" : ""}`} role="alert" onAnimationEnd={() => (hiding) && removeAlert?.()}>
       <button type="button" className="close btn-close" title={t("close")} onClick={() => setHiding(true)}>
         <FontAwesomeIcon icon={faClose} />
       </button>

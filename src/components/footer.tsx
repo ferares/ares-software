@@ -12,7 +12,7 @@ import { useCookieConsentContext } from "@/context/cookieConsent"
 
 function Footer() {
   const t = useTranslations("Labels")
-  const { setConsentGiven } = useCookieConsentContext()
+  const { showCookieConsentAlert } = useCookieConsentContext()
   return (
     <footer className="footer">
       <div className="max-width">
@@ -36,12 +36,12 @@ function Footer() {
             </li>
             <li className="footer__menu__item">
               <button type="button" className="footer__menu__link" onClick={() => scrollIntoView("#contact")}>
-                <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label="Send me an email" />
+                <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label={t("contact-me")} />
               </button>
             </li>
             <li className="footer__menu__item">
-              <button type="button" className="footer__menu__link" onClick={() => setConsentGiven(null)}>
-                <FontAwesomeIcon className="footer__menu__icon" icon={faCookieBite} aria-label="Cookie settings" />
+              <button type="button" className="footer__menu__link" onClick={() => showCookieConsentAlert()}>
+                <FontAwesomeIcon className="footer__menu__icon" icon={faCookieBite} aria-label={t("cookie-settings")} />
               </button>
             </li>
           </ul>

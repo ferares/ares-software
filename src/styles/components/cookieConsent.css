@@ -1,0 +1,14 @@
+.cookie-alert {
+  gap: 1rem;
+}
+
+.cookie-alert__btns {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.cookie-alert__btn {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+}

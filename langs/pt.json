@@ -26,7 +26,8 @@
     "platforms": "Plataformas",
     "tools": "Ferramentas",
     "accept": "Aceitar",
-    "decline": "Recusar"
+    "decline": "Recusar",
+    "cookie-settings": "Configurações de cookies"
   },
   "Messages": {
     "changing-bg-img": "Alterando imagem de fundo",
@@ -38,7 +39,7 @@
     "error": "Ocorreu um erro, por favor, tente novamente mais tarde",
     "contact-success": "Obrigado, mensagem enviada com sucesso",
     "contact-submitting": "Enviando mensagem, por favor, aguarde",
-    "cookies": "Usamos cookies opcionais para melhorar sua experiência e entender como você interage com nosso site.<br></br>Esses cookies não são obrigatórios, e você pode escolher recusá-los.<br></br>Você pode alterar suas preferências a qualquer momento em nossas Configurações de cookies"
+    "cookies": "Usamos cookies opcionais para rastrear anonimamente o uso do site e melhorar sua experiência.<br></br>Você pode recusar se preferir.<br></br>Você pode alterar sua preferência mais tarde em nossas configurações de cookies"
   },
   "Metadata": {
     "description": "Desenvolvimento web focado em acessibilidade"
