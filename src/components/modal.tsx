@@ -53,15 +53,15 @@ export default function Modal({ id, className, open, onClose, title, children, l
   return (
     <dialog ref={dialogRef} onClick={onClick} className={`modal ${hiding ? "hide" : (open ? "show" : "")} ${className}`} aria-labelledby={labelledBy} onTransitionEnd={handleClose}>
       <div className="modal-content">
+        <button type="button" className="modal-close" aria-label={t("close")} onClick={startClosing}>
+          <FontAwesomeIcon icon={faXmark} />
+        </button>
         <div className="modal-header">
           {title && (
             <h3 id={`modal-${id}-title`}>
               {title}
             </h3>
           )}
-          <button type="button" className="modal-close" aria-label={t("close")} onClick={startClosing}>
-            <FontAwesomeIcon icon={faXmark} />
-          </button>
         </div>
         <div className="modal-body">
           {children}

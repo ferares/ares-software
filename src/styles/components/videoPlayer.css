@@ -28,19 +28,31 @@
 }
 
 .video__control {
+  background-color: transparent;
+  border: 0;
+  margin: 20px 90px;
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.video__control__content {
   color: #000;
   background-color: #eae7dc;
   border: 0;
   position: absolute;
-  bottom: 31px;
-  left: 89px;
+  bottom: 10px;
+  left: -1px;
   padding: 0;
   width: 2rem;
   height: 2rem;
-  border-top-right-radius: 50%;
   font-size: 1rem;
   line-height: 1;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top-right-radius: 10px;
 }
 
 .video-wrapper-mobile {
@@ -75,6 +87,10 @@
   }
 
   .video__control {
+    margin: 0;
+  }
+
+  .video__control__content {
     background-color: #fff;
     box-shadow: 0 -2px 11px #0003;
     border-top: 1px solid #d3d3d3;

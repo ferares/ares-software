@@ -188,10 +188,9 @@ function Projects() {
           {t("Sections.Projects.client-projects")}
         </h2>
         <ProjectsCarousel slides={clientPorjects.map(projectToElement)} options={carouselOptions} />
-        <Modal id="project-modal" labelledBy={selectedProject?.title ?? ""} onClose={() => setSelectedProject(undefined)} open={!!selectedProject}>
+        <Modal id="project" title={selectedProject?.title} labelledBy="modal-project-title" onClose={() => setSelectedProject(undefined)} open={!!selectedProject}>
           {selectedProject && (
             <>
-              <h3 className="project__modal-title">{selectedProject.title}</h3>
               <div className="project__carousel">
                 <VideoPlayer videos={selectedProject.videos} />
               </div>

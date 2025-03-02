@@ -15,36 +15,72 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  max-width: 1000px;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 .contact__form .btn {
   margin-left: auto;
 }
 
-.input-field-row label{ margin-bottom: 10px; display: block; font-size: .9em; }
+.input-field-row label {
+  margin-bottom: 10px;
+  display: block;
+  font-size: .9em;
+}
 
-/*inputs*/
 input,
 select,
-textarea{ font-family: var(--font-nunito); padding: 10px; width: 100%; border: none; border-radius: 5px; resize: none; font-size: 1em; line-height: 1.3; background: #f1f2f6; border: 1px solid transparent; transition: border .3s; }
+textarea {
+  font-family: var(--font-nunito);
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  font-size: 1em;
+  line-height: 1.3;
+  background: #f1f2f6;
+  border: 1px solid transparent;
+  transition: border .3s;
+}
 
 input:focus,
 select:focus,
-textarea:focus{ border: 1px solid #a1a9c3; }
+textarea:focus {
+  border: 1px solid #a1a9c3;
+}
 
 input::placeholder,
 select::placeholder,
-textarea::placeholder{ opacity: .67 }
+textarea::placeholder {
+  opacity: .67
+}
 
 input:hover,
 select:hover,
-textarea:hover{ border: 1px solid #a1a9c3; }
+textarea:hover {
+  border: 1px solid #a1a9c3;
+}
 
-/*invalid feedback*/
-.invalid-feedback{ color: #F00; font-size: .8em; display: none; margin-top: 10px; opacity: 0; visibility: hidden; max-height: 0; }
+.invalid-feedback {
+  color: #F00;
+  font-size: .8em;
+  display: none;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
 .was-validated *:invalid + .invalid-feedback,
 .was-validated .invalid-feedback.show,
-.was-validated *[aria-invalid="true"] + .invalid-feedback{ opacity: 1; display: block; visibility: visible; max-height: unset; }
+.was-validated *[aria-invalid="true"] + .invalid-feedback {
+  opacity: 1;
+  display: block;
+  visibility: visible;
+  max-height: unset;
+}
 
 @media (prefers-reduced-motion) {
   input,

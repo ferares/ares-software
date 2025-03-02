@@ -46,7 +46,9 @@ function VideoPlayer({ videos }: VideoPlayerProps) {
         <div className="video__frame-wrapper">
           <Image className="video__frame" src={macbookImage} height={700} width={700} alt="" />
           <button className="video__control" type="button" onClick={() => videoDesktopRef.current?.paused ? videoDesktopRef.current?.play(): videoDesktopRef.current?.pause() }>
-            <FontAwesomeIcon icon={buttonIcon} />
+            <span className="video__control__content">
+              <FontAwesomeIcon icon={buttonIcon} />
+            </span>
           </button>
         </div>
         <video ref={videoDesktopRef} className="video__player" poster={videos.desktop.poster} autoPlay={!prefersReducedMotion} muted loop>
@@ -58,7 +60,9 @@ function VideoPlayer({ videos }: VideoPlayerProps) {
         <div className="video__frame-wrapper">
           <Image className="video__frame" src={iphoneImage} height={700} width={700} alt="" />
           <button className="video__control" type="button" onClick={() => videoMobileRef.current?.paused ? videoMobileRef.current?.play(): videoMobileRef.current?.pause() }>
-            <FontAwesomeIcon icon={buttonIcon} />
+            <span className="video__control__content">
+              <FontAwesomeIcon icon={buttonIcon} />
+            </span>
           </button>
         </div>
         <video ref={videoMobileRef} className="video__player" poster={videos.mobile.poster} autoPlay={!prefersReducedMotion} muted loop>

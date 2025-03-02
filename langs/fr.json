@@ -47,7 +47,7 @@
   "Sections": {
     "About": {
       "title": "À propos de moi",
-      "content": "<p>Je suis Fermín, un développeur de software freelance passionné par <b>l'accessibilité web</b>, travaillant depuis <a>La Paloma, Uruguay</a> 🏖️</p><p>La majeure partie de mon expérience est dans le <b>développement web</b>, travaillant sur des projets simples comme des <b>landing pages</b> et des projets complexes comme des <b>applications web</b>, des <b>sites e-commerce</b>, des <b>blogs</b>, des <b>jeux</b>, etc.</p><p>J'ai travaillé seul et en équipe pour différentes entreprises, et j'ai beaucoup d'expérience dans le travail à distance 👨‍💻</p><p>Je parle <b>espagnol</b> 🇪🇸, <b>anglais</b> 🇬🇧 et <b>italien</b> 🇮🇹, ainsi qu'un peu de <b>français</b> 🇫🇷 et de <b>portugais</b> 🇵🇹</p><p>Continuez à faire défiler pour en savoir plus sur les projets sur lesquels je travaille 🚀, certains de mes travaux pour des clients et les technologies que je maîtrise 🛸</p>",
+      "content": "<p>Je suis Fermín, un développeur de software freelance passionné par <b>l'accessibilité web</b>, travaillant depuis <a>La Paloma, Uruguay</a> 🏖️</p><p>La majeure partie de mon expérience est dans le <b>développement web</b>, travaillant sur des projets simples comme des <b>landing pages</b> et des projets complexes comme des <b>applications web</b>, des <b>sites e-commerce</b>, des <b>blogs</b>, des <b>jeux</b>, etc.</p><p>J'ai travaillé seul et en équipe pour différentes entreprises, et j'ai beaucoup d'expérience dans le travail à distance 👨‍💻</p><p>Je parle <b>espagnol</b> 🇪🇸, <b>anglais</b> 🇬🇧 et <b>italien</b> 🇮🇹, ainsi qu'un peu de <b>français</b> 🇫🇷 et de <b>portugais</b> 🇧🇷</p><p>Continuez à faire défiler pour en savoir plus sur les projets sur lesquels je travaille 🚀, certains de mes travaux pour des clients et les technologies que je maîtrise 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.fr.pdf"
     },
     "Projects": {
@@ -58,7 +58,7 @@
         "arbolado": "Un outil web interactif pour explorer les données recueillies lors de différents recensements sur les arbres dans les rues de différentes villes.",
         "papelapp": "Une application web pour calculer le coût au mètre des rouleaux de papier toilette.",
         "ecouter": "Une application web pour les enseignants et les étudiants en langues pour accéder facilement aux pistes audio de leurs manuels.",
-        "crabe": "Un jeu web à distance pour 2 joueurs basé sur le jeu de société \"La Marche Du Crabe\".",
+        "crabe": "Un jeu web à distance pour deux joueurs basé sur le jeu de société \"La Marche Du Crabe\".",
         "salam": "Un thème Shopify développé à partir de zéro et personnalisé pour un client.",
         "grigadale": "Un site web créé pour publier la collection complète d'arbres d'un arboretum privé. Avec une interface intuitive, une carte interactive et une section blog.",
         "angular": "Un site e-commerce personnalisé créé pour vendre des modèles pour les développeurs travaillant avec le framework Angular.",

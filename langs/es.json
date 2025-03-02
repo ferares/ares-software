@@ -46,8 +46,8 @@
   },
   "Sections": {
     "About": {
-      "title": "Acerca de mi",
-      "content": "<p>Hola, soy Fermín, un desarrollador de software independiente con pasión por la <b>accesibilidad web</b> trabajando remoto desde <a>La Paloma, Uruguay</a> 🏖️</p><p>Mi experiencia está enfocada en el desarrollo web y de <b>web apps</b>, tanto para proyectos sencillos como <b>landing pages</b> y más complejos como <b>web apps</b>, <b>e-commerces</b>, <b>blogs</b>, <b>juegos</b>, etc.</p><p>Trabajo solo o en equipos para diferentes empresas y tengo amplia experiencia trabajando remoto 👨‍💻</p><p>Hablo <b>Español</b> 🇪🇸 <b>Inglés</b> 🇬🇧 e <b>Italiano</b> 🇮🇹 y un poco de <b>Fracés</b> 🇫🇷 y <b>Portugués</b> 🇵🇹</p><p>Continúa hacia abajo para saber más sobre los proyectos en los que trabajo 🚀 algunos de mis trabajos para clientes y las tecnologías que uso habitualmente 🛸</p>",
+      "title": "Acerca de mí",
+      "content": "<p>Hola, soy Fermín, un desarrollador de software independiente con pasión por la <b>accesibilidad web</b> trabajando remoto desde <a>La Paloma, Uruguay</a> 🏖️</p><p>Mi experiencia está enfocada en el desarrollo web y de <b>web apps</b>, tanto para proyectos sencillos como <b>landing pages</b> y más complejos como <b>web apps</b>, <b>e-commerces</b>, <b>blogs</b>, <b>juegos</b>, etc.</p><p>Trabajo solo o en equipos para diferentes empresas y tengo amplia experiencia trabajando remoto 👨‍💻</p><p>Hablo <b>Español</b> 🇪🇸 <b>Inglés</b> 🇬🇧 e <b>Italiano</b> 🇮🇹 y un poco de <b>Fracés</b> 🇫🇷 y <b>Portugués</b> 🇧🇷</p><p>Continúa hacia abajo para saber más sobre los proyectos en los que trabajo 🚀 algunos de mis trabajos para clientes y las tecnologías que uso habitualmente 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.es.pdf"
     },
     "Projects": {
@@ -58,7 +58,7 @@
         "arbolado": "Una herramienta web interactiva para explorar los datos de distintos censos de arbolado urbano.",
         "papelapp": "Una app web para calcular el costo por metro de rollos de papel higiénico.",
         "ecouter": "Una app web para profesores y estudiantes de lenguas que permite acceder a los audios de sus libros de estudio con facilidad.",
-        "crabe": "Un juego para 2 jugadores remoto basado en el juego de mesa \"La Marche Du Crabe\"",
+        "crabe": "Un juego para dos jugadores remoto basado en el juego de mesa \"La Marche Du Crabe\"",
         "salam": "Un tema para una tienda de Shopify desarrollado desde cero para un cliente.",
         "grigadale": "Un sitio web para publicar la colección entera de árboles de un arboretum privado en Buenos Aires. Con una interfáz intuitiva, mapa interactivo y un blog.",
         "angular": "Una tienda en línea personalizada para vender templates para desarrolladores que trabajan con Angular.",

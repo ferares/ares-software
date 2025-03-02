@@ -13,7 +13,7 @@ import { useAlertsContext } from "@/context/alerts"
 
 import LangMenu from "./langMenu"
 
-import meImg from "@/../public/icons/me.jpg"
+import meImg from "@/../public/imgs/me.jpg"
 
 function Header() {
   const { newBackground, loadingBg } = useBackgroundContext()

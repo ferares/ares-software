@@ -30,8 +30,15 @@
   animation: backgroundFadeIn .3s ease;
 }
 
+.modal h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 .modal-content {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: #FFF;
   width: 90%;
   max-width: 1024px;
@@ -44,10 +51,9 @@
 }
 
 .modal-close {
-  position: absolute;
+  position: sticky;
   background-color: transparent;
-  right: 15px;
-  top: 15px;
+  top: 0;
   font-size: 1.6em;
   border: none;
   padding: 0;
@@ -55,6 +61,8 @@
   height: 40px;
   text-align: center;
   list-style: 40px;
+  z-index: 10;
+  margin-left: auto;
 }
 
 .modal .modal-content::-webkit-scrollbar {
@@ -89,9 +97,9 @@
 }
 
 @media (prefers-reduced-motion) {
-  .modal {
-    /* transition: none */
-  }
+  /* .modal {
+    transition: none
+  } */
   
   .modal.hide::backdrop {
     animation: none;
