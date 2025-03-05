@@ -31,6 +31,7 @@
 }
 
 .modal h3 {
+  font-family: var(--font-texts);
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -39,7 +40,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background: #FFF;
+  background: var(--bg-color-modal);
   width: 90%;
   max-width: 1024px;
   height: auto;
@@ -53,6 +54,7 @@
 .modal-close {
   position: sticky;
   background-color: transparent;
+  color: var(--text-color);
   top: 0;
   font-size: 1.6em;
   border: none;

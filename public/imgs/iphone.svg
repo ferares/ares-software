@@ -36,12 +36,12 @@
      inkscape:current-layer="svg9" />
   <path
      id="path12"
-     style="fill:#d8c3a5;stroke:#d8c3a5;stroke-width:0.736721"
+     style="fill:#34495e;stroke:#34495e;stroke-width:0.736721"
      d="m 466.39675,-23.927214 c -26.44687,-1.226994 -76.92252,-2.535112 -103.38976,-2.536618 l 68.54849,80.366389 -1.30793,813.019023 -67.10976,58.295 113.2792,7.62916 z"
      sodipodi:nodetypes="ccccccc" />
   <path
      id="rect12"
-     style="fill:#d8c3a5;stroke:#d8c3a5;stroke-width:0.737781"
+     style="fill:#34495e;stroke:#34495e;stroke-width:0.737781"
      d="m -32.01437,-26.832238 c 38.8904977,0.976763 74.441598,0.0022 113.34007,0 L 18.509142,54.816625 19.830998,861.58529 90.388223,933.24002 H -31.10344 Z"
      sodipodi:nodetypes="ccccccc" />
   <g
@@ -119,7 +119,7 @@
      height="920"
      fill="url(#pattern0_3202_1318)"
      id="rect8"
-     style="stroke:#d8c3a5;stroke-opacity:1"
+     style="stroke:#34495e;stroke-opacity:1"
      sodipodi:insensitive="true"
      x="0"
      y="0" />

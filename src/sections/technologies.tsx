@@ -60,7 +60,7 @@ function Technologies() {
               {(category.list.map((techKey, techIndex) => {
                 const technology = technologies[techKey]
                 return (
-                  <Badge key={`${catIndex}-${techIndex}`} icon={technology.icon} size={technology.iconSize} title={technology.title} />
+                  <Badge key={`${catIndex}-${techIndex}`} icon={technology.icon} size={technology.iconSize} title={technology.title} small />
                 )
               }))}
             </ul>

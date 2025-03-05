@@ -1,3 +1,20 @@
 :root {
-  
+  --max-width: 1200px;
+  --font-titles: var(--font-nunito), sans-serif;
+  --font-texts: var(--font-openSans), sans-serif;
+  --bg-color-header: #2C3E50;
+  --bg-color-footer: #2C3E50;
+  --bg-color-modal: #2C3E50;
+  --bg-color-alert: #1E293B;
+  --bg-color-about: #1E2837;
+  --bg-color-projects: #34495E;
+  --bg-color-contact: #1E2837;
+  --bg-color-technologies: #34495E;
+  --primary-color: #2DD4BF;
+  --accent-color: #34D399;
+  --title-color: #F3F4F6;
+  --button-bg-color: #3498DB;
+  --button-hover-bg-color: #2ECC71;
+  --text-color: #E6E6E6;
+  --text-color-dark: #1E293B;
 }

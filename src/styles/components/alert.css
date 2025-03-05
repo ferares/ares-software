@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-  background: #EEE;
+  background: var(--bg-color-alert);
   padding: 20px;
   margin-left: 10px;
   padding-right: 25px;
@@ -38,10 +38,11 @@
   z-index: 100001;
 }
 
-.alert .close {
+.alert-close {
   border: none;
   font-size: 1.2em;
-  color: #999;
+  background-color: transparent;
+  color: var(--text-color);
   position: absolute;
   top: 0;
   right: 10px;

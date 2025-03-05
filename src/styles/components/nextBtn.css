@@ -2,6 +2,7 @@
   background-color: transparent;
   border: 0;
   bottom: 1rem;
+  cursor: pointer;
   font-size: 2.5rem;
   position: absolute;
   animation: jump 1.25s ease-in-out infinite;

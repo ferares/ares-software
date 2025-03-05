@@ -2,11 +2,11 @@
   align-items: center;
   display: flex;
   cursor: default;
-  color: #fff;
+  color: var(--text-color);
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  background-color: #14213d;
+  background-color: #121212;
   border-radius: 1rem;
   padding: 1rem 2rem;
   text-align: center;

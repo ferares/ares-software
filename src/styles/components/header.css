@@ -1,6 +1,6 @@
 .header {
   padding: 1rem;
-  background-color: #000;
+  background-color: var(--bg-color-header);
 }
 
 .navbar__content {

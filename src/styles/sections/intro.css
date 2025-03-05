@@ -1,7 +1,5 @@
-
 .intro-content {
   align-items: center;
-  color: #fff;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -12,16 +10,17 @@
 }
 
 .intro-content .section-title {
+  color: #fff;
   margin: 0;
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 
 .intro-name {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .intro-subtitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: italic;
 }
 

@@ -1,6 +1,6 @@
 .tech {
   color: #fff;
-  background-color: #dda15e;
+  background-color: var(--bg-color-technologies);
 }
 
 .tech__category {

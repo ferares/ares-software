@@ -35,30 +35,25 @@ function About() {
   return (
     <section id="about" className="about">
       <div className="about__content">
-        <div className="about__bio">
-          <h2 className="section-title about__title-mobile">
-            {t("Sections.About.title")}
-          </h2>
-          <Image className="about__img" src={aboutImg} alt="" />
-          <div>
-            <h2 className="section-title about__title-desktop">
-              {t("Sections.About.title")}
-            </h2>
-            {t.rich("Sections.About.content", richTranslationValues)}
-            <div className="about__btns">
-              <button type="button" className="btn about__btn" onClick={handleDownload}>
-                <FontAwesomeIcon icon={faDownload} />
-                {t("Labels.download-cv")}
-              </button>
-              <button type="button" className="btn about__btn" onClick={() => scrollIntoView("#contact")}>
-                <FontAwesomeIcon icon={faEnvelope} />
-                {t("Labels.contact-me")}
-              </button>
-            </div>
+        <h2 className="section-title about__title">
+          {t("Sections.About.title")}
+        </h2>
+        <Image className="about__img" src={aboutImg} alt="" />
+        <div className="about__paragraph">
+          {t.rich("Sections.About.content", richTranslationValues)}
+          <div className="about__btns">
+            <button type="button" className="btn about__btn" onClick={handleDownload}>
+              <FontAwesomeIcon icon={faDownload} />
+              {t("Labels.download-cv")}
+            </button>
+            <button type="button" className="btn about__btn" onClick={() => scrollIntoView("#contact")}>
+              <FontAwesomeIcon icon={faEnvelope} />
+              {t("Labels.contact-me")}
+            </button>
           </div>
         </div>
-        <NextBtn target="#projects" color="black" />
       </div>
+      <NextBtn target="#projects" />
     </section>
   )
 }

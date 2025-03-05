@@ -17,7 +17,7 @@
   border-radius: 10px;
   padding: 1rem;
   top: 50px;
-  z-index: 2;
+  z-index: 10;
 }
 
 .dropdown-menu.show {
@@ -48,7 +48,7 @@
 
 .dropdown-menu li:hover,
 .dropdown-menu li button:focus {
-  background: #EEE;
+  background: var(--accent-color);
   border-radius: 5px;
 }
 

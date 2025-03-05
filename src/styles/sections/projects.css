@@ -1,19 +1,11 @@
 .projects {
-  background-color: #d8c3a5;
-  padding: 2rem 0;
-}
-
-.projects .modal-content {
-  background-color: #eae7dc;
+  background-color: var(--bg-color-projects);
+  padding: 2rem;
 }
 
 .projects__content {
   height: 100%;
   text-align: center;
-}
-
-.projects .section-title {
-  font-size: 4rem;
 }
 
 .project {
@@ -28,6 +20,7 @@
 }
 
 .project__title {
+  font-family: var(--font-texts);
   font-size: 2rem;
   margin-bottom: 0;
   display: flex;
@@ -41,6 +34,7 @@
 
 .project__title__label {
   display: block;
+  font-weight: 400;
 }
 
 .project__carousel {
@@ -48,6 +42,7 @@
 }
 
 .project__paragraph {
+  color: var(--text-color);
   font-size: 1.5rem;
   text-align: left;
   margin: auto;
@@ -56,6 +51,7 @@
 }
 
 .project__tech-title {
+  font-family: var(--font-texts);
   font-size: 1.5rem;
   text-align: left;
   margin-bottom: 2rem;
@@ -112,7 +108,7 @@
 .project__carousel-frame-wrapper:before,
 .project__carousel-frame-wrapper:after {
   content: '';
-  background-color: #d8c3a5;
+  background-color: var(--bg-color-projects);
   display: block;
   top: 0;
   height: 100%;
@@ -154,6 +150,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .projects {
+    padding: 2rem 0;
+  }
+  
   .project__title {
     position: absolute;
     bottom: 0;
@@ -162,9 +162,8 @@
     padding-bottom: .7rem;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
-    background-color: #fff;
+    background-color: var(--bg-color-projects);
     box-shadow: 0 -2px 11px rgba(0, 0, 0, .2);
-    border-top: 1px solid lightgray;
   }
 
   .project__title .btn {

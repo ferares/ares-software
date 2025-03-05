@@ -1,17 +1,3 @@
-:root {
-  --max-width: 1200px;
-  --text-width: 35em;
-  --font-titles: var(--font-open-sans), sans-serif;
-  --font-texts: var(--font-nunito), sans-serif;
-  --color-primary-100: rgb(255 247 237);
-  --color-primary-200: rgb(254 215 170);
-  --color-primary-300: rgb(253 186 116);
-  --color-primary-400: rgb(249 115 22);
-  --color-primary-500: rgb(194 65 12);
-  --color-primary-600: rgb(154 52 18);
-  --color-primary-700: rgb(67 20 7);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -24,6 +10,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-texts);
+  color: var(--text-color);
   height: 100%;
 }
 
@@ -40,6 +27,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-titles);
   margin: 0;
+  color: var(--title-color);
 }
 
 p {
@@ -47,7 +35,13 @@ p {
 }
 
 a {
-  color: inherit;
+  color: var(--text-color);
+  transition: color .3s;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 ul, ol {
@@ -56,21 +50,21 @@ ul, ol {
   padding: 0;
 }
 
-button {
-  cursor: pointer;
-}
-
 body {
   display: flex;
   flex-direction: column;
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn {
-  background-color: #fff;
-  border: 0 solid #e2e8f0;
+  background-color: var(--button-bg-color);
+  border: 0;
   border-radius: 1.5rem;
   box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-  color: #0d172a;
+  color: var(--text-color-dark);
   cursor: pointer;
   display: inline-block;
   font-size: 1.5rem;
@@ -81,18 +75,8 @@ body {
 }
 
 .btn:hover {
-  background-color: #1e293b;
-  color: #fff;
-}
-
-.btn--inverse {
-  background-color: #1e293b;
-  color: #fff;
-}
-
-.btn--inverse:hover {
-  background-color: #fff;
-  color: #1e293b;
+  background-color: var(--button-hover-bg-color);
+  text-decoration: none;
 }
 
 .section {
@@ -105,7 +89,7 @@ body {
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1;
   margin: 0 auto;
   margin-bottom: 4rem;

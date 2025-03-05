@@ -3,6 +3,11 @@
   border: 0;
   font-size: 2.25rem;
   color: #fff;
+  transition: color .3s;
+}
+
+.language-button:hover {
+  color: var(--accent-color);
 }
 
 #dropdown-lang {

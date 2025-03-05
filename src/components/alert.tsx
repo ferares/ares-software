@@ -28,7 +28,7 @@ export default function AlertComponent({ type, timeout, children, removeAlert }:
 
   return (
     <div className={`alert alert-${type} ${hiding ? "hide" : ""}`} role="alert" onAnimationEnd={() => (hiding) && removeAlert?.()}>
-      <button type="button" className="close btn-close" title={t("close")} onClick={() => setHiding(true)}>
+      <button type="button" className="alert-close" title={t("close")} onClick={() => setHiding(true)}>
         <FontAwesomeIcon icon={faClose} />
       </button>
       <div>

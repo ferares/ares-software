@@ -27,8 +27,8 @@ config.autoAddCss = false
 
 const { GTM_ID, APP_URL } = process.env
 
-const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400"], style: ["italic", "normal"], variable: "--font-nunito" })
-const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400"], variable: "--font-open-sans" })
+const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-openSans" })
+const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-nunito" })
 
 
 export const viewport: Viewport = {
@@ -75,7 +75,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={`${nunito.variable} ${openSans.variable}`}>
+    <html lang={locale} className={`${openSans.variable} ${nunito.variable}`}>
       <head>
         <link rel="shortcut icon" href="/imgs/me.jpg" type="image/jpeg" />
       </head>

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #000;
+  background-color: var(--bg-color-footer);
   padding: 1rem;
 }
 
@@ -43,6 +43,11 @@
   display: block;
   font-size: 2rem;
   text-decoration: none;
+  transition: color .3s;
+}
+
+.footer__menu__link:hover {
+  color: var(--accent-color);
 }
 
 .footer__menu__icon {
