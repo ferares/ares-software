@@ -34,7 +34,9 @@
     "projects": "Projetos",
     "skip-to-content": "Pular para o conteúdo",
     "switch-dark": "Mudar para o tema escuro",
-    "switch-light": "Mudar para o tema claro"
+    "switch-light": "Mudar para o tema claro",
+    "previous": "Anterior",
+    "next": "Próximo"
   },
   "Messages": {
     "changing-bg-img": "Alterando imagem de fundo",

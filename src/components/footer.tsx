@@ -33,23 +33,23 @@ function Footer() {
           </div>
           <ul className="footer__menu">
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/ferares">
-                <FontAwesomeIcon className="footer__menu__icon" icon={faGithub} aria-label="GitHub" />
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/ferares" aria-label="GitHub">
+                <FontAwesomeIcon className="footer__menu__icon" icon={faGithub} />
               </a>
             </li>
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://www.linkedin.com/in/ferm%C3%ADn-ares-0249b71ab/">
-                <FontAwesomeIcon className="footer__menu__icon" icon={faLinkedin} aria-label="Linkedin" />
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://www.linkedin.com/in/ferm%C3%ADn-ares-0249b71ab/" aria-label="Linkedin">
+                <FontAwesomeIcon className="footer__menu__icon" icon={faLinkedin} />
               </a>
             </li>
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="#contact" onClick={(event) => handleContactClick(event)}>
-                <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label={t("contact-me")} />
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="#contact" onClick={(event) => handleContactClick(event)} aria-label={t("contact-me")}>
+                <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} />
               </a>
             </li>
             <li className="footer__menu__item">
-              <button type="button" className="footer__menu__link" onClick={() => showCookieConsentAlert()}>
-                <FontAwesomeIcon className="footer__menu__icon" icon={faCookieBite} aria-label={t("cookie-settings")} />
+              <button type="button" className="footer__menu__link" onClick={() => showCookieConsentAlert()} aria-label={t("cookie-settings")}>
+                <FontAwesomeIcon className="footer__menu__icon" icon={faCookieBite} />
               </button>
             </li>
           </ul>
