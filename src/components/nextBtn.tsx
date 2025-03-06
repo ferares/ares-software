@@ -9,9 +9,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 import { scrollIntoView } from "@/helpers/scroll"
 
-interface NextBtnProps { target: string, color?: string }
+interface NextBtnProps { target: string }
 
-function NextBtn({ target, color }: NextBtnProps) {
+function NextBtn({ target }: NextBtnProps) {
   const t = useTranslations("Labels")
 
   const handleClick = useCallback((event: MouseEvent) => {
