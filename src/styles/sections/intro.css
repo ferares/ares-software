@@ -33,4 +33,12 @@
   .intro-name {
     font-size: 3.5rem;
   }
+
+  .intro-content .section-title {
+    line-height: 2rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.5rem;
+  }
 }

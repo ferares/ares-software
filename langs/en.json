@@ -27,7 +27,12 @@
     "tools": "Tools",
     "accept": "Accept",
     "decline": "Decline",
-    "cookie-settings": "Cookie settings"
+    "cookie-settings": "Cookie settings",
+    "open-menu": "Open menu",
+    "close-menu": "Close menu",
+    "menu": "Menu",
+    "projects": "Projects",
+    "skip-to-content": "Skip to content"
   },
   "Messages": {
     "changing-bg-img": "Changing background image",

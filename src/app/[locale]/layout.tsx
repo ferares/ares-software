@@ -15,10 +15,12 @@ import { LoaderProvider } from "@/context/loader"
 import { PrefersReducedMotionProvider } from "@/context/reducedMotion"
 import { CallOnEscProvider } from "@/context/callOnEsc"
 import { CookieConsentProvider } from "@/context/cookieConsent"
+import { MenuProvider } from "@/context/menu"
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import GoogleTagManager from "@/components/googleTagManager"
+import Menu from "@/components/menu"
 
 import "@/styles/main.css"
 
@@ -87,10 +89,13 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                 <AlertsProvider>
                   <BackgroundProvider>
                     <CookieConsentProvider>
-                      <Header />
-                      <main id="main" className="main">
-                        {children}
-                      </main>
+                      <MenuProvider>
+                        <Header />
+                        <Menu />
+                        <main id="main" className="main">
+                          {children}
+                        </main>
+                      </MenuProvider>
                       {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
                       <Footer />
                     </CookieConsentProvider>

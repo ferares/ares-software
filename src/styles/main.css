@@ -3,6 +3,7 @@
 @import "./animations.css";
 
 @import "./components/badge.css";
+@import "./components/menu.css";
 @import "./components/cookieConsent.css";
 @import "./components/alert.css";
 @import "./components/videoPlayer.css";

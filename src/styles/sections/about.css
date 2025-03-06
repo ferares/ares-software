@@ -22,6 +22,7 @@
 .about__img {
   grid-area: image;
   margin: 0 auto;
+  max-width: 100%;
   width: 500px;
 }
 
@@ -57,12 +58,17 @@
 }
 
 @media screen and (max-width: 576px) {
-  /* .about__paragraph {
+  .about__paragraph {
     font-size: 1.25rem;
   }
   
   .about__btns {
     flex-direction: column;
     align-items: center;
-  } */
+  }
+
+  .about__btn {
+    justify-content: center;
+    width: 100%;
+  }
 }

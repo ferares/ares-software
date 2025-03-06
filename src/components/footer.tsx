@@ -1,5 +1,7 @@
 "use client"
 
+import { type MouseEvent, useCallback } from "react"
+
 import { useTranslations } from "next-intl"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -13,6 +15,12 @@ import { useCookieConsentContext } from "@/context/cookieConsent"
 function Footer() {
   const t = useTranslations("Labels")
   const { showCookieConsentAlert } = useCookieConsentContext()
+
+  const handleContactClick = useCallback((event: MouseEvent) => {
+    event.preventDefault()
+    scrollIntoView("#contact")
+  }, [])
+
   return (
     <footer className="footer">
       <div className="max-width">
@@ -35,9 +43,9 @@ function Footer() {
               </a>
             </li>
             <li className="footer__menu__item">
-              <button type="button" className="footer__menu__link" onClick={() => scrollIntoView("#contact")}>
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="#contact" onClick={(event) => handleContactClick(event)}>
                 <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} aria-label={t("contact-me")} />
-              </button>
+              </a>
             </li>
             <li className="footer__menu__item">
               <button type="button" className="footer__menu__link" onClick={() => showCookieConsentAlert()}>

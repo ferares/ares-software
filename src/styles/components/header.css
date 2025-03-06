@@ -1,6 +1,9 @@
 .header {
   padding: 1rem;
   background-color: var(--bg-color-header);
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 .navbar__content {
@@ -9,6 +12,12 @@
   justify-content: space-between;
   position: relative;
   width: 100%;
+}
+
+.navbar__content__right {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
 }
 
 .navbar__btn {
@@ -21,4 +30,24 @@
   border-radius: 50%;
   display: block;
   width: 3rem;
+}
+
+.skip-main {
+  position: absolute;
+  background-color: var(--button-bg-color);
+  border-bottom-right-radius: 55px;
+  text-decoration: none;
+  padding: 10px 30px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  left: 0;
+  top: 0;
+  transition: background-color .5s;
+}
+
+.skip-main:hover {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--button-hover-bg-color);
 }

@@ -27,7 +27,12 @@
     "tools": "Strumenti",
     "accept": "Accetta",
     "decline": "Rifiuta",
-    "cookie-settings": "Impostazioni dei cookie"
+    "cookie-settings": "Impostazioni dei cookie",
+    "open-menu": "Apri menu",
+    "close-menu": "Chiudi menu",
+    "menu": "Menu",
+    "projects": "Progetti",
+    "skip-to-content": "Salta al contenuto"
   },
   "Messages": {
     "changing-bg-img": "Cambio immagine di sfondo",

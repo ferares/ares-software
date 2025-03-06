@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.contact-section .section-title {
+  margin-bottom: 1rem;
+}
+
 .contact-content {
   width: 100%;
 }
@@ -16,7 +20,6 @@
   flex-direction: column;
   gap: 1.25rem;
   max-width: 1000px;
-  padding: 2rem;
   margin: 0 auto;
 }
 
