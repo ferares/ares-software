@@ -63,17 +63,17 @@
       "personal-projects": "Projetos Pessoais",
       "client-projects": "Projetos para Clientes",
       "projects": {
-        "busesuy": "Um mecanismo de busca para linhas de ônibus de média e longa distância no Uruguai que pode calcular viagens com conexões. O primeiro do tipo no país.",
-        "arbolado": "Uma ferramenta web interativa para explorar dados coletados de diferentes censos sobre árvores nas ruas de várias cidades.",
-        "papelapp": "Um aplicativo web para calcular o custo por metro de rolos de papel higiênico.",
-        "ecouter": "Um aplicativo web para professores e estudantes de idiomas acessarem facilmente as faixas de áudio de seus livros didáticos.",
-        "crabe": "Um jogo web remoto para dois jogadores baseado no jogo de tabuleiro \"La Marche Du Crabe\".",
-        "salam": "Um tema Shopify desenvolvido do zero e personalizado para um cliente.",
-        "grigadale": "Um site criado para publicar a coleção completa de árvores de um arboreto privado. Com uma interface intuitiva, um mapa interativo e uma seção de blog.",
-        "angular": "Um site de e-commerce personalizado criado para vender modelos para desenvolvedores que trabalham com o framework Angular.",
-        "ionic": "Um site de e-commerce personalizado criado para vender modelos para desenvolvedores que trabalham com o framework Ionic.",
-        "atlantico": "Um site empresarial desenvolvido para uma empresa de desenvolvimento imobiliário.",
-        "pipina": "Um site para uma marca que desenvolve jogos para ajudar crianças com dificuldades de escrita e/ou leitura."
+        "busesuy": "Um motor de busca completo para linhas de ônibus de média e longa distância no Uruguai. Esta ferramenta inovadora calcula viagens com conexões, fornecendo aos usuários rotas e horários ideais. Foi a primeira do tipo no país, abordando uma lacuna significativa no planejamento e acessibilidade do transporte público.",
+        "arbolado": "Uma ferramenta web interativa projetada para explorar e visualizar dados de censos de árvores realizados em várias cidades. Os usuários podem filtrar e analisar informações sobre espécies de árvores, localizações e mais, tornando-a um recurso valioso para urbanistas, pesquisadores e entusiastas da natureza.",
+        "papelapp": "Um aplicativo web prático que ajuda os usuários a calcular o custo por metro de rolos de papel higiênico. Ao comparar preços e tamanhos, capacita os consumidores a tomar decisões de compra informadas, economizando dinheiro e recursos.",
+        "ecouter": "Um aplicativo web fácil de usar projetado para professores e estudantes de idiomas. Ele fornece acesso fácil a faixas de áudio que acompanham os livros didáticos.",
+        "crabe": "Um jogo web cooperativo divertido para dois jogadores inspirado no jogo de tabuleiro \"La Marche Du Crabe\".",
+        "salam": "Um tema Shopify totalmente personalizado desenvolvido do zero, adaptado aos requisitos e identidade da marca do cliente.",
+        "grigadale": "Um site que exibe a coleção completa de árvores de um arboreto privado. Com uma interface intuitiva, um mapa interativo e uma seção de blog, serve tanto a pesquisadores quanto a entusiastas da natureza.",
+        "angular": "Uma plataforma de comércio eletrônico personalizada projetada para vender modelos para desenvolvedores que trabalham com o framework Angular. O site oferece modelos de alta qualidade e profissionalmente projetados para agilizar fluxos de trabalho de desenvolvimento.",
+        "ionic": "Um site de comércio eletrônico especializado que oferece modelos para desenvolvedores que utilizam o framework Ionic. A plataforma fornece soluções prontas para uso na criação de aplicativos móveis e web multiplataforma, economizando tempo e esforço para desenvolvedores.",
+        "atlantico": "Um site profissional desenvolvido para uma empresa de desenvolvimento imobiliário. O site destaca os projetos, valores e expertise da empresa, servindo como uma vitrine digital para clientes e parceiros em potencial.",
+        "pipina": "Um site para uma marca dedicada a criar jogos que ajudam crianças com dificuldades de escrita e leitura."
       }
     },
     "Contact": {

@@ -56,24 +56,24 @@
   "Sections": {
     "About": {
       "title": "About Me",
-      "content": "<p>I'm Fermín, a Freelance Software Developer with a passion for <b>web accessibility</b> working from <a>La Paloma, Uruguay</a> 🏖️</p><p>Most of my experience is in <b>web development</b> working on both simple projects like <b>landing pages</b> and complex ones like <b>web apps</b>, <b>e-commerce sites</b>, <b>blogs</b>, <b>games</b>, etc.</p><p>I've worked both alone and with teams for different companies, and I have plenty of experience working remotely 👨‍💻</p><p>I speak <b>Spanish</b> 🇪🇸 <b>English</b> 🇬🇧 and <b>Italian</b> 🇮🇹 and some <b>French</b> 🇫🇷 and <b>Portuguese</b> 🇧🇷</p><p>Keep scrolling to learn more about what kind of projects I'm working on 🚀 some of my client work and the technolgies I'm familiar with 🛸</p>",
+      "content": "<p>I'm Fermín, a Freelance Software Developer with a passion for <b>web accessibility</b> working from <a>La Paloma, Uruguay</a> 🏖️</p><p>Most of my experience is in <b>web development</b> working on both simple projects like <b>landing pages</b> and complex ones like <b>web apps</b>, <b>e-commerce sites</b>, <b>blogs</b>, <b>games</b>, etc.</p><p>I've worked both alone and with teams for different companies, and I have plenty of experience working remotely 👨‍💻</p><p>I speak <b>Spanish</b> 🇪🇸 <b>English</b> 🇬🇧 and <b>Italian</b> 🇮🇹 and some <b>French</b> 🇫🇷 and <b>Portuguese</b> 🇧🇷</p><p>Keep scrolling to learn more about what kind of projects I'm working on 🚀 some of my client work and the technologies I'm familiar with 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.en.pdf"
     },
     "Projects": {
       "personal-projects": "Personal Projects",
       "client-projects": "Client Projects",
       "projects": {
-        "busesuy": "A search engine for medium & long distance bus lines in Uruguay that can calculate transfer trips. First of its kind in the country.",
-        "arbolado": "An interactive web tool for exploring data gathered from different census about trees in different cities' streets.",
-        "papelapp": "A web app for figuring out the cost per meter of toilet paper rolls.",
-        "ecouter": "A web app for language teachers and students to access the accompanying audio tracks from their text books with ease.",
-        "crabe": "A two player remote web game based on the board game \"La Marche Du Crabe\"",
-        "salam": "A Shopify store theme develop from scratch custom built for a client.",
-        "grigadale": "A web site built to publish the full collection of trees from a private abrobretum. With an intuitive interace, an interactive map and a blog section.",
-        "angular": "A custom e-commerce site made to sell templates for developers working with the Angular framework.",
-        "ionic": "A custom e-commerce site made to sell templates for developers working with the Ionic framework.",
-        "atlantico": "A business web site developed for a real estate development company.",
-        "pipina": "A web site for a brand that develops games to help kids with writing and/or reading dificulties."
+        "busesuy": "A comprehensive search engine for medium and long-distance bus lines in Uruguay. This innovative tool calculates transfer trips, providing users with optimal routes and schedules. It was the first of its kind in the country, addressing a significant gap in public transportation planning and accessibility.",
+        "arbolado": "An interactive web tool designed to explore and visualize data from tree censuses conducted in various cities. Users can filter and analyze information about tree species, locations and more making it a valuable resource for urban planners, researchers, and nature enthusiasts.",
+        "papelapp": "A practical web app that helps users calculate the cost per meter of toilet paper rolls. By comparing prices and sizes, it empowers consumers to make informed purchasing decisions, saving both money and resources.",
+        "ecouter": "A user-friendly web app tailored for language teachers and students. It provides easy access to audio tracks accompanying textbooks.",
+        "crabe": "A fun two-player cooperative web game inspired by the board game \"La Marche Du Crabe\".",
+        "salam": "A fully custom Shopify store theme developed from scratch tailored to the client's requirements and brand identity.",
+        "grigadale": "A website showcasing the complete collection of trees from a private arboretum. Featuring an intuitive interface, an interactive map, and a blog section. Serving both researchers and nature enthusiasts.",
+        "angular": "A custom e-commerce platform designed to sell templates for developers working with the Angular framework. The site offers high-quality, professionally designed templates to streamline development workflows.",
+        "ionic": "A specialized e-commerce site offering templates for developers using the Ionic framework. The platform provides ready-to-use solutions for building cross-platform mobile and web applications, saving time and effort for developers.",
+        "atlantico": "A professional business website developed for a real estate development company. The site highlights the company's projects, values, and expertise, serving as a digital showcase for potential clients and partners.",
+        "pipina": "A website for a brand dedicated to creating games that help children with writing and reading difficulties."
       }
     },
     "Contact": {

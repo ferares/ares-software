@@ -63,17 +63,17 @@
       "personal-projects": "Projets personnels",
       "client-projects": "Projets clients",
       "projects": {
-        "busesuy": "Un moteur de recherche pour les lignes de bus longue distance en Uruguay qui peut calculer les trajets avec correspondances. Le premier du genre dans le pays.",
-        "arbolado": "Un outil web interactif pour explorer les données recueillies lors de différents recensements sur les arbres dans les rues de différentes villes.",
-        "papelapp": "Une application web pour calculer le coût au mètre des rouleaux de papier toilette.",
-        "ecouter": "Une application web pour les enseignants et les étudiants en langues pour accéder facilement aux pistes audio de leurs manuels.",
-        "crabe": "Un jeu web à distance pour deux joueurs basé sur le jeu de société \"La Marche Du Crabe\".",
-        "salam": "Un thème Shopify développé à partir de zéro et personnalisé pour un client.",
-        "grigadale": "Un site web créé pour publier la collection complète d'arbres d'un arboretum privé. Avec une interface intuitive, une carte interactive et une section blog.",
-        "angular": "Un site e-commerce personnalisé créé pour vendre des modèles pour les développeurs travaillant avec le framework Angular.",
-        "ionic": "Un site e-commerce personnalisé créé pour vendre des modèles pour les développeurs travaillant avec le framework Ionic.",
-        "atlantico": "Un site web d'entreprise développé pour une société de promotion immobilière.",
-        "pipina": "Un site web pour une marque qui développe des jeux pour aider les enfants ayant des difficultés d'écriture et/ou de lecture."
+        "busesuy": "Un moteur de recherche complet pour les lignes de bus à moyenne et longue distance en Uruguay. Cet outil innovant calcule les trajets avec correspondances, offrant aux utilisateurs des itinéraires et des horaires optimaux. Il a été le premier du genre dans le pays, comblant une lacune importante dans la planification et l'accessibilité des transports publics.",
+        "arbolado": "Un outil web interactif conçu pour explorer et visualiser les données des recensements d'arbres menés dans diverses villes. Les utilisateurs peuvent filtrer et analyser des informations sur les espèces d'arbres, les emplacements et plus encore, en faisant une ressource précieuse pour les urbanistes, les chercheurs et les amateurs de nature.",
+        "papelapp": "Une application web pratique qui aide les utilisateurs à calculer le coût au mètre des rouleaux de papier toilette. En comparant les prix et les tailles, elle permet aux consommateurs de prendre des décisions d'achat éclairées, économisant ainsi de l'argent et des ressources.",
+        "ecouter": "Une application web conviviale conçue pour les enseignants et les étudiants en langues. Elle permet un accès facile aux pistes audio accompagnant les manuels scolaires.",
+        "crabe": "Un jeu web coopératif amusant pour deux joueurs inspiré du jeu de société \"La Marche Du Crabe\".",
+        "salam": "Un thème Shopify entièrement personnalisé développé à partir de zéro, adapté aux exigences et à l'identité de marque du client.",
+        "grigadale": "Un site web présentant la collection complète d'arbres d'un arboretum privé. Doté d'une interface intuitive, d'une carte interactive et d'une section blog, il sert à la fois les chercheurs et les amateurs de nature.",
+        "angular": "Une plateforme de commerce électronique personnalisée conçue pour vendre des modèles aux développeurs travaillant avec le framework Angular. Le site propose des modèles de haute qualité et professionnellement conçus pour rationaliser les flux de travail de développement.",
+        "ionic": "Un site de commerce électronique spécialisé offrant des modèles pour les développeurs utilisant le framework Ionic. La plateforme fournit des solutions prêtes à l'emploi pour créer des applications mobiles et web multiplateformes, économisant du temps et des efforts aux développeurs.",
+        "atlantico": "Un site web professionnel développé pour une entreprise de promotion immobilière. Le site met en avant les projets, les valeurs et l'expertise de l'entreprise, servant de vitrine numérique pour les clients et partenaires potentiels.",
+        "pipina": "Un site web pour une marque dédiée à la création de jeux aidant les enfants ayant des difficultés en écriture et en lecture."
       }
     },
     "Contact": {

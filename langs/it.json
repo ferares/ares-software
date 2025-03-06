@@ -63,17 +63,17 @@
       "personal-projects": "Progetti Personali",
       "client-projects": "Progetti per Clienti",
       "projects": {
-        "busesuy": "Un motore di ricerca per le linee di autobus a medio e lungo raggio in Uruguay che può calcolare i viaggi con trasferimenti. Il primo nel suo genere nel paese.",
-        "arbolado": "Uno strumento web interattivo per esplorare i dati raccolti da diversi censimenti sugli alberi nelle strade di diverse città.",
-        "papelapp": "Un'app web per calcolare il costo al metro dei rotoli di carta igienica.",
-        "ecouter": "Un'app web per insegnanti e studenti di lingue per accedere facilmente alle tracce audio dei loro libri di testo.",
-        "crabe": "Un gioco web per due giocatori a distanza basato sul gioco da tavolo \"La Marche Du Crabe\".",
-        "salam": "Un tema Shopify sviluppato da zero e personalizzato per un cliente.",
-        "grigadale": "Un sito web creato per pubblicare l'intera collezione di alberi di un arboreto privato. Con un'interfaccia intuitiva, una mappa interattiva e una sezione blog.",
-        "angular": "Un sito e-commerce personalizzato creato per vendere template per sviluppatori che lavorano con il framework Angular.",
-        "ionic": "Un sito e-commerce personalizzato creato per vendere template per sviluppatori che lavorano con il framework Ionic.",
-        "atlantico": "Un sito web aziendale sviluppato per una società di sviluppo immobiliare.",
-        "pipina": "Un sito web per un brand che sviluppa giochi per aiutare i bambini con difficoltà di scrittura e/o lettura."
+        "busesuy": "Un motore di ricerca completo per le linee di autobus a media e lunga distanza in Uruguay. Questo strumento innovativo calcola i viaggi con trasbordo, fornendo agli utenti percorsi e orari ottimali. È stato il primo del suo genere nel paese, colmando una lacuna significativa nella pianificazione e accessibilità dei trasporti pubblici.",
+        "arbolado": "Uno strumento web interattivo progettato per esplorare e visualizzare i dati dei censimenti degli alberi condotti in varie città. Gli utenti possono filtrare e analizzare informazioni su specie di alberi, ubicazioni e altro, rendendolo una risorsa preziosa per urbanisti, ricercatori e appassionati di natura.",
+        "papelapp": "Un'app web pratica che aiuta gli utenti a calcolare il costo al metro dei rotoli di carta igienica. Confrontando prezzi e dimensioni, consente ai consumatori di prendere decisioni di acquisto informate, risparmiando denaro e risorse.",
+        "ecouter": "Un'app web user-friendly progettata per insegnanti e studenti di lingue. Fornisce un accesso semplice alle tracce audio che accompagnano i libri di testo.",
+        "crabe": "Un divertente gioco web cooperativo per due giocatori ispirato al gioco da tavolo \"La Marche Du Crabe\".",
+        "salam": "Un tema Shopify completamente personalizzato sviluppato da zero, adattato ai requisiti e all'identità del brand del cliente.",
+        "grigadale": "Un sito web che mostra la collezione completa di alberi di un arboreto privato. Dotato di un'interfaccia intuitiva, una mappa interattiva e una sezione blog, serve sia ricercatori che appassionati di natura.",
+        "angular": "Una piattaforma di e-commerce personalizzata progettata per vendere modelli per sviluppatori che lavorano con il framework Angular. Il sito offre modelli di alta qualità e professionalmente progettati per semplificare i flussi di lavoro di sviluppo.",
+        "ionic": "Un sito di e-commerce specializzato che offre modelli per sviluppatori che utilizzano il framework Ionic. La piattaforma fornisce soluzioni pronte all'uso per creare applicazioni mobili e web multipiattaforma, risparmiando tempo e fatica agli sviluppatori.",
+        "atlantico": "Un sito web professionale sviluppato per un'azienda di sviluppo immobiliare. Il sito mette in evidenza i progetti, i valori e l'esperienza dell'azienda, servendo come vetrina digitale per clienti e partner potenziali.",
+        "pipina": "Un sito web per un brand dedicato alla creazione di giochi che aiutano i bambini con difficoltà di scrittura e lettura."
       }
     },
     "Contact": {
