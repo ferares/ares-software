@@ -78,7 +78,6 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
     <html lang={locale} className={`${openSans.variable} ${nunito.variable}`}>
       <head>
         <link rel="shortcut icon" href="/imgs/me.jpg" type="image/jpeg" />
-        {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
@@ -87,6 +86,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
               <ThemeProvider initialTheme={theme === "light" ? "light" : "dark"}>
                 <App>
                   {children}
+                  {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
                 </App>
               </ThemeProvider>
             </CallOnEscProvider>
