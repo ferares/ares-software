@@ -94,6 +94,7 @@ button {
 
 .btn:hover {
   background-color: var(--button-hover-bg-color);
+  color: var(--text-color-dark);
   text-decoration: none;
 }
 
