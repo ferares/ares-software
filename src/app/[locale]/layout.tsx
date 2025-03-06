@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { Nunito, Open_Sans } from "next/font/google"
+import { cookies } from "next/headers"
 
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
@@ -9,18 +10,12 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 
 import { type LocaleOption, locales } from "@/i18n/routing"
 
-import { BackgroundProvider } from "@/context/background"
-import { AlertsProvider } from "@/context/alerts"
-import { LoaderProvider } from "@/context/loader"
 import { PrefersReducedMotionProvider } from "@/context/reducedMotion"
 import { CallOnEscProvider } from "@/context/callOnEsc"
-import { CookieConsentProvider } from "@/context/cookieConsent"
-import { MenuProvider } from "@/context/menu"
+import { ThemeProvider } from "@/context/theme"
 
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 import GoogleTagManager from "@/components/googleTagManager"
-import Menu from "@/components/menu"
+import App from "@/components/app"
 
 import "@/styles/main.css"
 
@@ -76,32 +71,24 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
   const messages = await getMessages()
 
+  const cookieStore = await cookies()
+  const theme = cookieStore.get("theme")?.value.split(" ")[0]
+
   return (
     <html lang={locale} className={`${openSans.variable} ${nunito.variable}`}>
       <head>
         <link rel="shortcut icon" href="/imgs/me.jpg" type="image/jpeg" />
+        {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <PrefersReducedMotionProvider>
             <CallOnEscProvider>
-              <LoaderProvider>
-                <AlertsProvider>
-                  <BackgroundProvider>
-                    <CookieConsentProvider>
-                      <MenuProvider>
-                        <Header />
-                        <Menu />
-                        <main id="main" className="main">
-                          {children}
-                        </main>
-                      </MenuProvider>
-                      {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
-                      <Footer />
-                    </CookieConsentProvider>
-                  </BackgroundProvider>
-                </AlertsProvider>
-              </LoaderProvider>
+              <ThemeProvider initialTheme={theme === "light" ? "light" : "dark"}>
+                <App>
+                  {children}
+                </App>
+              </ThemeProvider>
             </CallOnEscProvider>
           </PrefersReducedMotionProvider>
         </NextIntlClientProvider>

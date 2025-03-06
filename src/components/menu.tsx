@@ -13,6 +13,8 @@ import { scrollIntoView } from "@/helpers/scroll"
 import { useCallOnEscContext } from "@/context/callOnEsc"
 import { useMenuContext } from "@/context/menu"
 
+import ThemeSwitch from "./themeSwitch"
+
 const links: { label: TranslationKey, target: string }[] = [
   { label: "Sections.About.title", target: "#about" },
   { label: "Labels.projects", target: "#projects" },
@@ -69,6 +71,9 @@ function Menu() {
               </li>
             )
           })}
+          <li>
+            <ThemeSwitch />
+          </li>
         </ul>
       </nav>
     </div>

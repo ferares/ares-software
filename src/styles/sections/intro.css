@@ -24,11 +24,6 @@
   font-style: italic;
 }
 
-.scroll-down {
-  height: 2rem;
-  color: #fff;
-}
-
 @media (max-width: 450px) {
   .intro-name {
     font-size: 3.5rem;

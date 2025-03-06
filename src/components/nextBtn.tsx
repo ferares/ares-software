@@ -21,7 +21,7 @@ function NextBtn({ target, color }: NextBtnProps) {
   
   return (
     <a href={target} className="next-btn" onClick={handleClick}>
-      <FontAwesomeIcon className="scroll-down" icon={faChevronDown} aria-label={t("scroll-down")} style={{ color }} />
+      <FontAwesomeIcon className="scroll-down" icon={faChevronDown} aria-label={t("scroll-down")} />
     </a>
   )
 }

@@ -72,7 +72,7 @@ export function CookieConsentProvider({ children }: { children: React.ReactNode 
                 {t("Labels.accept")}
               </button>
               <button className="cookie-alert__btn btn" onClick={() => handleSelection(false)}>
-                {t("Labels.decline")}
+                {t("Labels.reject-optional")}
               </button>
             </div>
           </div>

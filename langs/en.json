@@ -26,13 +26,15 @@
     "platforms": "Platforms",
     "tools": "Tools",
     "accept": "Accept",
-    "decline": "Decline",
+    "reject-optional": "Reject optional",
     "cookie-settings": "Cookie settings",
     "open-menu": "Open menu",
     "close-menu": "Close menu",
     "menu": "Menu",
     "projects": "Projects",
-    "skip-to-content": "Skip to content"
+    "skip-to-content": "Skip to content",
+    "switch-dark": "Switch to dark theme",
+    "switch-light": "Switch to light theme"
   },
   "Messages": {
     "changing-bg-img": "Changing background image",
@@ -44,7 +46,7 @@
     "error": "An error occurred, please try again later",
     "contact-success": "Thank you, message sent successfully",
     "contact-submitting": "Sending message please wait",
-    "cookies": "We use optional cookies to anonymously track site usage and improve your experience.<br></br>You can decline them if you prefer.<br></br>You can change your preference later in our cookie settings"
+    "cookies": "We use necessary cookies to ensure the site works properly and optional cookies for anonymous analytics.<br></br>You can manage your preferences below."
   },
   "Metadata": {
     "description": "Accessibility focused web development"

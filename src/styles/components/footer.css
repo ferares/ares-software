@@ -19,12 +19,12 @@
 
 .footer__icon {
   display: block;
-  color: #fff;
+  color: var(--text-color);
   width: 1.25rem;
 }
 
 .footer__text {
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.125rem;
 }
 
@@ -39,7 +39,7 @@
   background-color: transparent;
   border: 0;
   padding: 0;
-  color: #fff;
+  color: var(--text-color);
   display: block;
   font-size: 2rem;
   text-decoration: none;

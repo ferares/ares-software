@@ -1,0 +1,36 @@
+.theme-switch {
+  background-color: var(--text-color-dark);
+  border: 0;
+  border-radius: 30px;
+  padding: .5rem 1rem;
+  color: var(--text-color-dark);
+  font-size: 1.5rem;
+  position: relative;
+  line-height: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.theme-switch__indicator {
+  background-color: var(--text-color);
+  position: absolute;
+  top: .25rem;
+  height: 2rem;
+  left: 0;
+  width: 2rem;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+.theme-switch__indicator.right {
+  transform: translateX(2.9rem);
+}
+
+.theme-switch__indicator.left {
+  transform: translateX(.7rem);
+}
+
+.theme-switch__icon {
+  position: relative;
+  z-index: 1;
+}

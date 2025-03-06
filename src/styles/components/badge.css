@@ -28,6 +28,10 @@
   font-size: 1.25rem;
 }
 
+[data-theme="light"] .badge__label {
+  color: var(--text-color-dark);
+}
+
 .badge--small {
   flex-direction: row;
   padding: .5rem 1rem;

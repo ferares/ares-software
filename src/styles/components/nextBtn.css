@@ -2,6 +2,7 @@
   background-color: transparent;
   border: 0;
   bottom: 1rem;
+  color: var(--color-text);
   cursor: pointer;
   font-size: 2.5rem;
   position: absolute;

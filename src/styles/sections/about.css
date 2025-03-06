@@ -1,6 +1,7 @@
 .about {
   align-items: center;
   background-color: var(--bg-color-about);
+  color: var(--text-color);
   display: flex;
   min-height: 100%;
   justify-content: center;

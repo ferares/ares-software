@@ -26,13 +26,15 @@
     "platforms": "Plataformas",
     "tools": "Ferramentas",
     "accept": "Aceitar",
-    "decline": "Recusar",
+    "reject-optional": "Rejeitar opcionais",
     "cookie-settings": "Configurações de cookies",
     "open-menu": "Abrir menu",
     "close-menu": "Fechar menu",
     "menu": "Menu",
     "projects": "Projetos",
-    "skip-to-content": "Pular para o conteúdo"
+    "skip-to-content": "Pular para o conteúdo",
+    "switch-dark": "Mudar para o tema escuro",
+    "switch-light": "Mudar para o tema claro"
   },
   "Messages": {
     "changing-bg-img": "Alterando imagem de fundo",
@@ -44,7 +46,7 @@
     "error": "Ocorreu um erro, por favor, tente novamente mais tarde",
     "contact-success": "Obrigado, mensagem enviada com sucesso",
     "contact-submitting": "Enviando mensagem, por favor, aguarde",
-    "cookies": "Usamos cookies opcionais para rastrear anonimamente o uso do site e melhorar sua experiência.<br></br>Você pode recusar se preferir.<br></br>Você pode alterar sua preferência mais tarde em nossas configurações de cookies"
+    "cookies": "Usamos cookies necessários para garantir o funcionamento adequado do site e cookies opcionais para rastrear anonimamente o uso do site.<br></br>Você pode gerenciar suas preferências abaixo."
   },
   "Metadata": {
     "description": "Desenvolvimento web focado em acessibilidade"

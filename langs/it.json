@@ -26,13 +26,15 @@
     "platforms": "Piattaforme",
     "tools": "Strumenti",
     "accept": "Accetta",
-    "decline": "Rifiuta",
+    "reject-optional": "Rifiuta opzionali",
     "cookie-settings": "Impostazioni dei cookie",
     "open-menu": "Apri menu",
     "close-menu": "Chiudi menu",
     "menu": "Menu",
     "projects": "Progetti",
-    "skip-to-content": "Salta al contenuto"
+    "skip-to-content": "Salta al contenuto",
+    "switch-dark": "Passa al tema scuro",
+    "switch-light": "Passa al tema chiaro"
   },
   "Messages": {
     "changing-bg-img": "Cambio immagine di sfondo",
@@ -44,7 +46,7 @@
     "error": "Si è verificato un errore, riprova più tardi",
     "contact-success": "Grazie, messaggio inviato con successo",
     "contact-submitting": "Invio messaggio in corso, attendi",
-    "cookies": "Utilizziamo cookie opzionali per monitorare in modo anonimo l'utilizzo del sito e migliorare la tua esperienza.<br></br>Puoi rifiutarli se preferisci.<br></br>Puoi cambiare la tua preferenza in un secondo momento nelle nostre impostazioni dei cookie"
+    "cookies": "Utilizziamo cookie necessari per garantire il corretto funzionamento del sito e cookie opzionali per monitorare in modo anonimo l'utilizzo del sito.<br></br>Puoi gestire le tue preferenze di seguito."
   },
   "Metadata": {
     "description": "Sviluppo web focalizzato sull'accessibilità"

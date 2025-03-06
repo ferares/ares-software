@@ -19,3 +19,22 @@
   --text-color: #E6E6E6;
   --text-color-dark: #1E293B;
 }
+
+[data-theme="light"] {
+  --bg-color-header: #ECF0F1;
+  --bg-color-footer: #ECF0F1;
+  --bg-color-menu: #ECF0F1;
+  --bg-color-modal: #ECF0F1;
+  --bg-color-alert: #F1F5F9;
+  --bg-color-about: #EDF1F7;
+  --bg-color-projects: #D6EAF8;
+  --bg-color-contact: #EDF1F7;
+  --bg-color-technologies: #D6EAF8;
+  --primary-color: #0D9488;
+  --accent-color: #059669;
+  --title-color: #1E293B;
+  --button-bg-color: #2980B9;
+  --button-hover-bg-color: #27AE60;
+  --text-color: #2C3E50;
+  --text-color-dark: #e6e6e6;
+}
