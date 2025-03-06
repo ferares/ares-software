@@ -170,10 +170,17 @@ function Projects() {
     return (
       <button id={`project-${project.id}`} type="button" className="project" onClick={() => setSelectedProject(project)}>
         <h2 className="project__title">
-          <span className="btn btn--inverse">{t("Labels.view-details")}</span>
+          <span className="btn">{t("Labels.view-details")}</span>
           <span className="project__title__label">{project.title}</span>
         </h2>
-        <Image className="project__img-desktop" src={project.images.desktop} alt="" height={500} width={500} />
+        <div className="project__img-desktop-wrapper">
+          <span className="project__hover">
+            <span className="btn">
+              {t("Labels.view-details")}
+            </span>
+          </span>
+          <Image className="project__img-desktop" src={project.images.desktop} alt="" height={500} width={500} />
+        </div>
         <Image className="project__img-mobile" src={project.images.mobile} alt="" height={300} width={300} />
       </button>
     )
