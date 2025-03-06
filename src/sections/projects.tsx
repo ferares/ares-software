@@ -50,7 +50,7 @@ const clientPorjects: Project[] = [
     images: { desktop: "/imgs/projects/grigadale/desktop.png", mobile: "/imgs/projects/grigadale/mobile.png" },
     desc: "Sections.Projects.projects.grigadale",
     links: [
-      { url: "https://grigadale.com", label: "Labels.visit-site" },
+      { url: "https://grigadale.org", label: "Labels.visit-site" },
     ],
     technologies: ["html", "css", "javascript", "wordpress", "bootstrap", "git"],
     videos: { desktop: { src: "/vids/grigadale/desktop.webm", poster: "/imgs/projects/grigadale/poster-desktop.png" }, mobile: { src: "/vids/grigadale/mobile.webm", poster: "/imgs/projects/grigadale/poster-mobile.png" }},
