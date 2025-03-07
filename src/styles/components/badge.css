@@ -3,7 +3,7 @@
   background-color: #121212;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0 0 0 / 10%);
-  color: var(--text-color);
+  color: var(--color-text);
   cursor: default;
   display: flex;
   flex-direction: column;
@@ -28,13 +28,14 @@
   font-size: 1.25rem;
 }
 
-[data-theme="light"] .badge__label {
-  color: var(--text-color-dark);
+.theme-light .badge__label {
+  color: var(--color-text-dark);
 }
 
 .badge--small {
   flex-direction: row;
-  padding: .5rem 1rem;
+  height: 4.7rem;
+  padding: .5rem 1.5rem;
 }
 
 .badge--small .badge__icon  {

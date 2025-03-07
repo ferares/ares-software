@@ -23,7 +23,7 @@ function Technologies() {
     },
     {
       title: t("Labels.frameworks"),
-      list: [ "next", "react", "angular", "vue", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap" ],
+      list: [ "next", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap" ],
     },
     {
       title: t("Labels.e-commerce"),

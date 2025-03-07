@@ -18,13 +18,13 @@
 }
 
 .footer__icon {
-  color: var(--text-color);
+  color: var(--color-text);
   display: block;
   width: 1.25rem;
 }
 
 .footer__text {
-  color: var(--text-color);
+  color: var(--color-text);
   font-size: 1.125rem;
 }
 
@@ -38,7 +38,7 @@
 .footer__menu__link {
   background-color: transparent;
   border: 0;
-  color: var(--text-color);
+  color: var(--color-text);
   display: block;
   font-size: 2rem;
   padding: 0;
@@ -47,7 +47,7 @@
 }
 
 .footer__menu__link:hover {
-  color: var(--accent-color);
+  color: var(--color-accent);
 }
 
 .footer__menu__icon {

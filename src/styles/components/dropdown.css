@@ -59,7 +59,7 @@
 
 .dropdown-menu li:hover,
 .dropdown-menu li button:focus {
-  background: var(--accent-color);
+  background: var(--color-accent);
   border-radius: 5px;
 }
 

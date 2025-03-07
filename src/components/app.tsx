@@ -14,7 +14,7 @@ import Footer from "./footer"
 function App({ children }: { children: React.ReactNode }) {
   const { theme } = useThemeContext()
   return (
-    <div className="app" data-theme={theme}>
+    <div className={`app theme-${theme}`}>
       <LoaderProvider>
         <AlertsProvider>
           <BackgroundProvider>

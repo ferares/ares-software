@@ -10,14 +10,15 @@
 }
 
 .bg-image::before {
-  background-color: #000;
+  background-color: var(--bg-color-intro);
   content: '';
   inset: 0;
   position: absolute;
-  transition: opacity .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .bg-image.image-loaded::before {
+  background-color: #000;
   opacity: .4;
 }
 

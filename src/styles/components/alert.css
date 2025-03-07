@@ -6,7 +6,7 @@
   border-radius: 5px;
   bottom: 4rem;
   box-shadow: 0 0 6px rgba(0 0 0 / 20%);
-  color: var(--text-color);
+  color: var(--color-text);
   display: flex;
   flex-wrap: wrap;
   font-size: .8em;
@@ -42,7 +42,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  color: var(--text-color);
+  color: var(--color-text);
   display: flex;
   font-size: 1.2em;
   height: 20px;

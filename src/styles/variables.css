@@ -7,34 +7,34 @@
   --bg-color-menu: #2C3E50;
   --bg-color-modal: #2C3E50;
   --bg-color-alert: #1E293B;
+  --bg-color-intro: #34495E;
   --bg-color-about: #1E2837;
   --bg-color-projects: #34495E;
   --bg-color-contact: #1E2837;
   --bg-color-technologies: #34495E;
-  --primary-color: #2DD4BF;
-  --accent-color: #34D399;
-  --title-color: #F3F4F6;
-  --button-bg-color: #3498DB;
-  --button-hover-bg-color: #2ECC71;
-  --text-color: #E6E6E6;
-  --text-color-dark: #1E293B;
+  --color-accent: #34D399;
+  --color-title: #F3F4F6;
+  --bg-color-button: #3498DB;
+  --bg-color-hover-button: #2ECC71;
+  --color-text: #E6E6E6;
+  --color-text-dark: #1E293B;
 }
 
-[data-theme="light"] {
+.theme-light {
   --bg-color-header: #ECF0F1;
   --bg-color-footer: #ECF0F1;
   --bg-color-menu: #ECF0F1;
   --bg-color-modal: #ECF0F1;
   --bg-color-alert: #F1F5F9;
+  --bg-color-intro: #D6EAF8;
   --bg-color-about: #EDF1F7;
   --bg-color-projects: #D6EAF8;
   --bg-color-contact: #EDF1F7;
   --bg-color-technologies: #D6EAF8;
-  --primary-color: #0D9488;
-  --accent-color: #059669;
-  --title-color: #1E293B;
-  --button-bg-color: #2980B9;
-  --button-hover-bg-color: #27AE60;
-  --text-color: #2C3E50;
-  --text-color-dark: #e6e6e6;
+  --color-accent: #059669;
+  --color-title: #1E293B;
+  --bg-color-button: #2980B9;
+  --bg-color-hover-button: #27AE60;
+  --color-text: #2C3E50;
+  --color-text-dark: #e6e6e6;
 }

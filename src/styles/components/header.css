@@ -33,7 +33,7 @@
 }
 
 .skip-main {
-  background-color: var(--button-bg-color);
+  background-color: var(--bg-color-button);
   border-bottom-right-radius: 55px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -47,7 +47,7 @@
 }
 
 .skip-main:hover {
-  background-color: var(--button-hover-bg-color);
+  background-color: var(--bg-color-hover-button);
   color: inherit;
   text-decoration: none;
 }

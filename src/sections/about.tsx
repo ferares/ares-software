@@ -15,10 +15,12 @@ import NextBtn from "@/components/nextBtn"
 
 import aboutImg from "../../public/imgs/about.jpg"
 
+const GOOGLE_MAPS_LA_PALOMA_LINK = "https://maps.app.goo.gl/1JMJA3WRLQ6VAswu6"
+
 const richTranslationValues: RichTranslationValues = {
   p: (chunks) => <p className="about__paragraph">{chunks}</p>,
   b: (chunks) => <strong>{chunks}</strong>,
-  a: (chunks) => <a href="https://maps.app.goo.gl/1JMJA3WRLQ6VAswu6" target="_blank" rel="noreferrer nofollow noopener">{chunks}</a>,
+  a: (chunks) => <a href={GOOGLE_MAPS_LA_PALOMA_LINK} target="_blank" rel="noreferrer nofollow noopener">{chunks}</a>,
 }
 
 function About() {
@@ -43,8 +45,8 @@ function About() {
         <h2 className="section-title about__title">
           {t("Sections.About.title")}
         </h2>
-        <Image className="about__img" src={aboutImg} alt="" width={500} height={500} />
-        <div className="about__paragraph">
+        <Image className="about__img" src={aboutImg} alt="" width={500} />
+        <div className="about__paragraphs">
           {t.rich("Sections.About.content", richTranslationValues)}
           <div className="about__btns">
             <button type="button" className="btn about__btn" onClick={handleDownload}>

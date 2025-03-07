@@ -12,6 +12,9 @@ import { scrollIntoView } from "@/helpers/scroll"
 
 import { useCookieConsentContext } from "@/context/cookieConsent"
 
+const GITHUB_LINK = "https://github.com/ferares"
+const LINKEDIN_LINK = "https://linkedin.com/in/fermin-ares"
+
 function Footer() {
   const t = useTranslations("Labels")
   const { showCookieConsentAlert } = useCookieConsentContext()
@@ -33,12 +36,12 @@ function Footer() {
           </div>
           <ul className="footer__menu">
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://github.com/ferares" aria-label="GitHub">
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href={GITHUB_LINK} aria-label="GitHub">
                 <FontAwesomeIcon className="footer__menu__icon" icon={faGithub} />
               </a>
             </li>
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://linkedin.com/in/fermin-ares" aria-label="LinkedIn">
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href={LINKEDIN_LINK} aria-label="LinkedIn">
                 <FontAwesomeIcon className="footer__menu__icon" icon={faLinkedin} />
               </a>
             </li>

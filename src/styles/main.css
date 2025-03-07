@@ -4,28 +4,27 @@
 @import url("./animations.css");
 
 /* Components */
-@import url("./components/badge.css");
-@import url("./components/menu.css");
-@import url("./components/themeSwitch.css");
-@import url("./components/cookieConsent.css");
 @import url("./components/alert.css");
-@import url("./components/videoPlayer.css");
-@import url("./components/nextBtn.css");
-@import url("./components/modal.css");
+@import url("./components/badge.css");
 @import url("./components/bgImage.css");
-@import url("./components/projectsCarousel.css");
+@import url("./components/cookieConsent.css");
 @import url("./components/dropdown.css");
-@import url("./components/langMenu.css");
-@import url("./components/header.css");
 @import url("./components/footer.css");
+@import url("./components/header.css");
+@import url("./components/langMenu.css");
 @import url("./components/loader.css");
+@import url("./components/menu.css");
+@import url("./components/modal.css");
+@import url("./components/nextBtn.css");
+@import url("./components/themeSwitch.css");
+@import url("./components/videoPlayer.css");
 
 /* Sections */
-@import url("./sections/intro.css");
 @import url("./sections/about.css");
+@import url("./sections/contact.css");
+@import url("./sections/intro.css");
 @import url("./sections/projects.css");
 @import url("./sections/technologies.css");
-@import url("./sections/contact.css");
 
 /* Fontawesome */
 @import url("@fortawesome/fontawesome-svg-core/styles.css");

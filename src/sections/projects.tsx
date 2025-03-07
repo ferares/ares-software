@@ -7,8 +7,11 @@ import Link from "next/link"
 
 import { useTranslations } from "next-intl"
 
+import { type EmblaCarouselType } from "embla-carousel"
+import useEmblaCarousel, { type EmblaViewportRefType } from "embla-carousel-react"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLink, type IconDefinition } from "@fortawesome/free-solid-svg-icons"
+import { faChevronLeft, faChevronRight, faExternalLink, type IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 import { technologies, type TechnologyKey } from "@/constants/technologies"
@@ -18,7 +21,7 @@ import { type TranslationKey } from "@/i18n/request"
 import Modal from "@/components/modal"
 import Badge from "@/components/badge"
 import VideoPlayer, { type Videos } from "@/components/videoPlayer"
-import ProjectsCarousel from "@/components/projectsCarousel"
+import IPhoneFrame from "@/components/iPhoneFrame"
 
 type Project = {
   id: string
@@ -41,7 +44,7 @@ const clientPorjects: Project[] = [
     links: [
       { url: "https://salamhello.com", label: "Labels.visit-site" },
     ],
-    technologies: ["shopify", "html", "css", "typescript", "liquid", "git"],
+    technologies: ["shopify", "html", "css", "typescript", "liquid", "webcomponents", "git"],
     videos: { desktop: { src: "/vids/salam/desktop.webm", poster: "/imgs/projects/salam/poster-desktop.png" }, mobile: { src: "/vids/salam/mobile.webm", poster: "/imgs/projects/salam/poster-mobile.png" }},
   },
   {
@@ -146,7 +149,7 @@ const personalProjects: Project[] = [
       { url: "https://papelapp.ares.uy", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/ferares/papelapp", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["html", "css", "typescript", "pwa", "android"],
+    technologies: ["html", "css", "typescript", "webcomponents", "pwa", "android"],
     videos: { desktop: { src: "/vids/papelapp/desktop.webm", poster: "/imgs/projects/papelapp/poster-desktop.png" }, mobile: { src: "/vids/papelapp/mobile.webm", poster: "/imgs/projects/papelapp/poster-mobile.png" }},
   },
   {
@@ -157,22 +160,29 @@ const personalProjects: Project[] = [
     links: [
       { url: "https://github.com/ferares/ecouter", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["html", "sass", "typescript", "pwa"],
+    technologies: ["html", "sass", "typescript", "webcomponents", "pwa"],
     videos: { desktop: { src: "/vids/ecouter/desktop.webm", poster: "/imgs/projects/ecouter/poster-desktop.png" }, mobile: { src: "/vids/ecouter/mobile.webm", poster: "/imgs/projects/ecouter/poster-mobile.png" }},
   },
 ]
 
 function Projects() {
-  const t = useTranslations()
   const [selectedProject, setSelectedProject] = useState<Project>()
+  const [emblaRefPersonal, emblaApiPersonal] = useEmblaCarousel(carouselOptions)
+  const [emblaRefClients, emblaApiClients] = useEmblaCarousel(carouselOptions)
+  const t = useTranslations()
 
-  const projectToElement = useCallback((project: Project) => {
+  const carouselNav = useCallback((direction: "prev" | "next", emblaApi?: EmblaCarouselType) => {
+    if (direction === "next") emblaApi?.scrollNext()
+    else emblaApi?.scrollPrev()
+  }, [])
+
+  const projectToSlide = useCallback((project: Project) => {
     return (
       <button id={`project-${project.id}`} type="button" className="project" onClick={() => setSelectedProject(project)}>
-        <h2 className="project__title">
-          <span className="btn">{t("Labels.view-details")}</span>
+        <h3 className="project__title">
+          <span className="project__title__btn btn">{t("Labels.view-details")}</span>
           <span className="project__title__label">{project.title}</span>
-        </h2>
+        </h3>
         <div className="project__img-desktop-wrapper">
           <span className="project__hover">
             <span className="btn">
@@ -186,23 +196,40 @@ function Projects() {
     )
   }, [t])
 
+  const projectsCarousel = useCallback((projects: Project[], emblaRef: EmblaViewportRefType, emblaApi?: EmblaCarouselType) => (
+    <div className="project__carousel-wrapper">
+      <div className="project__carousel-frame-wrapper">
+        <IPhoneFrame className="project__carousel-frame" height={520} width={254} />
+        <button type="button" className="carousel__arrow carousel__arrow-left" onClick={() => carouselNav("prev", emblaApi)} aria-label={t("Labels.previous")}>
+          <FontAwesomeIcon icon={faChevronLeft} className="carousel__arrow__icon" />
+        </button>
+        <button type="button" className="carousel__arrow carousel__arrow-right" onClick={() => carouselNav("next", emblaApi)} aria-label={t("Labels.next")}>
+          <FontAwesomeIcon icon={faChevronRight} className="carousel__arrow__icon" />
+        </button>
+      </div>
+      <div className="embla" ref={emblaRef}>
+        <div className="embla__container projects__list">
+          {projects.map(projectToSlide).map((slide, key) => <div key={key} className="embla__slide">{slide}</div>)}
+        </div>
+      </div>
+    </div>
+  ), [t, carouselNav, projectToSlide])
+
   return (
     <section id="projects" className="projects">
       <div className="max-width projects__content">
         <h2 className="section-title">
           {t("Sections.Projects.personal-projects")}
         </h2>
-        <ProjectsCarousel slides={personalProjects.map(projectToElement)} options={carouselOptions} />
+        {projectsCarousel(personalProjects, emblaRefPersonal, emblaApiPersonal)}
         <h2 className="section-title">
           {t("Sections.Projects.client-projects")}
         </h2>
-        <ProjectsCarousel slides={clientPorjects.map(projectToElement)} options={carouselOptions} />
+        {projectsCarousel(clientPorjects, emblaRefClients, emblaApiClients)}
         <Modal id="project" title={selectedProject?.title} labelledBy="modal-project-title" onClose={() => setSelectedProject(undefined)} open={!!selectedProject}>
           {selectedProject && (
             <>
-              <div className="project__carousel">
-                <VideoPlayer videos={selectedProject.videos} />
-              </div>
+              <VideoPlayer videos={selectedProject.videos} />
               <p className="project__paragraph">
                 {t(selectedProject.desc)}
               </p>
@@ -214,7 +241,7 @@ function Projects() {
                   </Link>
                 ))}
               </div>
-              <h4 className="project__tech-title">{t("Labels.developed-using")}</h4>
+              <h3 className="project__tech-title">{t("Labels.developed-using")}</h3>
               <ul className="project__technologies">
                 {selectedProject.technologies.map((tech, index) => {
                   const technology = technologies[tech]

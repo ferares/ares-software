@@ -1,7 +1,7 @@
 .about {
   align-items: center;
   background-color: var(--bg-color-about);
-  color: var(--text-color);
+  color: var(--color-text);
   display: flex;
   justify-content: center;
   min-height: 100%;
@@ -12,7 +12,7 @@
 .about__content {
   display: grid;
   gap: 2rem;
-  grid-template-areas: "first title" "image text";
+  grid-template-areas: "void title" "image text";
 }
 
 .about__title {
@@ -23,24 +23,27 @@
 .about__img {
   grid-area: image;
   margin: 0 auto;
-  max-width: 100%;
-  width: 500px;
+}
+
+.about__paragraphs {
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
+  margin: 0 auto;
+  max-width: 58rem;
 }
 
 .about__paragraph {
-  font-size: 1.45rem;
-  grid-area: text;
-  line-height: 1.5;
-  margin: 0 auto;
   margin-bottom: 1rem;
-  max-width: 57rem;
 }
 
 .about__btns {
   display: flex;
   gap: 2rem;
+  grid-area: buttons;
   justify-content: center;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-top: auto;
 }
 
 .about__btn {
@@ -50,7 +53,11 @@
 
 @media (width < 1300px) {
   .about__content {
-    grid-template-areas: "title title" "image image" "text text";
+    grid-template-areas: "title" "image" "text";
+  }
+
+  .about__btns {
+    margin-top: 2rem;
   }
 
   .about__img {
@@ -58,11 +65,7 @@
   }
 }
 
-@media (width < 576px) {
-  .about__paragraph {
-    font-size: 1.25rem;
-  }
-  
+@media (width < 576px) {  
   .about__btns {
     align-items: center;
     flex-direction: column;

@@ -50,6 +50,7 @@ const technologies = {
   hcaptcha: { icon: "/icons/hcaptcha.svg", title: "hCaptcha", iconSize },
   analytics: { icon: "/icons/analytics.svg", title: "Google Analytics", iconSize },
   tagmanager: { icon: "/icons/tagmanager.svg", title: "Google Tag Manager", iconSize },
+  webcomponents: { icon: "/icons/webcomponents.svg", title: "Web Components", iconSize },
 }
 
 type TechnologyKey = keyof typeof technologies
