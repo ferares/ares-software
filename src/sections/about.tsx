@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback } from "react"
+import { type MouseEvent, useCallback } from "react"
 
 import Image from "next/image"
 
@@ -32,6 +32,11 @@ function About() {
     anchor.click()
   }, [t])
 
+  const handleContactMe = useCallback((event: MouseEvent) => {
+    event.preventDefault()
+    scrollIntoView("#contact")
+  }, [])
+
   return (
     <section id="about" className="about">
       <div className="about__content">
@@ -46,10 +51,10 @@ function About() {
               <FontAwesomeIcon icon={faDownload} />
               {t("Labels.download-cv")}
             </button>
-            <button type="button" className="btn about__btn" onClick={() => scrollIntoView("#contact")}>
+            <a href="#contact" className="btn about__btn" onClick={handleContactMe}>
               <FontAwesomeIcon icon={faEnvelope} />
               {t("Labels.contact-me")}
-            </button>
+            </a>
           </div>
         </div>
       </div>
