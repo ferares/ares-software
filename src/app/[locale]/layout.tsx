@@ -24,7 +24,7 @@ config.autoAddCss = false
 
 const { GTM_ID, APP_URL } = process.env
 
-const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-openSans" })
+const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-open-sans" })
 const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-nunito" })
 
 

@@ -1,10 +1,10 @@
 .contact-section {
   align-items: center;
-  justify-content: center;
-  display: flex;
   background-color: var(--bg-color-contact);
-  min-height: 100%;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
 }
 
 .contact-section .section-title {
@@ -19,8 +19,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  max-width: 1000px;
   margin: 0 auto;
+  max-width: 1000px;
 }
 
 .contact__form .btn {
@@ -29,26 +29,25 @@
 
 .input-field-row label {
   color: var(--text-color);
-  margin-bottom: 10px;
   display: block;
   font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 input,
 select,
 textarea {
-  font-family: var(--font-nunito);
-  padding: 10px;
-  width: 100%;
-  border: none;
-  color: var(--text-color-dark);
+  background-color: var(--text-color);
+  border: 1px solid transparent;
   border-radius: 5px;
-  resize: none;
+  color: var(--text-color-dark);
+  font-family: var(--font-nunito);
   font-size: 1.25rem;
   line-height: 1.3;
-  background: var(--text-color);
-  border: 1px solid transparent;
+  padding: 10px;
+  resize: none;
   transition: border .3s;
+  width: 100%;
 }
 
 input:focus,
@@ -71,12 +70,12 @@ textarea:hover {
 
 .invalid-feedback {
   color: #FF9496;
-  font-size: 1rem;
   display: none;
+  font-size: 1rem;
   margin-top: 10px;
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
-  max-height: 0;
 }
 
 [data-theme="light"] .invalid-feedback {
@@ -86,10 +85,10 @@ textarea:hover {
 .was-validated *:invalid + .invalid-feedback,
 .was-validated .invalid-feedback.show,
 .was-validated *[aria-invalid="true"] + .invalid-feedback {
-  opacity: 1;
   display: block;
-  visibility: visible;
   max-height: unset;
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (prefers-reduced-motion) {

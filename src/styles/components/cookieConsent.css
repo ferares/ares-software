@@ -3,9 +3,9 @@
 }
 
 .cookie-alert__btns {
-  margin-top: 1rem;
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .cookie-alert__btn {

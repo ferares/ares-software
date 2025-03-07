@@ -1,28 +1,31 @@
-@import "./variables.css";
-@import "./base.css";
-@import "./animations.css";
+/* Base */
+@import url("./variables.css");
+@import url("./base.css");
+@import url("./animations.css");
 
-@import "./components/badge.css";
-@import "./components/menu.css";
-@import "./components/themeSwitch.css";
-@import "./components/cookieConsent.css";
-@import "./components/alert.css";
-@import "./components/videoPlayer.css";
-@import "./components/nextBtn.css";
-@import "./components/modal.css";
-@import "./components/bgImage.css";
-@import "./components/projectsCarousel.css";
-@import "./components/dropdown.css";
-@import "./components/langMenu.css";
-@import "./components/header.css";
-@import "./components/footer.css";
-@import "./components/loader.css";
+/* Components */
+@import url("./components/badge.css");
+@import url("./components/menu.css");
+@import url("./components/themeSwitch.css");
+@import url("./components/cookieConsent.css");
+@import url("./components/alert.css");
+@import url("./components/videoPlayer.css");
+@import url("./components/nextBtn.css");
+@import url("./components/modal.css");
+@import url("./components/bgImage.css");
+@import url("./components/projectsCarousel.css");
+@import url("./components/dropdown.css");
+@import url("./components/langMenu.css");
+@import url("./components/header.css");
+@import url("./components/footer.css");
+@import url("./components/loader.css");
 
-@import "./sections/intro.css";
-@import "./sections/about.css";
-@import "./sections/projects.css";
-@import "./sections/technologies.css";
-@import "./sections/contact.css";
+/* Sections */
+@import url("./sections/intro.css");
+@import url("./sections/about.css");
+@import url("./sections/projects.css");
+@import url("./sections/technologies.css");
+@import url("./sections/contact.css");
 
 /* Fontawesome */
-@import "@fortawesome/fontawesome-svg-core/styles.css";
+@import url("@fortawesome/fontawesome-svg-core/styles.css");

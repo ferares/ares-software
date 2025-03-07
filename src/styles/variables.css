@@ -1,7 +1,7 @@
 :root {
   --max-width: 1200px;
   --font-titles: var(--font-nunito), sans-serif;
-  --font-texts: var(--font-openSans), sans-serif;
+  --font-texts: var(--font-open-sans), sans-serif;
   --bg-color-header: #2C3E50;
   --bg-color-footer: #2C3E50;
   --bg-color-menu: #2C3E50;

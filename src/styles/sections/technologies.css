@@ -1,6 +1,6 @@
 .tech {
-  color: #fff;
   background-color: var(--bg-color-technologies);
+  color: #fff;
 }
 
 .tech__category {
@@ -13,11 +13,11 @@
 }
 
 .tech__category__list {
-  font-size: 4rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 1fr;
+  font-size: 4rem;
   gap: 2rem;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .tech__contact {
@@ -25,22 +25,22 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 992px) {
+@media (width < 992px) {
   .tech__category__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (width < 768px) {
   .tech__category__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 576px) {
+@media (width < 576px) {
   .tech__category__list {
-    grid-template-columns: 1fr;
     gap: 1rem;
+    grid-template-columns: 1fr;
   }
 
   .tech .section-title {

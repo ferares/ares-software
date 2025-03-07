@@ -18,8 +18,8 @@
 }
 
 .footer__icon {
-  display: block;
   color: var(--text-color);
+  display: block;
   width: 1.25rem;
 }
 
@@ -31,17 +31,17 @@
 .footer__menu {
   align-items: center;
   display: flex;
-  justify-content: flex-end;
   gap: 1rem;
+  justify-content: flex-end;
 }
 
 .footer__menu__link {
   background-color: transparent;
   border: 0;
-  padding: 0;
   color: var(--text-color);
   display: block;
   font-size: 2rem;
+  padding: 0;
   text-decoration: none;
   transition: color .3s;
 }
@@ -55,7 +55,7 @@
   height: 2rem;
 }
 
-@media screen and (max-width: 576px) {
+@media (width < 576px) {
   .footer__content {
     justify-content: center;
   }

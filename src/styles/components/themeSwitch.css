@@ -2,24 +2,24 @@
   background-color: var(--text-color-dark);
   border: 0;
   border-radius: 30px;
-  padding: .5rem 1rem;
   color: var(--text-color-dark);
-  font-size: 1.5rem;
-  position: relative;
-  line-height: 1;
   display: flex;
+  font-size: 1.5rem;
   gap: 1rem;
+  line-height: 1;
+  padding: .5rem 1rem;
+  position: relative;
 }
 
 .theme-switch__indicator {
   background-color: var(--text-color);
-  position: absolute;
-  top: .25rem;
+  border-radius: 50%;
   height: 2rem;
   left: 0;
-  width: 2rem;
-  border-radius: 50%;
+  position: absolute;
+  top: .25rem;
   transition: all .5s;
+  width: 2rem;
 }
 
 .theme-switch__indicator.right {
