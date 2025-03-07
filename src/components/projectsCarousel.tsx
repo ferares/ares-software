@@ -2,14 +2,15 @@
 
 import { type ReactNode, useCallback } from "react"
 
-import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 import useEmblaCarousel from "embla-carousel-react"
 import { type EmblaOptionsType } from "embla-carousel"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import { useTranslations } from "next-intl"
+
+import IPhoneFrame from "./iPhoneFrame"
 
 interface ProjectsCarouselProps { slides: ReactNode[], options?: EmblaOptionsType }
 
@@ -25,7 +26,7 @@ function ProjectsCarousel({ slides, options }: ProjectsCarouselProps) {
   return (
     <div className="project__carousel-wrapper">
       <div className="project__carousel-frame-wrapper">
-        <Image className="project__carousel-frame" src="/imgs/iphone.svg" alt="" height={550} width={254} />
+        <IPhoneFrame className="project__carousel-frame" height={520} width={254} />
         <button type="button" className="carousel__arrow carousel__arrow-left" onClick={() => carouselNav("prev")} aria-label={t("previous")}>
           <FontAwesomeIcon icon={faChevronLeft} className="carousel__arrow__icon" />
         </button>
