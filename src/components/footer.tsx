@@ -38,7 +38,7 @@ function Footer() {
               </a>
             </li>
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://www.linkedin.com/in/ferm%C3%ADn-ares-0249b71ab/" aria-label="Linkedin">
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="https://linkedin.com/in/fermin-ares" aria-label="LinkedIn">
                 <FontAwesomeIcon className="footer__menu__icon" icon={faLinkedin} />
               </a>
             </li>
