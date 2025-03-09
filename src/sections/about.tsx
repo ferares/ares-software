@@ -45,7 +45,7 @@ function About() {
         <h2 className="section-title about__title">
           {t("Sections.About.title")}
         </h2>
-        <Image className="about__img" src={aboutImg} alt="" width={500} />
+        <Image className="about__img" src={aboutImg} alt="" width={500} height={500} />
         <div className="about__paragraphs">
           {t.rich("Sections.About.content", richTranslationValues)}
           <div className="about__btns">

@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useCallback, useContext, useState } from "react"
+import { createContext, useCallback, useContext, useMemo, useState } from "react"
 
 import { setCookie } from "@/helpers/cookies"
 
@@ -9,11 +9,13 @@ type ThemeOption = "light" | "dark"
 declare type ThemeContextProps = {
   toggleTheme: () => void,
   theme: ThemeOption,
+  isDark: boolean,
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
   toggleTheme: () => null,
   theme: "dark",
+  isDark: true,
 })
 
 export function ThemeProvider({ children, initialTheme }: { children: React.ReactNode, initialTheme: ThemeOption }) {
@@ -27,7 +29,9 @@ export function ThemeProvider({ children, initialTheme }: { children: React.Reac
     })
   }, [])
 
-  const value = { theme, toggleTheme }
+  const isDark = useMemo(() => theme === "dark", [theme])
+
+  const value = { theme, toggleTheme, isDark }
 
   return (
     <ThemeContext.Provider value={value}>

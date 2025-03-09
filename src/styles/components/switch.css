@@ -1,0 +1,32 @@
+.switch {
+  align-items: center;
+  background-color: var(--color-text-dark);
+  border: 0;
+  border-radius: 30px;
+  color: var(--color-text-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: .5rem 1rem;
+  width: 6.8rem;
+}
+
+.switch__indicator {
+  align-items: center;
+  background-color: var(--color-text);
+  border-radius: 50%;
+  display: flex;
+  height: 2.4rem;
+  justify-content: center;
+  transition: all .5s;
+  width: 2.4rem;
+}
+
+.switch__indicator--right {
+  transform: translateX(100%);
+}
+
+@media (prefers-reduced-motion) {
+  .switch__indicator {
+    transition: none;
+  }
+}

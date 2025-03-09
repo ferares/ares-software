@@ -77,7 +77,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   return (
     <html lang={locale} className={`${openSans.variable} ${nunito.variable}`}>
       <head>
-        <link rel="shortcut icon" href="/imgs/me.jpg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/imgs/favicon.jpg" type="image/jpeg" />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>

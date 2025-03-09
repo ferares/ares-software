@@ -36,7 +36,11 @@
     "switch-dark": "Switch to dark theme",
     "switch-light": "Switch to light theme",
     "previous": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "show-mobile-screenshots": "Show mobile screenshots",
+    "show-desktop-screenshots": "Show desktop screenshots",
+    "show-mobile-video": "Show mobile video",
+    "show-desktop-video": "Show desktop video"
   },
   "Messages": {
     "changing-bg-img": "Changing background image",
@@ -60,6 +64,7 @@
       "cv-link": "/docs/fermin-ares.cv.en.pdf"
     },
     "Projects": {
+      "title": "Featured Projects",
       "personal-projects": "Personal Projects",
       "client-projects": "Client Projects",
       "projects": {

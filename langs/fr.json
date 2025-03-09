@@ -36,7 +36,11 @@
     "switch-dark": "Passer au thème sombre",
     "switch-light": "Passer au thème clair",
     "previous": "Précédent",
-    "next": "Suivant"
+    "next": "Suivant",
+    "show-mobile-screenshots": "Afficher les captures d'écran mobiles",
+    "show-desktop-screenshots": "Afficher les captures d'écran bureau",
+    "show-mobile-video": "Afficher la vidéo mobile",
+    "show-desktop-video": "Afficher la vidéo bureau"
   },
   "Messages": {
     "changing-bg-img": "Changement de l'image de fond",
@@ -60,6 +64,7 @@
       "cv-link": "/docs/fermin-ares.cv.fr.pdf"
     },
     "Projects": {
+      "title": "Projets en vedette",
       "personal-projects": "Projets personnels",
       "client-projects": "Projets clients",
       "projects": {

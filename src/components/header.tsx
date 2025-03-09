@@ -14,7 +14,7 @@ import { useMenuContext } from "@/context/menu"
 
 import LangMenu from "./langMenu"
 
-import meImg from "@/../public/imgs/me.jpg"
+import meImg from "@/../public/imgs/header.jpg"
 
 function Header() {
   const { newBackground, loadingBg } = useBackgroundContext()
@@ -40,7 +40,7 @@ function Header() {
         </a>
         <div className="navbar__content">
           <button className="navbar__btn" type="button" onClick={handleAvatarClick} title={t("Labels.change-background")}>
-            <Image className="navbar__img" src={meImg} alt="" />
+            <Image className="navbar__img" src={meImg} alt="" height={48} width={48} />
           </button>
           <div className="navbar__content__right">
             <LangMenu />
