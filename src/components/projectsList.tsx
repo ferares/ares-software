@@ -31,7 +31,7 @@ export type Project = {
   videos: Videos,
 }
 
-interface ProjectsListProps { title: string, projects: Project[] }
+interface ProjectsListProps { id:string, title: string, projects: Project[] }
 
 const carouselOptions: EmblaOptionsType = {
   align: "center",
@@ -40,7 +40,7 @@ const carouselOptions: EmblaOptionsType = {
   breakpoints: { "(max-width: 768px)": { active: true } },
 }
 
-function ProjectsList({ title, projects}: ProjectsListProps) {
+function ProjectsList({ id, title, projects}: ProjectsListProps) {
   const t = useTranslations()
   const [selectedProject, setSelectedProject] = useState<Project>()
   const [emblaRef, emblaApi] = useEmblaCarousel(carouselOptions)
@@ -62,7 +62,7 @@ function ProjectsList({ title, projects}: ProjectsListProps) {
   return (
     <>
       <div className="projects__title-wrapper">
-        <h3 className="projects__title">
+        <h3 id={id} className="projects__title">
           {title}
         </h3>
         <Switch ariaLabel={switchAriaLabel} leftIcon={faDisplay} rightIcon={faMobileScreen} onChange={toggleDisplay} state={displayMode === "mobile" ? "right" : "left"} />
@@ -75,18 +75,18 @@ function ProjectsList({ title, projects}: ProjectsListProps) {
           <FontAwesomeIcon icon={faChevronRight} className="project__carousel__arrow__icon" />
         </button>
         <div className="embla" ref={emblaRef}>
-          <div className="embla__container">
+          <ul className="embla__container" aria-labelledby={id}>
             {projects.map((project, key) => (
-              <div key={key} className="embla__slide">
-              <button id={`project-${project.id}`} type="button" className="project" onClick={() => setSelectedProject(project)}>
-                <Image className="project__img" src={displayMode === "desktop" ? project.images.desktop : project.images.mobile} alt="" />
-                <h4 className="project__title">
-                  {project.title}
-                </h4>
-              </button>
-              </div>
+              <li key={key} className="embla__slide">
+                <button id={`project-${project.id}`} type="button" className="project" onClick={() => setSelectedProject(project)}>
+                  <Image className="project__img" src={displayMode === "desktop" ? project.images.desktop : project.images.mobile} alt="" />
+                  <h4 className="project__title">
+                    {project.title}
+                  </h4>
+                </button>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
       <Modal id="project" title={selectedProject?.title} labelledBy="modal-project-title" onClose={() => setSelectedProject(undefined)} open={!!selectedProject}>

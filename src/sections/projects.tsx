@@ -200,8 +200,8 @@ function Projects() {
     <section id="projects" className="projects">
       <h2 className="section-title">{t("Sections.Projects.title")}</h2>
       <div className="projects__content">
-        <ProjectsList title={t("Sections.Projects.personal-projects")} projects={personalProjects} />
-        <ProjectsList title={t("Sections.Projects.client-projects")} projects={clientProjects} />
+        <ProjectsList id="projects-personal" title={t("Sections.Projects.personal-projects")} projects={personalProjects} />
+        <ProjectsList id="projects-client" title={t("Sections.Projects.client-projects")} projects={clientProjects} />
       </div>
     </section>
   )
