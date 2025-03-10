@@ -2,7 +2,11 @@
 
 import { useTranslations } from "next-intl"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+
+import { scrollIntoView } from "@/helpers/scroll"
 
 import ProjectsList, { type Project } from "@/components/projectsList"
 
@@ -202,6 +206,12 @@ function Projects() {
       <div className="projects__content">
         <ProjectsList id="projects-personal" title={t("Sections.Projects.personal-projects")} projects={personalProjects} />
         <ProjectsList id="projects-client" title={t("Sections.Projects.client-projects")} projects={clientProjects} />
+      </div>
+      <div className="projects__contact">
+        <button type="button" className="btn projects__btn" onClick={() => scrollIntoView("#contact")}>
+          <FontAwesomeIcon icon={faEnvelope} />
+          {t("Labels.contact-me")}
+        </button>
       </div>
     </section>
   )

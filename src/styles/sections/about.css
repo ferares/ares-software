@@ -65,7 +65,7 @@
   }
 }
 
-@media (width < 576px) {  
+@media (width < 576px) {
   .about__btns {
     align-items: center;
     flex-direction: column;

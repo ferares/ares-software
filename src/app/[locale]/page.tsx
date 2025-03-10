@@ -12,8 +12,8 @@ function Home() {
       <Intro />
       <About />
       <Projects />
-      <Contact captchaSiteKey={CAPTCHA_SITE_KEY ?? ""} />
       <Technologies />
+      <Contact captchaSiteKey={CAPTCHA_SITE_KEY ?? ""} />
     </>
   )
 }

@@ -54,12 +54,6 @@ function Technologies() {
           {t("Sections.Technologies.title")}
         </h2>
         {technologiesList.map((category, index) => <TechnologyCategory key={index} category={category} />)}
-        <div className="tech__contact">
-          <button type="button" className="btn tech__btn" onClick={() => scrollIntoView("#contact")}>
-            <FontAwesomeIcon icon={faEnvelope} />
-            {t("Labels.contact-me")}
-          </button>
-        </div>
       </div>
     </section>
   )
