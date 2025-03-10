@@ -79,3 +79,10 @@
 .menu-toggle-btn.open .icon-hamburger__line:nth-child(3) {
   transform: translateY(-.4rem) rotate(45deg);
 }
+
+@media (prefers-reduced-motion) {
+  .icon-hamburger__line,
+  .menu__content {
+    transition: none;
+  }
+}

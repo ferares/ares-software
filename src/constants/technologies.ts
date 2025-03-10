@@ -51,6 +51,13 @@ const technologies = {
   analytics: { icon: "/icons/analytics.svg", title: "Google Analytics", iconSize },
   tagmanager: { icon: "/icons/tagmanager.svg", title: "Google Tag Manager", iconSize },
   webcomponents: { icon: "/icons/webcomponents.svg", title: "Web Components", iconSize },
+  postman: { icon: "/icons/postman.svg", title: "Postman", iconSize },
+  linear: { icon: "/icons/linear.svg", title: "Linear", iconSize },
+  figma: { icon: "/icons/figma.svg", title: "Figma", iconSize: 45 },
+  heroku: { icon: "/icons/heroku.svg", title: "Heroku", iconSize },
+  jest: { icon: "/icons/jest.svg", title: "Jest", iconSize },
+  jwt: { icon: "/icons/jwt.svg", title: "JWT", iconSize },
+  sketch: { icon: "/icons/sketch.svg", title: "Sketch", iconSize },
 }
 
 type TechnologyKey = keyof typeof technologies

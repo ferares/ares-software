@@ -1,57 +1,22 @@
 .tech {
   background-color: var(--bg-color-technologies);
   color: #fff;
-}
-
-.tech__category {
-  margin-bottom: 4rem;
-}
-
-.tech__category__title {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.tech__category__list {
-  display: grid;
-  font-size: 4rem;
-  gap: 2rem;
-  grid-auto-rows: 1fr;
-  grid-template-columns: repeat(5, 1fr);
+  padding: 2rem 0;
 }
 
 .tech__contact {
   display: flex;
   justify-content: center;
+  padding: 0 2rem;
 }
 
-@media (width < 992px) {
-  .tech__category__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (width < 768px) {
-  .tech__category__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.tech__btn {
+  display: flex;
+  gap: 1rem;
 }
 
 @media (width < 576px) {
-  .tech__category__list {
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-
   .tech .section-title {
     font-size: 2.5rem;
-  }
-
-  .tech__category__title {
-    font-size: 2rem;
-  }
-
-  .project__carousel-wrapper {
-    margin-bottom: 2rem;
   }
 }

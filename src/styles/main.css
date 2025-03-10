@@ -2,6 +2,7 @@
 @import url("./variables.css");
 @import url("./base.css");
 @import url("./animations.css");
+@import url("./embla.css");
 
 /* Components */
 @import url("./components/alert.css");
@@ -18,6 +19,7 @@
 @import url("./components/nextBtn.css");
 @import url("./components/projectsList.css");
 @import url("./components/switch.css");
+@import url("./components/technologyCategory.css");
 @import url("./components/videoPlayer.css");
 
 /* Sections */

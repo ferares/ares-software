@@ -1,0 +1,32 @@
+.tech__category {
+  margin-bottom: 4rem;
+}
+
+.tech__category__title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.tech__category__slide {
+  flex: 0 0 auto;
+  font-size: 4rem;
+  margin: 0 1rem;
+  min-width: 200px;
+}
+
+@media (width < 576px) {
+  .tech__category {
+    margin-bottom: 2rem;
+  }
+
+  .tech__category__title {
+    font-size: 2rem;
+  }
+
+  .tech__category__slide {
+    margin: 0 .25rem;
+  }
+}

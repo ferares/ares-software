@@ -37,7 +37,7 @@ const carouselOptions: EmblaOptionsType = {
   align: "center",
   loop: true,
   dragFree: true,
-  breakpoints: { "(max-width: 768px)": { active: true } },
+  breakpoints: { "(prefers-reduced-motion)": { duration: 0 } },
 }
 
 function ProjectsList({ id, title, projects}: ProjectsListProps) {
@@ -77,7 +77,7 @@ function ProjectsList({ id, title, projects}: ProjectsListProps) {
         <div className="embla" ref={emblaRef}>
           <ul className="embla__container" aria-labelledby={id}>
             {projects.map((project, key) => (
-              <li key={key} className="embla__slide">
+              <li key={key} className="embla__slide projects__slide">
                 <button id={`project-${project.id}`} type="button" className="project" onClick={() => setSelectedProject(project)}>
                   <Image className="project__img" src={displayMode === "desktop" ? project.images.desktop : project.images.mobile} alt="" />
                   <h4 className="project__title">
