@@ -1,4 +1,4 @@
-.contact-section {
+.contact {
   align-items: center;
   background-color: var(--bg-color-contact);
   display: flex;
@@ -7,11 +7,11 @@
   min-height: 100%;
 }
 
-.contact-section .section-title {
+.contact .section-title {
   margin-bottom: 1rem;
 }
 
-.contact-content {
+.contact__content {
   width: 100%;
 }
 
@@ -23,19 +23,14 @@
   max-width: 1000px;
 }
 
-.contact__form .btn {
-  margin-left: auto;
-}
-
-.input-field-row label {
+.contact__form__label {
   color: var(--color-text);
   display: block;
   font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
-input,
-textarea {
+.contact__form__input {
   background-color: var(--color-text);
   border: 1px solid transparent;
   border-radius: 5px;
@@ -49,22 +44,19 @@ textarea {
   width: 100%;
 }
 
-input:focus,
-textarea:focus {
+.contact__form__input:focus {
   border: 1px solid #a1a9c3;
 }
 
-input::placeholder,
-textarea::placeholder {
+.contact__form__input::placeholder {
   opacity: .67
 }
 
-input:hover,
-textarea:hover {
+.contact__form__input:hover {
   border: 1px solid #a1a9c3;
 }
 
-.invalid-feedback {
+.contact__form__invalid-feedback {
   color: #FF9496;
   display: none;
   font-size: 1rem;
@@ -74,22 +66,36 @@ textarea:hover {
   visibility: hidden;
 }
 
-.theme-light .invalid-feedback {
+.theme-light .contact__form__invalid-feedback {
   color: #86292b;
 }
 
-.was-validated *:invalid + .invalid-feedback,
-.was-validated .invalid-feedback.show,
-.was-validated *[aria-invalid="true"] + .invalid-feedback {
+.was-validated *:invalid + .contact__form__invalid-feedback,
+.was-validated .contact__form__invalid-feedback.show,
+.was-validated *[aria-invalid="true"] + .contact__form__invalid-feedback {
   display: block;
   max-height: unset;
   opacity: 1;
   visibility: visible;
 }
 
+.contact__form__submit-row {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.contact__form__email {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  gap: .5rem;
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion) {
-  input,
-  textarea {
+  .contact__form__input {
     transition: none;
   }
 }

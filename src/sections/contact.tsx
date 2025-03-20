@@ -4,6 +4,9 @@ import { type FormEvent, useCallback, useRef, useState } from "react"
 
 import { useLocale, useTranslations } from "next-intl"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+
 import { emailPattern } from "@/helpers/strings"
 
 import HCaptcha from "@hcaptcha/react-hcaptcha"
@@ -60,33 +63,39 @@ function Contact({ captchaSiteKey }: ContactProps) {
   }, [captchaToken, email, message, name, t, setLoading, pushAlert, pushScreenReaderAlert])
 
   return (
-    <section id="contact"className="contact-section">
-      <div className="max-width contact-content">
+    <section id="contact" className="contact">
+      <div className="max-width contact__content">
         <h2 className="section-title">
           {t("Sections.Contact.title")}
         </h2>
         <form noValidate className={`contact__form ${wasValidated ? "was-validated" : ""}`} onSubmit={handleSubmit}>
-          <div className="input-field-row">
-            <label htmlFor="name">{t("Labels.name")}</label>
-            <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />
+          <div className="contact__form__row">
+            <label className="contact__form__label" htmlFor="name">{t("Labels.name")}</label>
+            <input className="contact__form__input" type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />
           </div>
-          <div className="input-field-row">
-            <label htmlFor="email">{t("Labels.email")} ({t("Labels.required")})</label>
-            <input ref={emailRef}  type="email" id="email" value={email} required pattern={emailPattern} onChange={(event) => setEmail(event.target.value)} />
-            <div className="invalid-feedback">{t("Messages.input-an-email")}</div>
+          <div className="contact__form__row">
+            <label className="contact__form__label" htmlFor="email">{t("Labels.email")} ({t("Labels.required")})</label>
+            <input className="contact__form__input" ref={emailRef}  type="email" id="email" value={email} required pattern={emailPattern} onChange={(event) => setEmail(event.target.value)} />
+            <div className="contact__form__invalid-feedback">{t("Messages.input-an-email")}</div>
           </div>
-          <div className="input-field-row">
-            <label htmlFor="message">{t("Labels.message")} ({t("Labels.required")})</label>
-            <textarea ref={messageRef} id="message" rows={6} required value={message} onChange={(event) => setMessage(event.target.value)} />
-            <div className="invalid-feedback">{t("Messages.input-a-message")}</div>
+          <div className="contact__form__row">
+            <label className="contact__form__label" htmlFor="message">{t("Labels.message")} ({t("Labels.required")})</label>
+            <textarea className="contact__form__input" ref={messageRef} id="message" rows={6} required value={message} onChange={(event) => setMessage(event.target.value)} />
+            <div className="contact__form__invalid-feedback">{t("Messages.input-a-message")}</div>
           </div>
-          <div className="input-field-row">
+          <div className="contact__form__row">
             <HCaptcha ref={captchaRef} sitekey={captchaSiteKey} onVerify={setCaptchaToken} languageOverride={locale} />
           </div>
-          {<div className={`invalid-feedback ${!captchaToken ? "show" : ""}`}>{t("Messages.invalid-captcha")}</div>}
-          <button type="submit" className="btn btn-primary">
-            {t("Labels.send")}
-          </button>
+          {<div className={`contact__form__invalid-feedback ${!captchaToken ? "show" : ""}`}>{t("Messages.invalid-captcha")}</div>}
+          <div className="contact__form__submit-row">
+            <a className="contact__form__email" href="mailto:fermin@ares.uy">
+              <FontAwesomeIcon icon={faEnvelope} />
+              fermin@ares.uy
+            </a>
+            <button type="submit" className="btn btn-primary">
+              {t("Labels.send")}
+            </button>
+          </div>
         </form>
       </div>
     </section>
