@@ -2,12 +2,7 @@
 
 import { useTranslations } from "next-intl"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-
 import { type TechnologyKey } from "@/constants/technologies"
-
-import { scrollIntoView } from "@/helpers/scroll"
 
 import { type TranslationKey } from "@/i18n/request"
 
