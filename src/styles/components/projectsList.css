@@ -79,7 +79,7 @@
 .project__paragraph {
   color: var(--color-text);
   margin: 2rem auto;
-  max-width: 750px;
+  max-width: 50rem;
 }
 
 .project__tech-title {
