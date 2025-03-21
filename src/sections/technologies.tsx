@@ -15,7 +15,7 @@ const technologiesList: { title: TranslationKey, list: TechnologyKey[] }[] = [
   },
   {
     title: "Labels.frameworks",
-    list: [ "next", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "jest", "tailwindcss", "bootstrap" ],
+    list: [ "next", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap" ],
   },
   {
     title: "Labels.e-commerce",
@@ -35,7 +35,7 @@ const technologiesList: { title: TranslationKey, list: TechnologyKey[] }[] = [
   },
   {
     title: "Labels.tools",
-    list: [ "analytics", "tagmanager", "postman", "figma", "sketch", "linear", "jwt", "recaptcha", "hcaptcha" ],
+    list: [ "analytics", "tagmanager", "vite", "vitest", "jest", "postman", "figma", "sketch", "leaflet", "linear", "jwt", "recaptcha", "hcaptcha" ],
   },
 ]
 

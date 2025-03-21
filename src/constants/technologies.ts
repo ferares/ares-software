@@ -58,6 +58,9 @@ const technologies = {
   jest: { icon: "/icons/jest.svg", title: "Jest", iconSize },
   jwt: { icon: "/icons/jwt.svg", title: "JWT", iconSize },
   sketch: { icon: "/icons/sketch.svg", title: "Sketch", iconSize },
+  vite: { icon: "/icons/vite.svg", title: "Vite", iconSize },
+  vitest: { icon: "/icons/vitest.svg", title: "Vitest", iconSize },
+  leaflet: { icon: "/icons/leaflet.svg", title: "Leaflet", iconSize },
 }
 
 type TechnologyKey = keyof typeof technologies

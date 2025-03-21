@@ -130,7 +130,7 @@ const personalProjects: Project[] = [
     links: [
       { url: "https://buses.uy", label: "Labels.try-it", rel: "" },
     ],
-    technologies: ["go", "next", "react", "html", "typescript", "css", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket" ,"cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
+    technologies: ["go", "next", "react", "html", "typescript", "css", "vitest", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket" ,"cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
     videos: {
       desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png"},
       mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png"},
@@ -160,7 +160,7 @@ const personalProjects: Project[] = [
       { url: "https://arboladourbano.com", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/Arbolado-Urbano", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["next", "react", "bootstrap", "sass", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
+    technologies: ["typescript", "bootstrap", "sass", "vite", "leaflet", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
     videos: {
       desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/projects/arbolado/poster-desktop.png" },
       mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/projects/arbolado/poster-mobile.png" },
@@ -175,7 +175,7 @@ const personalProjects: Project[] = [
       { url: "https://papelapp.ares.uy", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/ferares/papelapp", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["html", "css", "typescript", "webcomponents", "pwa", "android"],
+    technologies: ["html", "css", "typescript", "vite", "webcomponents", "pwa", "android"],
     videos: {
       desktop: { src: "/vids/papelapp/desktop.webm", poster: "/imgs/projects/papelapp/poster-desktop.png" },
       mobile: { src: "/vids/papelapp/mobile.webm", poster: "/imgs/projects/papelapp/poster-mobile.png" },
@@ -189,7 +189,7 @@ const personalProjects: Project[] = [
     links: [
       { url: "https://github.com/ferares/ecouter", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["html", "sass", "typescript", "webcomponents", "pwa"],
+    technologies: ["html", "sass", "typescript", "webcomponents", "pwa", "vite"],
     videos: {
       desktop: { src: "/vids/ecouter/desktop.webm", poster: "/imgs/projects/ecouter/poster-desktop.png" },
       mobile: { src: "/vids/ecouter/mobile.webm", poster: "/imgs/projects/ecouter/poster-mobile.png" },
