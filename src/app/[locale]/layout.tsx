@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
-import { Nunito, Open_Sans } from "next/font/google"
+import { Figtree, Open_Sans } from "next/font/google"
 import { cookies } from "next/headers"
 
 import { NextIntlClientProvider } from "next-intl"
@@ -25,7 +25,7 @@ config.autoAddCss = false
 const { GTM_ID, APP_URL } = process.env
 
 const openSans = Open_Sans({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-open-sans" })
-const nunito = Nunito({ subsets: ["latin"], display: "swap", weight: ["400", "700"], variable: "--font-nunito" })
+const figtree = Figtree({ subsets: ["latin"], display: "swap", weight: ["400", "500"], variable: "--font-figtree" })
 
 
 export const viewport: Viewport = {
@@ -75,7 +75,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   const theme = cookieStore.get("theme")?.value.split(" ")[0]
 
   return (
-    <html lang={locale} className={`${openSans.variable} ${nunito.variable}`}>
+    <html lang={locale} className={`${openSans.variable} ${figtree.variable}`}>
       <head>
         <link rel="shortcut icon" href="/imgs/favicon.jpg" type="image/jpeg" />
       </head>
