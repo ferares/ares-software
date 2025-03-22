@@ -64,20 +64,6 @@ const clientProjects: Project[] = [
     },
   },
   {
-    id: "ionic",
-    title: "Ionic Themes",
-    images: { desktop: ionicDesktopImg, mobile: ionicMobileImg },
-    desc: "Sections.Projects.projects.ionic",
-    links: [
-      { url: "https://ionicthemes.com/", label: "Labels.visit-site" },
-    ],
-    technologies: ["angular", "typescript", "html", "sass", "git"],
-    videos: {
-      desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/projects/ionic/poster-desktop.png" },
-      mobile: { src: "/vids/ionic/mobile.webm", poster: "/imgs/projects/ionic/poster-mobile.png" },
-    },
-  },
-  {
     id: "atlantico",
     title: "Atlántico Desarrollos",
     images: { desktop: atlanticoDesktopImg, mobile: atlanticoMobileImg },
@@ -119,6 +105,20 @@ const clientProjects: Project[] = [
       mobile: { src: "/vids/angular/mobile.webm", poster: "/imgs/projects/angular/poster-mobile.png" },
     },
   },
+  {
+    id: "ionic",
+    title: "Ionic Themes",
+    images: { desktop: ionicDesktopImg, mobile: ionicMobileImg },
+    desc: "Sections.Projects.projects.ionic",
+    links: [
+      { url: "https://ionicthemes.com/", label: "Labels.visit-site" },
+    ],
+    technologies: ["angular", "typescript", "html", "sass", "git"],
+    videos: {
+      desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/projects/ionic/poster-desktop.png" },
+      mobile: { src: "/vids/ionic/mobile.webm", poster: "/imgs/projects/ionic/poster-mobile.png" },
+    },
+  },
 ]
 
 const personalProjects: Project[] = [
@@ -152,21 +152,6 @@ const personalProjects: Project[] = [
     },
   },
   {
-    id: "arbolado",
-    title: "Arbolado Urbano",
-    images: { desktop: arboladoDesktopImg, mobile: arboladoMobileImg },
-    desc: "Sections.Projects.projects.arbolado",
-    links: [
-      { url: "https://arboladourbano.com", label: "Labels.try-it", rel: "" },
-      { url: "https://github.com/Arbolado-Urbano", label: "Labels.view-project", icon: faGithub },
-    ],
-    technologies: ["typescript", "bootstrap", "sass", "vite", "leaflet", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
-    videos: {
-      desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/projects/arbolado/poster-desktop.png" },
-      mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/projects/arbolado/poster-mobile.png" },
-    },
-  },
-  {
     id: "papelapp",
     title: "Papelapp",
     images: { desktop: papelappDesktopImg, mobile: papelappMobileImg },
@@ -193,6 +178,21 @@ const personalProjects: Project[] = [
     videos: {
       desktop: { src: "/vids/ecouter/desktop.webm", poster: "/imgs/projects/ecouter/poster-desktop.png" },
       mobile: { src: "/vids/ecouter/mobile.webm", poster: "/imgs/projects/ecouter/poster-mobile.png" },
+    },
+  },
+  {
+    id: "arbolado",
+    title: "Arbolado Urbano",
+    images: { desktop: arboladoDesktopImg, mobile: arboladoMobileImg },
+    desc: "Sections.Projects.projects.arbolado",
+    links: [
+      { url: "https://arboladourbano.com", label: "Labels.try-it", rel: "" },
+      { url: "https://github.com/Arbolado-Urbano", label: "Labels.view-project", icon: faGithub },
+    ],
+    technologies: ["typescript", "bootstrap", "sass", "vite", "leaflet", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
+    videos: {
+      desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/projects/arbolado/poster-desktop.png" },
+      mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/projects/arbolado/poster-mobile.png" },
     },
   },
 ]
