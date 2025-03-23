@@ -65,6 +65,7 @@
     },
     "Projects": {
       "title": "Progetti in evidenza",
+      "intro": "Selezionane uno per saperne di più",
       "personal-projects": "Progetti Personali",
       "client-projects": "Progetti per Clienti",
       "projects": {

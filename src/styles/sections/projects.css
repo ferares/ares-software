@@ -3,6 +3,15 @@
   padding: 2rem 0;
 }
 
+.projects .section-title {
+  margin-bottom: 1rem;
+}
+
+.projects__intro {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .projects__content {
   height: 100%;
 }

@@ -203,6 +203,7 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <h2 className="section-title">{t("Sections.Projects.title")}</h2>
+      <p className="projects__intro">{t("Sections.Projects.intro")}</p>
       <div className="projects__content">
         <ProjectsList id="projects-personal" title={t("Sections.Projects.personal-projects")} projects={personalProjects} />
         <ProjectsList id="projects-client" title={t("Sections.Projects.client-projects")} projects={clientProjects} />
