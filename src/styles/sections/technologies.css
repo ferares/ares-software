@@ -1,7 +1,6 @@
 .tech {
   background-color: var(--bg-color-technologies);
   color: #fff;
-  padding: 2rem 0;
 }
 
 @media (width < 576px) {
