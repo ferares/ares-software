@@ -3,12 +3,12 @@ import { notFound } from "next/navigation"
 import { Figtree, Open_Sans } from "next/font/google"
 import { cookies } from "next/headers"
 
-import { NextIntlClientProvider } from "next-intl"
+import { type Locale, NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 
 import { config } from "@fortawesome/fontawesome-svg-core"
 
-import { type LocaleOption, locales } from "@/i18n/routing"
+import { locales } from "@/i18n/routing"
 
 import { PrefersReducedMotionProvider } from "@/context/reducedMotion"
 import { CallOnEscProvider } from "@/context/callOnEsc"
@@ -33,7 +33,7 @@ export const viewport: Viewport = {
   themeColor: "black",
 }
 
-export async function generateMetadata(props: { params: Promise<{ locale: LocaleOption }> }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await props.params
   const t = await getTranslations({ locale, namespace: "Metadata" })
   const title = "Ares Software"
@@ -64,7 +64,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: LocaleOption }> }>) {
+export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: Locale }> }>) {
   const { locale } = await params
   if (!locales.includes(locale)) notFound()
   setRequestLocale(locale)

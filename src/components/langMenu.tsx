@@ -2,12 +2,13 @@
 
 import { useCallback, useRef, useState } from "react"
 
-import { useLocale, useTranslations } from "next-intl"
+import { type Locale, useLocale, useTranslations } from "next-intl"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLanguage } from "@fortawesome/free-solid-svg-icons"
 
-import { labels, type LocaleOption, locales, redirect } from "@/i18n/routing"
+import { labels, locales } from "@/i18n/routing"
+import { redirect } from "@/i18n/navigation"
 
 import Dropdown from "./dropdown"
 
@@ -17,7 +18,7 @@ export default function LangMenu() {
   const locale = useLocale()
   const t = useTranslations("Labels")
 
-  const changeLocale = useCallback(async (localeOption: LocaleOption) => {
+  const changeLocale = useCallback(async (localeOption: Locale) => {
     redirect({ href: { pathname: "/" }, locale: localeOption })
     setOpen(false)
   }, [])

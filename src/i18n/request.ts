@@ -1,6 +1,7 @@
+import { hasLocale, type Messages } from "next-intl"
 import { getRequestConfig } from "next-intl/server"
 
-import { defaultLocale, type LocaleOption, locales } from "./routing"
+import { routing } from "./routing"
 
 type DotPrefix<T extends string, U extends string> = `${T}.${U}`
 
@@ -8,11 +9,11 @@ type NestedKeyOf<ObjectType extends object> = {
   [Key in keyof ObjectType & (string)]: ObjectType[Key] extends object ? DotPrefix<Key & string, NestedKeyOf<ObjectType[Key]>> : Key
 }[keyof ObjectType & (string)]
 
-export type TranslationKey = NestedKeyOf<IntlMessages>
+export type TranslationKey = NestedKeyOf<Messages>
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale
-  if ((!locale) || (!locales.includes(locale as LocaleOption))) locale = defaultLocale
-  const messages = (await import(`../../langs/${locale}.json`)) as { default: IntlMessages }
+  const requested = await requestLocale
+  const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale
+  const messages = (await import(`../../langs/${locale}.json`)) as { default: Messages }
   return { locale, messages: messages.default }
 })
