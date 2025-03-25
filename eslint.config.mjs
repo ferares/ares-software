@@ -6,12 +6,10 @@ import tsParser from "@typescript-eslint/parser"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 const compat = new FlatCompat({ baseDirectory: __dirname })
 
 /** @type {import("eslint").Linter.Config} */
 const eslintConfig = [
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   ...compat.extends(
     "next/core-web-vitals",
     "next/typescript",
