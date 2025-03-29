@@ -205,8 +205,8 @@ function Projects() {
       <h2 className="section-title">{t("Sections.Projects.title")}</h2>
       <p className="projects__intro">{t("Sections.Projects.intro")}</p>
       <div className="projects__content">
-        <ProjectsList id="projects-personal" title={t("Sections.Projects.personal-projects")} projects={personalProjects} />
-        <ProjectsList id="projects-client" title={t("Sections.Projects.client-projects")} projects={clientProjects} />
+        <ProjectsList id="projects-personal" title={t("Sections.Projects.personal-projects.title")} intro={t("Sections.Projects.personal-projects.intro")} projects={personalProjects} />
+        <ProjectsList id="projects-client" title={t("Sections.Projects.client-projects.title")} intro={t("Sections.Projects.client-projects.intro")} projects={clientProjects} />
       </div>
       <div className="projects__contact">
         <button type="button" className="btn projects__btn" onClick={() => scrollIntoView("#contact")}>

@@ -66,8 +66,14 @@
     "Projects": {
       "title": "Projets en vedette",
       "intro": "Sélectionnez-en un pour en savoir plus",
-      "personal-projects": "Projets personnels",
-      "client-projects": "Projets clients",
+      "personal-projects": {
+        "title": "Projets personnels",
+        "intro": "Travail personnel et collaboratif, explorant de nouvelles technologies et transformant des idées en expériences fonctionnelles et faciles à utiliser."
+      },
+      "client-projects": {
+        "title": "Projets clients",
+        "intro": "Solutions web faites pour les clients, en mettant l'accent sur la performance, l'accessibilité, l'utilisabilité et des fonctionnalités personnalisées pour répondre à leurs besoins uniques."
+      },
       "projects": {
         "busesuy": "Un moteur de recherche complet pour les lignes de bus à moyenne et longue distance en Uruguay. Cet outil innovant calcule les trajets avec correspondances, offrant aux utilisateurs des itinéraires et des horaires optimaux. Il a été le premier du genre dans le pays, comblant une lacune importante dans la planification et l'accessibilité des transports publics.",
         "arbolado": "Un outil web interactif conçu pour explorer et visualiser les données des recensements d'arbres menés dans diverses villes. Les utilisateurs peuvent filtrer et analyser des informations sur les espèces d'arbres, les emplacements et plus encore, en faisant une ressource précieuse pour les urbanistes, les chercheurs et les amateurs de nature.",
@@ -83,10 +89,12 @@
       }
     },
     "Contact": {
-      "title": "Contact"
+      "title": "Contact",
+      "intro": "N'hésitez pas à me contacter pour des demandes de projet ou des opportunités de collaboration. Je suis toujours ouvert à de nouvelles idées et ravi de connecter"
     },
     "Technologies": {
-      "title": "Technologies"
+      "title": "Technologies",
+      "intro": "J'exploite une variété d'outils et de frameworks de développement web modernes pour créer des applications web rapides, évolutives et accessibles. En restant à jour avec les tendances de l'industrie et en priorisant l'accessibilité, je m'assure que chaque projet est construit en utilisant les solutions les plus efficaces et inclusives disponibles."
     }
   }
 }

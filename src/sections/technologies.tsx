@@ -48,6 +48,9 @@ function Technologies() {
         <h2 className="section-title">
           {t("Sections.Technologies.title")}
         </h2>
+        <p className="tech__intro">
+          {t("Sections.Technologies.intro")}
+        </p>
         {technologiesList.map((category, index) => <TechnologyCategory key={index} category={category} />)}
       </div>
     </section>

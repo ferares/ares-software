@@ -66,8 +66,14 @@
     "Projects": {
       "title": "Featured Projects",
       "intro": "Select one to learn more",
-      "personal-projects": "Personal Projects",
-      "client-projects": "Client Projects",
+      "personal-projects": {
+        "title": "Personal Projects",
+        "intro": "Personal and collaborative work, exploring new technologies and turning ideas into functional, user-friendly experiences."
+      },
+      "client-projects": {
+        "title": "Client Projects",
+        "intro": "Web solutions made for clients, focusing on performance, accessibility, usability, and tailored functionality to meet their unique needs."
+      },
       "projects": {
         "busesuy": "A comprehensive search engine for medium and long-distance bus lines in Uruguay. This innovative tool calculates transfer trips, providing users with optimal routes and schedules. It was the first of its kind in the country, addressing a significant gap in public transportation planning and accessibility.",
         "arbolado": "An interactive web tool designed to explore and visualize data from tree censuses conducted in various cities. Users can filter and analyze information about tree species, locations and more making it a valuable resource for urban planners, researchers, and nature enthusiasts.",
@@ -83,10 +89,12 @@
       }
     },
     "Contact": {
-      "title": "Contact"
+      "title": "Contact",
+      "intro": "Feel free to reach out for project inquiries and collaboration opportunities. I'm always open to new ideas and excited to connect"
     },
     "Technologies": {
-      "title": "Technologies"
+      "title": "Technologies",
+      "intro": "I leverage a variety of modern web development tools and frameworks to create fast, scalable, and accessible web applications. By staying up-to-date with industry trends and prioritizing accessibility, I ensure that each project is built using the most effective and inclusive solutions available."
     }
   }
 }

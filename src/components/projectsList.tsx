@@ -31,7 +31,7 @@ export type Project = {
   videos: Videos,
 }
 
-interface ProjectsListProps { id:string, title: string, projects: Project[] }
+interface ProjectsListProps { id:string, title: string, intro: string, projects: Project[] }
 
 const carouselOptions: EmblaOptionsType = {
   align: "center",
@@ -40,7 +40,7 @@ const carouselOptions: EmblaOptionsType = {
   breakpoints: { "(prefers-reduced-motion)": { duration: 0 } },
 }
 
-function ProjectsList({ id, title, projects}: ProjectsListProps) {
+function ProjectsList({ id, title, intro, projects}: ProjectsListProps) {
   const t = useTranslations()
   const [selectedProject, setSelectedProject] = useState<Project>()
   const [emblaRef, emblaApi] = useEmblaCarousel(carouselOptions)
@@ -67,6 +67,9 @@ function ProjectsList({ id, title, projects}: ProjectsListProps) {
         </h3>
         <Switch ariaLabel={switchAriaLabel} leftIcon={faDisplay} rightIcon={faMobileScreen} onChange={toggleDisplay} state={displayMode === "mobile" ? "right" : "left"} />
       </div>
+      <p className="projects-list__intro">
+        {intro}
+      </p>
       <div className={`project__carousel project__carousel--${displayMode}`}>
         <button type="button" className="project__carousel__arrow project__carousel__arrow--left" onClick={() => carouselNav("prev", emblaApi)} aria-label={t("Labels.previous")}>
           <FontAwesomeIcon icon={faChevronLeft} className="project__carousel__arrow__icon" />

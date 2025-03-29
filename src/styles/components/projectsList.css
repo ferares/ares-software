@@ -54,7 +54,7 @@
   align-items: center;
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-left: 1rem;
 }
 
@@ -63,6 +63,11 @@
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0;
+}
+
+.projects-list__intro {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .projects__slide {

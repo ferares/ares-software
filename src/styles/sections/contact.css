@@ -11,6 +11,12 @@
   margin-bottom: 1rem;
 }
 
+.contact__intro {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  max-width: 750px;
+}
+
 .contact__content {
   width: 100%;
 }

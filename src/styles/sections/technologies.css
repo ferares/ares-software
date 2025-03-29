@@ -3,6 +3,16 @@
   color: #fff;
 }
 
+.tech .section-title {
+  margin-bottom: 1rem;
+}
+
+.tech__intro {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+}
+
 @media (width < 576px) {
   .tech .section-title {
     font-size: 2.5rem;

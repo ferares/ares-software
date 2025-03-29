@@ -66,8 +66,14 @@
     "Projects": {
       "title": "Progetti in evidenza",
       "intro": "Selezionane uno per saperne di più",
-      "personal-projects": "Progetti Personali",
-      "client-projects": "Progetti per Clienti",
+      "personal-projects": {
+        "title": "Progetti Personali",
+        "intro": "Lavoro personale e collaborativo, esplorando nuove tecnologie e trasformando idee in esperienze funzionali e facili da usare."
+      },
+      "client-projects": {
+        "title": "Progetti per Clienti",
+        "intro": "Soluzioni web create per i clienti, concentrandosi su prestazioni, accessibilità, usabilità e funzionalità personalizzate per soddisfare le loro esigenze uniche."
+      },
       "projects": {
         "busesuy": "Un motore di ricerca completo per le linee di autobus a media e lunga distanza in Uruguay. Questo strumento innovativo calcola i viaggi con trasbordo, fornendo agli utenti percorsi e orari ottimali. È stato il primo del suo genere nel paese, colmando una lacuna significativa nella pianificazione e accessibilità dei trasporti pubblici.",
         "arbolado": "Uno strumento web interattivo progettato per esplorare e visualizzare i dati dei censimenti degli alberi condotti in varie città. Gli utenti possono filtrare e analizzare informazioni su specie di alberi, ubicazioni e altro, rendendolo una risorsa preziosa per urbanisti, ricercatori e appassionati di natura.",
@@ -83,10 +89,12 @@
       }
     },
     "Contact": {
-      "title": "Contatto"
+      "title": "Contatto",
+      "intro": "Sentiti libero di contattarmi per richieste su progetti o opportunità di collaborazione. Sono sempre aperto a nuove idee e entusiasta di connettermi"
     },
     "Technologies": {
-      "title": "Tecnologie"
+      "title": "Tecnologie",
+      "intro": "Sfrutto una varietà di strumenti e framework di sviluppo web moderni per creare applicazioni web veloci, scalabili e accessibili. Rimanendo aggiornato con le tendenze del settore e dando priorità all'accessibilità, garantisco che ogni progetto venga realizzato utilizzando le soluzioni più efficaci e inclusive disponibili."
     }
   }
 }

@@ -66,8 +66,14 @@
     "Projects": {
       "title": "Proyectos destacados",
       "intro": "Selecciona uno para saber más",
-      "personal-projects": "Proyectos personales",
-      "client-projects": "Proyectos de clientes",
+      "personal-projects": {
+        "title": "Proyectos personales",
+        "intro": "Trabajo personal y colaborativo, explorando nuevas tecnologías y transformando ideas en experiencias funcionales y fáciles de usar."
+      },
+      "client-projects": {
+        "title": "Proyectos de clientes",
+        "intro": "Soluciones web hechas para clientes, enfocándose en el rendimiento, accesibilidad, usabilidad y funcionalidad personalizada para satisfacer sus necesidades únicas."
+      },
       "projects": {
         "busesuy": "Un motor de búsqueda completo para líneas de autobuses de media y larga distancia en Uruguay. Esta herramienta innovadora calcula viajes con trasbordos, proporcionando a los usuarios rutas y horarios óptimos. Fue la primera de su tipo en el país, abordando una brecha significativa en la planificación y accesibilidad del transporte público.",
         "arbolado": "Una herramienta web interactiva diseñada para explorar y visualizar datos de censos de árboles realizados en varias ciudades. Los usuarios pueden filtrar y analizar información sobre especies de árboles, ubicaciones y más, convirtiéndola en un recurso valioso para urbanistas, investigadores y entusiastas de la naturaleza.",
@@ -83,10 +89,12 @@
       }
     },
     "Contact": {
-      "title": "Contacto"
+      "title": "Contacto",
+      "intro": "No dudes en contactarme para consultas sobre proyectos u oportunidades de colaboración. Siempre estoy abierto a nuevas ideas y contento de conectar"
     },
     "Technologies": {
-      "title": "Tecnologías"
+      "title": "Tecnologías",
+      "intro": "Utilizo una variedad de herramientas y marcos de desarrollo web modernos para crear aplicaciones web rápidas, escalables y accesibles. Al mantenerme actualizado con las tendencias de la industria y priorizar la accesibilidad, aseguro que cada proyecto se construya utilizando las soluciones más efectivas e inclusivas disponibles."
     }
   }
 }

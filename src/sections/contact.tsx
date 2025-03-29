@@ -68,6 +68,9 @@ function Contact({ captchaSiteKey }: ContactProps) {
         <h2 className="section-title">
           {t("Sections.Contact.title")}
         </h2>
+        <p className="contact__intro">
+          {t("Sections.Contact.intro")}
+        </p>
         <form noValidate className={`contact__form ${wasValidated ? "was-validated" : ""}`} onSubmit={handleSubmit}>
           <div className="contact__form__row">
             <label className="contact__form__label" htmlFor="name">{t("Labels.name")}</label>
