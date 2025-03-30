@@ -8,7 +8,6 @@ html {
 }
 
 body {
-  color: var(--color-text);
   font-family: var(--font-texts);
   font-size: 1.4rem;
   height: 100%;
@@ -58,6 +57,7 @@ button {
 }
 
 .app {
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   height: 100%;
