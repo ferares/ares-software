@@ -3,7 +3,7 @@
 }
 
 .dropdown-menu {
-  background: #FFF;
+  background: var(--bg-color-menu);
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0 0 0 / 20%);
   left: 0;
@@ -47,6 +47,7 @@
 .dropdown-menu li button {
   background-color: transparent;
   border: none;
+  color: var(--color-text);
   display: block;
   font-size: 1.25rem;
   overflow: hidden;
