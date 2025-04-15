@@ -29,7 +29,7 @@ const figtree = Figtree({ subsets: ["latin"], display: "swap", weight: ["400", "
 
 
 export const viewport: Viewport = {
-  colorScheme: "only light",
+  colorScheme: "dark light",
   themeColor: "black",
 }
 
