@@ -4,9 +4,6 @@ import { type FormEvent, useCallback, useRef, useState } from "react"
 
 import { useLocale, useTranslations } from "next-intl"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-
 import { emailPattern } from "@/helpers/strings"
 
 import HCaptcha from "@hcaptcha/react-hcaptcha"
@@ -78,7 +75,7 @@ function Contact({ captchaSiteKey }: ContactProps) {
           </div>
           <div className="contact__form__row">
             <label className="contact__form__label" htmlFor="email">{t("Labels.email")} ({t("Labels.required")})</label>
-            <input className="contact__form__input" ref={emailRef}  type="email" id="email" value={email} required pattern={emailPattern} onChange={(event) => setEmail(event.target.value)} />
+            <input className="contact__form__input" ref={emailRef} type="email" id="email" value={email} required pattern={emailPattern} onChange={(event) => setEmail(event.target.value)} />
             <div className="contact__form__invalid-feedback">{t("Messages.input-an-email")}</div>
           </div>
           <div className="contact__form__row">
@@ -91,10 +88,6 @@ function Contact({ captchaSiteKey }: ContactProps) {
           </div>
           {<div className={`contact__form__invalid-feedback ${!captchaToken ? "show" : ""}`}>{t("Messages.invalid-captcha")}</div>}
           <div className="contact__form__submit-row">
-            <a className="contact__form__email" href="mailto:fermin@ares.uy">
-              <FontAwesomeIcon icon={faEnvelope} />
-              fermin@ares.uy
-            </a>
             <button type="submit" className="btn btn-primary">
               {t("Labels.send")}
             </button>
