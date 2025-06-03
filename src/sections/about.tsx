@@ -49,13 +49,13 @@ function About() {
         <div className="about__paragraphs">
           {t.rich("Sections.About.content", richTranslationValues)}
           <div className="about__btns">
-            <button type="button" className="btn about__btn" onClick={handleDownload}>
+            {/* <button type="button" className="btn about__btn" onClick={handleDownload}>
               <FontAwesomeIcon icon={faDownload} />
               {t("Labels.download-cv")}
-            </button>
+            </button> */}
             <a href="#contact" className="btn about__btn" onClick={handleContactMe}>
               <FontAwesomeIcon icon={faEnvelope} />
-              {t("Labels.contact-me")}
+              {t("Labels.contact-us")}
             </a>
           </div>
         </div>

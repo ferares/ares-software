@@ -17,7 +17,7 @@
     "visit-site": "Ver sitio",
     "try-it": "Visitar",
     "download-cv": "Descargar CV",
-    "contact-me": "Contáctame",
+    "contact-us": "Contáctanos",
     "languages": "Lenguajes",
     "frameworks": "Frameworks",
     "e-commerce": "E-commerce",
@@ -59,16 +59,16 @@
   },
   "Sections": {
     "About": {
-      "title": "Acerca de mí",
-      "content": "<p>Hola, soy Fermín, un desarrollador de software independiente con pasión por la <b>accesibilidad web</b> trabajando remoto desde <a>La Paloma, Uruguay</a> 🏖️ (UTC -03:00)</p><p>Mi experiencia está enfocada en el desarrollo web y de <b>web apps</b>, tanto para proyectos sencillos como <b>landing pages</b> y más complejos como <b>web apps</b>, <b>e-commerces</b>, <b>blogs</b>, <b>juegos</b>, etc.</p><p>A lo largo de mis 10 años de carrera, he trabajado tanto de manera independiente como en equipos para diversas empresas, y tengo mucha experiencia trabajando de forma remota 👨‍💻</p><p>Hablo <b>Español</b> 🇪🇸 <b>Inglés</b> 🇬🇧 e <b>Italiano</b> 🇮🇹 y un poco de <b>Fracés</b> 🇫🇷 y <b>Portugués</b> 🇧🇷</p><p>Continúa hacia abajo para saber más sobre los proyectos en los que trabajo 🚀 algunos de mis trabajos para clientes y las tecnologías que uso habitualmente 🛸</p>",
+      "title": "Sobre nosotros",
+      "content": "<p>Fundada por Fermín, un Desarrollador de Software con pasión por la <b>accesibilidad web</b> y más de una década de experiencia. Trabajamos desde <a>La Paloma, Uruguay</a> 🏖️ (UTC -03:00)</p><p>La mayor parte de nuestra experiencia se centra en el <b>desarrollo web</b>, trabajando tanto en proyectos simples como <b>landing pages</b> y otros más complejos como <b>aplicaciones web</b>, <b>sitios de e-commerce</b>, <b>blogs</b>, <b>juegos</b>, etc.</p><p>Trabajamos tanto de forma independiente como en equipo para varias otras empresas, y tenemos mucha experiencia trabajando de forma remota 👨‍💻</p><p>Hablamos <b>español</b> 🇪🇸 <b>inglés</b> 🇬🇧 y <b>italiano</b> 🇮🇹 y algo de <b>francés</b> 🇫🇷 y <b>portugués</b> 🇧🇷</p><p>Seguí bajando para conocer más sobre los tipos de proyectos en los que trabajamos 🚀, algunos trabajos para clientes y las tecnologías que más dominamos 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.es.pdf"
     },
     "Projects": {
       "title": "Proyectos destacados",
       "intro": "Selecciona uno para saber más",
       "personal-projects": {
-        "title": "Proyectos personales",
-        "intro": "Trabajo personal y colaborativo, explorando nuevas tecnologías y transformando ideas en experiencias funcionales y fáciles de usar."
+        "title": "Proyectos internos",
+        "intro": "Trabajo interno y colaborativo, explorando nuevas tecnologías y transformando ideas en experiencias funcionales y fáciles de usar."
       },
       "client-projects": {
         "title": "Proyectos de clientes",
@@ -90,11 +90,11 @@
     },
     "Contact": {
       "title": "Contacto",
-      "intro": "No dudes en contactarme para consultas sobre proyectos u oportunidades de colaboración. Siempre estoy abierto a nuevas ideas y contento de conectar"
+      "intro": "No dudes en contactarnos para consultas sobre proyectos u oportunidades de colaboración. Siempre estoy abierto a nuevas ideas y contento de conectar"
     },
     "Technologies": {
       "title": "Tecnologías",
-      "intro": "Utilizo una variedad de herramientas y marcos de desarrollo web modernos para crear aplicaciones web rápidas, escalables y accesibles. Al mantenerme actualizado con las tendencias de la industria y priorizar la accesibilidad, aseguro que cada proyecto se construya utilizando las soluciones más efectivas e inclusivas disponibles."
+      "intro": "Utilizamos una variedad de herramientas y marcos de desarrollo web modernos para crear aplicaciones web rápidas, escalables y accesibles. Al mantenernos actualizado con las tendencias de la industria y priorizar la accesibilidad, aseguro que cada proyecto se construya utilizando las soluciones más efectivas e inclusivas disponibles."
     }
   }
 }

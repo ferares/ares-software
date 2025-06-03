@@ -17,7 +17,7 @@
     "visit-site": "Visit Site",
     "try-it": "Try it",
     "download-cv": "Download CV",
-    "contact-me": "Contact Me",
+    "contact-us": "Contact Us",
     "languages": "Languages",
     "frameworks": "Frameworks",
     "e-commerce": "E-commerce",
@@ -59,16 +59,16 @@
   },
   "Sections": {
     "About": {
-      "title": "About Me",
-      "content": "<p>I'm Fermín, a Freelance Software Developer with a passion for <b>web accessibility</b> working from <a>La Paloma, Uruguay</a> 🏖️ (UTC -03:00)</p><p>Most of my experience is in <b>web development</b> working on both simple projects like <b>landing pages</b> and complex ones like <b>web apps</b>, <b>e-commerce sites</b>, <b>blogs</b>, <b>games</b>, etc.</p><p>Throughout my 10 year career, I have worked both independently and within teams for various companies, and I have plenty of experience working remotely 👨‍💻</p><p>I speak <b>Spanish</b> 🇪🇸 <b>English</b> 🇬🇧 and <b>Italian</b> 🇮🇹 and some <b>French</b> 🇫🇷 and <b>Portuguese</b> 🇧🇷</p><p>Keep scrolling to learn more about what kind of projects I'm working on 🚀 some of my client work and the technologies I'm familiar with 🛸</p>",
+      "title": "About Us",
+      "content": "<p>Founded by Fermín, a Software Developer with a passion for <b>web accessibility</b> and over a decade of experience. We work out of <a>La Paloma, Uruguay</a> 🏖️ (UTC -03:00)</p><p>Most of our experience focuses in <b>web development</b> working on both simple projects like <b>landing pages</b> and complex ones like <b>web apps</b>, <b>e-commerce sites</b>, <b>blogs</b>, <b>games</b>, etc.</p><p>We work both independently and with teams for various other companies, and we have plenty of experience working remotely 👨‍💻</p><p>We speak <b>Spanish</b> 🇪🇸 <b>English</b> 🇬🇧 and <b>Italian</b> 🇮🇹 and some <b>French</b> 🇫🇷 and <b>Portuguese</b> 🇧🇷</p><p>Keep scrolling to learn more about what kind of projects we're working on 🚀 some of our client work and the technologies we're most familiar with 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.en.pdf"
     },
     "Projects": {
       "title": "Featured Projects",
       "intro": "Select one to learn more",
       "personal-projects": {
-        "title": "Personal Projects",
-        "intro": "Personal and collaborative work, exploring new technologies and turning ideas into functional, user-friendly experiences."
+        "title": "Internal Projects",
+        "intro": "Interal and collaborative work, exploring new technologies and turning ideas into functional, user-friendly experiences."
       },
       "client-projects": {
         "title": "Client Projects",
@@ -90,11 +90,11 @@
     },
     "Contact": {
       "title": "Contact",
-      "intro": "Feel free to reach out for project inquiries and collaboration opportunities. I'm always open to new ideas and excited to connect"
+      "intro": "Feel free to reach out for project inquiries and collaboration opportunities. We're always open to new ideas and excited to connect"
     },
     "Technologies": {
       "title": "Technologies",
-      "intro": "I leverage a variety of modern web development tools and frameworks to create fast, scalable, and accessible web applications. By staying up-to-date with industry trends and prioritizing accessibility, I ensure that each project is built using the most effective and inclusive solutions available."
+      "intro": "We leverage a variety of modern web development tools and frameworks to create fast, scalable, and accessible web applications. By staying up-to-date with industry trends and prioritizing accessibility, We ensure that each project is built using the most effective and inclusive solutions available."
     }
   }
 }

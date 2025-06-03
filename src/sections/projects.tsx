@@ -33,7 +33,7 @@ import crabeMobileImg from "../../public/imgs/projects/crabe/mobile.png"
 import arboladoMobileImg from "../../public/imgs/projects/arbolado/mobile.png"
 import papelappMobileImg from "../../public/imgs/projects/papelapp/mobile.png"
 import ecouterMobileImg from "../../public/imgs/projects/ecouter/mobile.png"
-  
+
 const clientProjects: Project[] = [
   {
     id: "salam",
@@ -130,10 +130,10 @@ const personalProjects: Project[] = [
     links: [
       { url: "https://buses.uy", label: "Labels.try-it", rel: "" },
     ],
-    technologies: ["go", "next", "react", "html", "typescript", "css", "vitest", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket" ,"cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
+    technologies: ["go", "next", "react", "html", "typescript", "css", "vitest", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket", "cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
     videos: {
-      desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png"},
-      mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png"},
+      desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png" },
+      mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png" },
     },
   },
   {
@@ -211,7 +211,7 @@ function Projects() {
       <div className="projects__contact">
         <button type="button" className="btn projects__btn" onClick={() => scrollIntoView("#contact")}>
           <FontAwesomeIcon icon={faEnvelope} />
-          {t("Labels.contact-me")}
+          {t("Labels.contact-us")}
         </button>
       </div>
     </section>

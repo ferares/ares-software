@@ -17,7 +17,7 @@
     "visit-site": "Visiter le site",
     "try-it": "Essayer",
     "download-cv": "Télécharger le CV",
-    "contact-me": "Me contacter",
+    "contact-us": "Nous contacter",
     "languages": "Langues",
     "frameworks": "Frameworks",
     "e-commerce": "E-commerce",
@@ -59,16 +59,16 @@
   },
   "Sections": {
     "About": {
-      "title": "À propos de moi",
-      "content": "<p>Je suis Fermín, un développeur de software freelance passionné par <b>l'accessibilité web</b>, travaillant depuis <a>La Paloma, Uruguay</a> 🏖️ (UTC -03:00)</p><p>La majeure partie de mon expérience est dans le <b>développement web</b>, travaillant sur des projets simples comme des <b>landing pages</b> et des projets complexes comme des <b>applications web</b>, des <b>sites e-commerce</b>, des <b>blogs</b>, des <b>jeux</b>, etc.</p><p>Au cours de mes 10 ans de carrière, j'ai travaillé à la fois de manière indépendante et en équipe pour diverses entreprises, et j'ai beaucoup d'expérience dans le travail à distance 👨‍💻</p><p>Je parle <b>espagnol</b> 🇪🇸, <b>anglais</b> 🇬🇧 et <b>italien</b> 🇮🇹, ainsi qu'un peu de <b>français</b> 🇫🇷 et de <b>portugais</b> 🇧🇷</p><p>Continuez à faire défiler pour en savoir plus sur les projets sur lesquels je travaille 🚀, certains de mes travaux pour des clients et les technologies que je maîtrise 🛸</p>",
+      "title": "À propos de nous",
+      "content": "<p>Fondée par Fermín, un Développeur Logiciel passionné par l'<b>accessibilité web</b> et avec plus de dix ans d'expérience. Nous travaillons depuis <a>La Paloma, Uruguay</a> 🏖️ (UTC -03:00)</p><p>La majorité de notre expérience est centrée sur le <b>développement web</b>, en travaillant aussi bien sur des projets simples comme des <b>landing pages</b> que sur des projets complexes comme des <b>applications web</b>, <b>sites e-commerce</b>, <b>blogs</b>, <b>jeux</b>, etc.</p><p>Nous travaillons aussi bien de manière indépendante qu’en équipe pour différentes entreprises, et avons beaucoup d’expérience en télétravail 👨‍💻</p><p>Nous parlons <b>espagnol</b> 🇪🇸 <b>anglais</b> 🇬🇧 et <b>italien</b> 🇮🇹 et un peu de <b>français</b> 🇫🇷 et de <b>portugais</b> 🇧🇷</p><p>Continuez à faire défiler pour en savoir plus sur les projets sur lesquels nous travaillons 🚀, quelques travaux pour des clients et les technologies que nous maîtrisons le mieux 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.fr.pdf"
     },
     "Projects": {
       "title": "Projets en vedette",
       "intro": "Sélectionnez-en un pour en savoir plus",
       "personal-projects": {
-        "title": "Projets personnels",
-        "intro": "Travail personnel et collaboratif, explorant de nouvelles technologies et transformant des idées en expériences fonctionnelles et faciles à utiliser."
+        "title": "Projets internes",
+        "intro": "Travail interne et collaboratif, explorant de nouvelles technologies et transformant des idées en expériences fonctionnelles et faciles à utiliser."
       },
       "client-projects": {
         "title": "Projets clients",
@@ -90,11 +90,11 @@
     },
     "Contact": {
       "title": "Contact",
-      "intro": "N'hésitez pas à me contacter pour des demandes de projet ou des opportunités de collaboration. Je suis toujours ouvert à de nouvelles idées et ravi de connecter"
+      "intro": "N'hésitez pas à nous contacter pour des demandes de projet ou des opportunités de collaboration. Je suis toujours ouvert à de nouvelles idées et ravi de connecter"
     },
     "Technologies": {
       "title": "Technologies",
-      "intro": "J'exploite une variété d'outils et de frameworks de développement web modernes pour créer des applications web rapides, évolutives et accessibles. En restant à jour avec les tendances de l'industrie et en priorisant l'accessibilité, je m'assure que chaque projet est construit en utilisant les solutions les plus efficaces et inclusives disponibles."
+      "intro": "Nous utilisons une variété d'outils et de frameworks de développement web modernes pour créer des applications web rapides, évolutives et accessibles. En restant à jour sur les tendances de l'industrie et en priorisant l'accessibilité, nous veillons à ce que chaque projet est construit en utilisant les solutions les plus efficaces et inclusives disponibles."
     }
   }
 }

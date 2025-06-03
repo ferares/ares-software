@@ -12,8 +12,8 @@ import { scrollIntoView } from "@/helpers/scroll"
 
 import { useCookieConsentContext } from "@/context/cookieConsent"
 
-const GITHUB_LINK = "https://github.com/ferares"
-const LINKEDIN_LINK = "https://linkedin.com/in/fermin-ares"
+const GITHUB_LINK = "https://github.com/Ares-Software-SAS"
+const LINKEDIN_LINK = "https://linkedin.com/company/ares-software-sas"
 
 function Footer() {
   const t = useTranslations("Labels")
@@ -31,7 +31,7 @@ function Footer() {
           <div className="footer__developed">
             <FontAwesomeIcon className="footer__icon" icon={faCode} aria-label={t("developed")} />
             <span className="footer__text">
-              {t("in")} La Paloma, Rocha, Uruguay 
+              {t("in")} La Paloma, Rocha, Uruguay
             </span>
           </div>
           <ul className="footer__menu">
@@ -46,7 +46,7 @@ function Footer() {
               </a>
             </li>
             <li className="footer__menu__item">
-              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="#contact" onClick={(event) => handleContactClick(event)} aria-label={t("contact-me")}>
+              <a className="footer__menu__link" target="_blank" rel="noreferrer nofollow noopener" href="#contact" onClick={(event) => handleContactClick(event)} aria-label={t("contact-us")}>
                 <FontAwesomeIcon className="footer__menu__icon" icon={faEnvelope} />
               </a>
             </li>

@@ -17,7 +17,7 @@
     "visit-site": "Visitar site",
     "try-it": "Experimentar",
     "download-cv": "Baixar CV",
-    "contact-me": "Contate-me",
+    "contact-us": "Contate-nos",
     "languages": "Idiomas",
     "frameworks": "Frameworks",
     "e-commerce": "E-commerce",
@@ -59,16 +59,16 @@
   },
   "Sections": {
     "About": {
-      "title": "Sobre Mim",
-      "content": "<p>Eu sou Fermín, um Desenvolvedor de Software Freelance com paixão por <b>acessibilidade web</b>, trabalhando de <a>La Paloma, Uruguai</a> 🏖️ (UTC -03:00)</p><p>A maior parte da minha experiência é em <b>desenvolvimento web</b>, trabalhando em projetos simples como <b>landing pages</b> e projetos complexos como <b>aplicativos web</b>, <b>sites de e-commerce</b>, <b>blogs</b>, <b>jogos</b>, etc.</p><p>Ao longo dos meus 10 anos de carreira, trabalhei tanto de forma independente quanto em equipe para várias empresas, e tenho muita experiência trabalhando remotamente 👨‍💻</p><p>Falo <b>espanhol</b> 🇪🇸, <b>inglês</b> 🇬🇧 e <b>italiano</b> 🇮🇹, e um pouco de <b>francês</b> 🇫🇷 e <b>português</b> 🇧🇷</p><p>Continue rolando para saber mais sobre os tipos de projetos em que estou trabalhando 🚀, alguns dos meus trabalhos para clientes e as tecnologias com as quais estou familiarizado 🛸</p>",
+      "title": "Sobre nós",
+      "content": "<p>Fundada por Fermín, um Desenvolvedor de Software com paixão por <b>acessibilidade na web</b> e mais de uma década de experiência. Trabalhamos a partir de <a>La Paloma, Uruguai</a> 🏖️ (UTC -03:00)</p><p>A maior parte da nossa experiência está focada em <b>desenvolvimento web</b>, trabalhando tanto em projetos simples como <b>landing pages</b> quanto em mais complexos como <b>aplicativos web</b>, <b>sites de e-commerce</b>, <b>blogs</b>, <b>jogos</b>, etc.</p><p>Trabalhamos tanto de forma independente quanto em equipe para diversas outras empresas, e temos bastante experiência em trabalho remoto 👨‍💻</p><p>Falamos <b>espanhol</b> 🇪🇸 <b>inglês</b> 🇬🇧 e <b>italiano</b> 🇮🇹 e um pouco de <b>francês</b> 🇫🇷 e <b>português</b> 🇧🇷</p><p>Continue rolando para saber mais sobre os tipos de projetos em que estamos trabalhando 🚀, alguns dos nossos trabalhos com clientes e as tecnologias com as quais temos mais familiaridade 🛸</p>",
       "cv-link": "/docs/fermin-ares.cv.pt.pdf"
     },
     "Projects": {
       "title": "Projetos em destaque",
       "intro": "Selecione um para saber mais",
       "personal-projects": {
-        "title": "Projetos Pessoais",
-        "intro": "Trabalho pessoal e colaborativo, explorando novas tecnologias e transformando ideias em experiências funcionais e fáceis de usar."
+        "title": "Projetos internos",
+        "intro": "Trabalho interno e colaborativo, explorando novas tecnologias e transformando ideias em experiências funcionais e fáceis de usar."
       },
       "client-projects": {
         "title": "Projetos para Clientes",
@@ -90,11 +90,11 @@
     },
     "Contact": {
       "title": "Contato",
-      "intro": "Fique à vontade para entrar em contato para consultas sobre projetos ou oportunidades de colaboração. Estou sempre aberto a novas ideias e animado para conectar"
+      "intro": "Fique à vontade para entrar em contato sobre projetos ou oportunidades de colaboração. Estamos sempre abertos a novas ideias e animados para nos conectar."
     },
     "Technologies": {
       "title": "Tecnologias",
-      "intro": "Utilizo uma variedade de ferramentas e frameworks modernos de desenvolvimento web para criar aplicativos web rápidos, escaláveis e acessíveis. Ao me manter atualizado com as tendências da indústria e priorizar a acessibilidade, garanto que cada projeto seja construído utilizando as soluções mais eficazes e inclusivas disponíveis."
+      "intro": "Usamos uma variedade de ferramentas e frameworks modernos de desenvolvimento web para criar aplicações rápidas, escaláveis e acessíveis. Mantendo-nos atualizados com as tendências do setor e priorizando a acessibilidade, garantimos que cada projeto seja construído com as soluções mais eficazes e inclusivas disponíveis."
     }
   }
 }

@@ -6,7 +6,7 @@ function Intro() {
     <BgImage>
       <div id="intro" className="max-width intro">
         <h1 className="intro__title">
-          <span className="intro__title__first-line">Ares</span><br />
+          <span className="intro__title__first-line">Ares Software SAS</span><br />
           <b className="intro__title__second-line">Software Development</b>
         </h1>
         <NextBtn target="#about" />
