@@ -96,5 +96,19 @@
       "title": "Tecnologie",
       "intro": "Sfrutto una varietà di strumenti e framework di sviluppo web moderni per creare applicazioni web veloci, scalabili e accessibili. Rimanendo aggiornato con le tendenze del settore e dando priorità all'accessibilità, garantisco che ogni progetto venga realizzato utilizzando le soluzioni più efficaci e inclusive disponibili."
     }
+  },
+  "Stores": {
+    "microsoft": {
+      "label": "Scarica da Microsoft Store",
+      "image": "/imgs/stores/microsoft-store-it.svg"
+    },
+    "apple": {
+      "label": "Scarica su App Store",
+      "image": "/imgs/stores/app-store-it.svg"
+    },
+    "google": {
+      "label": "Disponible su Google Play",
+      "image": "/imgs/stores/google-play-it.svg"
+    }
   }
 }

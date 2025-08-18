@@ -96,5 +96,19 @@
       "title": "Technologies",
       "intro": "I leverage a variety of modern web development tools and frameworks to create fast, scalable, and accessible web applications. By staying up-to-date with industry trends and prioritizing accessibility, I ensure that each project is built using the most effective and inclusive solutions available."
     }
+  },
+  "Stores": {
+    "microsoft": {
+      "label": "Download from the Microsoft Store",
+      "image": "/imgs/stores/microsoft-store-en.svg"
+    },
+    "apple": {
+      "label": "Download on the App Store",
+      "image": "/imgs/stores/app-store-en.svg"
+    },
+    "google": {
+      "label": "Get it on Google Play",
+      "image": "/imgs/stores/google-play-en.svg"
+    }
   }
 }

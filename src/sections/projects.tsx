@@ -33,13 +33,14 @@ import crabeMobileImg from "../../public/imgs/projects/crabe/mobile.png"
 import arboladoMobileImg from "../../public/imgs/projects/arbolado/mobile.png"
 import papelappMobileImg from "../../public/imgs/projects/papelapp/mobile.png"
 import ecouterMobileImg from "../../public/imgs/projects/ecouter/mobile.png"
-  
+
 const clientProjects: Project[] = [
   {
     id: "salam",
     title: "Salam Hello",
     images: { desktop: salamDesktopImg, mobile: salamMobileImg },
     desc: "Sections.Projects.projects.salam",
+    stores: {},
     links: [
       { url: "https://salamhello.com", label: "Labels.visit-site" },
     ],
@@ -54,6 +55,7 @@ const clientProjects: Project[] = [
     title: "Grigadale",
     images: { desktop: grigadaleDesktopImg, mobile: grigadaleMobileImg },
     desc: "Sections.Projects.projects.grigadale",
+    stores: {},
     links: [
       { url: "https://grigadale.org", label: "Labels.visit-site" },
     ],
@@ -68,6 +70,7 @@ const clientProjects: Project[] = [
     title: "Atlántico Desarrollos",
     images: { desktop: atlanticoDesktopImg, mobile: atlanticoMobileImg },
     desc: "Sections.Projects.projects.atlantico",
+    stores: {},
     links: [
       { url: "https://atlanticodesarrollos.uy/", label: "Labels.visit-site" },
     ],
@@ -82,6 +85,7 @@ const clientProjects: Project[] = [
     title: "Pipiña",
     images: { desktop: pipinaDesktopImg, mobile: pipinaMobileImg },
     desc: "Sections.Projects.projects.pipina",
+    stores: {},
     links: [
       { url: "https://pipiña.uy/", label: "Labels.visit-site" },
     ],
@@ -96,6 +100,7 @@ const clientProjects: Project[] = [
     title: "Angular Templates",
     images: { desktop: angularDesktopImg, mobile: angularMobileImg },
     desc: "Sections.Projects.projects.angular",
+    stores: {},
     links: [
       { url: "https://angular-templates.io/", label: "Labels.visit-site" },
     ],
@@ -110,6 +115,7 @@ const clientProjects: Project[] = [
     title: "Ionic Themes",
     images: { desktop: ionicDesktopImg, mobile: ionicMobileImg },
     desc: "Sections.Projects.projects.ionic",
+    stores: {},
     links: [
       { url: "https://ionicthemes.com/", label: "Labels.visit-site" },
     ],
@@ -127,13 +133,14 @@ const personalProjects: Project[] = [
     title: "BusesUY",
     images: { desktop: busesuyDesktopImg, mobile: busesuyMobileImg },
     desc: "Sections.Projects.projects.busesuy",
+    stores: { microsoft: "https://apps.microsoft.com/detail/9PKB1P5DDLHW?mode=direct", apple: "https://apps.apple.com/app/id6746334736", google: "https://play.google.com/store/apps/details?id=uy.buses.twa" },
     links: [
       { url: "https://buses.uy", label: "Labels.try-it", rel: "" },
     ],
-    technologies: ["go", "next", "react", "html", "typescript", "css", "vitest", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket" ,"cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
+    technologies: ["go", "next", "react", "html", "typescript", "css", "vitest", "postgresql", "valkey", "android", "windows", "apple", "linux", "git", "pwa", "websocket", "cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
     videos: {
-      desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png"},
-      mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png"},
+      desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png" },
+      mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png" },
     },
   },
   {
@@ -141,6 +148,7 @@ const personalProjects: Project[] = [
     title: "La Marche Du Crabe",
     images: { desktop: crabeDesktopImg, mobile: crabeMobileImg },
     desc: "Sections.Projects.projects.crabe",
+    stores: {},
     links: [
       { url: "https://crabe.ares.uy", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/ferares/marche-du-crabe", label: "Labels.view-project", icon: faGithub },
@@ -156,11 +164,12 @@ const personalProjects: Project[] = [
     title: "Papelapp",
     images: { desktop: papelappDesktopImg, mobile: papelappMobileImg },
     desc: "Sections.Projects.projects.papelapp",
+    stores: { apple: "https://apps.apple.com/app/id6747598740", google: "https://play.google.com/store/apps/details?id=uy.ares.papelapp.twa" },
     links: [
       { url: "https://papelapp.ares.uy", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/ferares/papelapp", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["html", "css", "typescript", "vite", "webcomponents", "pwa", "android"],
+    technologies: ["html", "css", "typescript", "vite", "webcomponents", "pwa", "android", "apple"],
     videos: {
       desktop: { src: "/vids/papelapp/desktop.webm", poster: "/imgs/projects/papelapp/poster-desktop.png" },
       mobile: { src: "/vids/papelapp/mobile.webm", poster: "/imgs/projects/papelapp/poster-mobile.png" },
@@ -171,6 +180,7 @@ const personalProjects: Project[] = [
     title: "Écouter",
     images: { desktop: ecouterDesktopImg, mobile: ecouterMobileImg },
     desc: "Sections.Projects.projects.ecouter",
+    stores: {},
     links: [
       { url: "https://github.com/ferares/ecouter", label: "Labels.view-project", icon: faGithub },
     ],
@@ -185,11 +195,12 @@ const personalProjects: Project[] = [
     title: "Arbolado Urbano",
     images: { desktop: arboladoDesktopImg, mobile: arboladoMobileImg },
     desc: "Sections.Projects.projects.arbolado",
+    stores: { apple: "https://apps.apple.com/app/id6747365722", google: "https://play.google.com/store/apps/details?id=com.arboladourbano.twa" },
     links: [
       { url: "https://arboladourbano.com", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/Arbolado-Urbano", label: "Labels.view-project", icon: faGithub },
     ],
-    technologies: ["typescript", "bootstrap", "sass", "vite", "leaflet", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager"],
+    technologies: ["typescript", "bootstrap", "sass", "vite", "leaflet", "php", "laravel", "wordpress", "mysql", "git", "analytics", "tagmanager", "android", "apple"],
     videos: {
       desktop: { src: "/vids/arbolado/desktop.webm", poster: "/imgs/projects/arbolado/poster-desktop.png" },
       mobile: { src: "/vids/arbolado/mobile.webm", poster: "/imgs/projects/arbolado/poster-mobile.png" },

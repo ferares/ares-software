@@ -27,11 +27,12 @@ export type Project = {
   images: { desktop: StaticImageData, mobile: StaticImageData }
   desc: TranslationKey
   links: { url: string, label: TranslationKey, icon?: IconDefinition, rel?: string }[]
+  stores: { microsoft?: string, google?: string, apple?: string }
   technologies: TechnologyKey[],
   videos: Videos,
 }
 
-interface ProjectsListProps { id:string, title: string, intro: string, projects: Project[] }
+interface ProjectsListProps { id: string, title: string, intro: string, projects: Project[] }
 
 const carouselOptions: EmblaOptionsType = {
   align: "center",
@@ -40,11 +41,11 @@ const carouselOptions: EmblaOptionsType = {
   breakpoints: { "(prefers-reduced-motion)": { duration: 0 } },
 }
 
-function ProjectsList({ id, title, intro, projects}: ProjectsListProps) {
+function ProjectsList({ id, title, intro, projects }: ProjectsListProps) {
   const t = useTranslations()
   const [selectedProject, setSelectedProject] = useState<Project>()
   const [emblaRef, emblaApi] = useEmblaCarousel(carouselOptions)
-  const [displayMode, setDisplayMode] = useState<"mobile"|"desktop">("desktop")
+  const [displayMode, setDisplayMode] = useState<"mobile" | "desktop">("desktop")
 
   const switchAriaLabel = useMemo(() => (
     displayMode === "desktop" ? t("Labels.show-mobile-screenshots") : t("Labels.show-desktop-screenshots")
@@ -107,6 +108,31 @@ function ProjectsList({ id, title, intro, projects}: ProjectsListProps) {
                 </Link>
               ))}
             </div>
+            {selectedProject.stores && (
+              <ul className="project__stores">
+                {selectedProject.stores.apple && (
+                  <li className="project__store">
+                    <a className="project__store__link" href={selectedProject.stores.apple}>
+                      <img className="project__store__img" src={t("Stores.apple.image")} alt={t("Stores.apple.label")} />
+                    </a>
+                  </li>
+                )}
+                {selectedProject.stores.google && (
+                  <li className="project__store">
+                    <a className="project__store__link" href={selectedProject.stores.google}>
+                      <img className="project__store__img" src={t("Stores.google.image")} alt={t("Stores.google.label")} />
+                    </a>
+                  </li>
+                )}
+                {selectedProject.stores.microsoft && (
+                  <li className="project__store">
+                    <a className="project__store__link" href={selectedProject.stores.microsoft}>
+                      <img className="project__store__img" src={t("Stores.microsoft.image")} alt={t("Stores.microsoft.label")} />
+                    </a>
+                  </li>
+                )}
+              </ul>
+            )}
             <h3 className="project__tech-title">{t("Labels.developed-using")}</h3>
             <ul className="project__technologies">
               {selectedProject.technologies.map((tech, index) => {

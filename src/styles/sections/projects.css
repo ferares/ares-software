@@ -27,6 +27,19 @@
   gap: 1rem;
 }
 
+.project__stores {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.project__store__img {
+  height: 70px;
+}
+
 @media (width < 576px) {
   .projects {
     padding: 2rem 0;
