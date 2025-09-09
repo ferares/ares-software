@@ -44,7 +44,7 @@ const clientProjects: Project[] = [
     links: [
       { url: "https://salamhello.com", label: "Labels.visit-site" },
     ],
-    technologies: ["shopify", "html", "css", "typescript", "liquid", "webcomponents", "git"],
+    technologies: ["shopify", "html", "css", "typescript", "liquid", "webcomponents", "git", "vite"],
     videos: {
       desktop: { src: "/vids/salam/desktop.webm", poster: "/imgs/projects/salam/poster-desktop.png" },
       mobile: { src: "/vids/salam/mobile.webm", poster: "/imgs/projects/salam/poster-mobile.png" },
@@ -101,9 +101,7 @@ const clientProjects: Project[] = [
     images: { desktop: angularDesktopImg, mobile: angularMobileImg },
     desc: "Sections.Projects.projects.angular",
     stores: {},
-    links: [
-      { url: "https://angular-templates.io/", label: "Labels.visit-site" },
-    ],
+    links: [],
     technologies: ["angular", "typescript", "html", "sass", "git"],
     videos: {
       desktop: { src: "/vids/angular/desktop.webm", poster: "/imgs/projects/angular/poster-desktop.png" },
@@ -116,9 +114,7 @@ const clientProjects: Project[] = [
     images: { desktop: ionicDesktopImg, mobile: ionicMobileImg },
     desc: "Sections.Projects.projects.ionic",
     stores: {},
-    links: [
-      { url: "https://ionicthemes.com/", label: "Labels.visit-site" },
-    ],
+    links: [],
     technologies: ["angular", "typescript", "html", "sass", "git"],
     videos: {
       desktop: { src: "/vids/ionic/desktop.webm", poster: "/imgs/projects/ionic/poster-desktop.png" },

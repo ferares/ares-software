@@ -11,31 +11,31 @@ import TechnologyCategory from "@/components/technologyCategory"
 const technologiesList: { title: TranslationKey, list: TechnologyKey[] }[] = [
   {
     title: "Labels.languages",
-    list: [ "typescript", "javascript", "go", "liquid", "python", "php", "sass", "html", "css" ],
+    list: ["typescript", "javascript", "go", "liquid", "python", "php", "sass", "html", "css"],
   },
   {
     title: "Labels.frameworks",
-    list: [ "next", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap" ],
+    list: ["next", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap"],
   },
   {
     title: "Labels.e-commerce",
-    list: [ "shopify", "woocommerce", "paypal", "mercado" ],
+    list: ["shopify", "woocommerce", "paypal", "mercado"],
   },
   {
     title: "Labels.databases",
-    list: [ "graphql", "postgresql", "mongodb", "redis", "valkey", "prisma", "mysql", "mariadb", "sqlite" ],
+    list: ["graphql", "postgresql", "mongodb", "redis", "valkey", "prisma", "mysql", "mariadb", "sqlite"],
   },
   {
     title: "Labels.infrastructure",
-    list: [ "aws", "digitalocean", "cloudflare", "docker", "heroku", "git", "bash", "websocket" ],
+    list: ["aws", "digitalocean", "cloudflare", "docker", "heroku", "git", "bash", "websocket"],
   },
   {
     title: "Labels.platforms",
-    list: [ "apple", "android", "linux", "windows", "pwa" ],
+    list: ["apple", "android", "linux", "windows", "pwa"],
   },
   {
     title: "Labels.tools",
-    list: [ "analytics", "tagmanager", "vite", "vitest", "jest", "postman", "figma", "sketch", "leaflet", "linear", "jwt", "recaptcha", "hcaptcha" ],
+    list: ["analytics", "tagmanager", "vite", "vitest", "jest", "postman", "figma", "sketch", "leaflet", "jwt", "recaptcha", "hcaptcha"],
   },
 ]
 
