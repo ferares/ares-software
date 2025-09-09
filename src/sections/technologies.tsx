@@ -11,7 +11,7 @@ import TechnologyCategory from "@/components/technologyCategory"
 const technologiesList: { title: TranslationKey, list: TechnologyKey[] }[] = [
   {
     title: "Labels.languages",
-    list: ["typescript", "javascript", "go", "liquid", "python", "php", "sass", "html", "css"],
+    list: ["typescript", "javascript", "go", "rust", "liquid", "python", "php", "sass", "html", "css"],
   },
   {
     title: "Labels.frameworks",

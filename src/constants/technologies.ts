@@ -4,6 +4,7 @@ const technologies = {
   go: { icon: "/icons/go.svg", title: "Go", iconSize },
   python: { icon: "/icons/python.svg", title: "Python", iconSize },
   php: { icon: "/icons/php.svg", title: "PHP", iconSize: 100 },
+  rust: { icon: "/icons/rust.svg", title: "Rust", iconSize: 90 },
   html: { icon: "/icons/html5.svg", title: "HTML", iconSize },
   css: { icon: "/icons/css.svg", title: "CSS", iconSize },
   sass: { icon: "/icons/sass.svg", title: "SASS", iconSize },
