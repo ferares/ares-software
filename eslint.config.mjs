@@ -1,3 +1,5 @@
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 import { dirname } from "path"
 import { fileURLToPath } from "url"
 import { FlatCompat } from "@eslint/eslintrc"
@@ -10,12 +12,10 @@ const compat = new FlatCompat({ baseDirectory: __dirname })
 
 /** @type {import("eslint").Linter.Config} */
 const eslintConfig = [
-  ...compat.extends(
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-  ),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  ...compat.extends("plugin:@typescript-eslint/recommended-type-checked"),
+  ...compat.extends("plugin:@typescript-eslint/stylistic-type-checked"),
   {
     languageOptions: {
       parser: tsParser,
@@ -49,6 +49,9 @@ const eslintConfig = [
         }
       ]
     },
+  },
+  {
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
   }
 ]
 

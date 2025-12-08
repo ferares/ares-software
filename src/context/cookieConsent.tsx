@@ -13,7 +13,7 @@ import AlertComponent from "@/components/alert"
 
 declare type CookieConsentContextProps = {
   consentGiven: boolean | null,
-  setConsentGiven:  Dispatch<SetStateAction<boolean | null>>,
+  setConsentGiven: Dispatch<SetStateAction<boolean | null>>,
   showCookieConsentAlert: () => void,
 }
 
@@ -46,7 +46,7 @@ export function CookieConsentProvider({ children }: { children: React.ReactNode 
       const savedConsent = localStorage.getItem(COOKIE_NAME)
       localStorage.setItem(COOKIE_NAME, consentGiven ? "true" : "false")
       if ((!consentGiven) && (savedConsent === "true")) {
-        window.location.reload()
+        window.location?.reload()
       }
     }
   }, [consentGiven, router])

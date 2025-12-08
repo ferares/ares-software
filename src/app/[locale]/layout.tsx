@@ -64,10 +64,10 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: Locale }> }>) {
+export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: string }> }>) {
   const { locale } = await params
-  if (!locales.includes(locale)) notFound()
-  setRequestLocale(locale)
+  if (!locales.includes(locale as Locale)) notFound()
+  setRequestLocale(locale as Locale)
 
   const messages = await getMessages()
 
