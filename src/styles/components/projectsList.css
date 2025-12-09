@@ -50,6 +50,15 @@
   width: 100%;
 }
 
+.project__img--modal {
+  display: block;
+  height: auto;
+  margin-inline: auto;
+  max-height: 600px;
+  max-width: 600px;
+  width: auto;
+}
+
 .projects__title-wrapper {
   align-items: center;
   display: flex;

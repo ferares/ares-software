@@ -75,6 +75,7 @@
         "intro": "Solutions web faites pour les clients, en mettant l'accent sur la performance, l'accessibilité, l'utilisabilité et des fonctionnalités personnalisées pour répondre à leurs besoins uniques."
       },
       "projects": {
+        "tuti": "Le premier agenda culturel numérique, gratuit et collaboratif de La Paloma, Rocha et des environs.",
         "busesuy": "Un moteur de recherche complet pour les lignes de bus à moyenne et longue distance en Uruguay. Cet outil innovant calcule les trajets avec correspondances, offrant aux utilisateurs des itinéraires et des horaires optimaux. Il a été le premier du genre dans le pays, comblant une lacune importante dans la planification et l'accessibilité des transports publics.",
         "arbolado": "Un outil web interactif conçu pour explorer et visualiser les données des recensements d'arbres menés dans diverses villes. Les utilisateurs peuvent filtrer et analyser des informations sur les espèces d'arbres, les emplacements et plus encore, en faisant une ressource précieuse pour les urbanistes, les chercheurs et les amateurs de nature.",
         "papelapp": "Une application web pratique qui aide les utilisateurs à calculer le coût au mètre des rouleaux de papier toilette. En comparant les prix et les tailles, elle permet aux consommateurs de prendre des décisions d'achat éclairées, économisant ainsi de l'argent et des ressources.",

@@ -17,6 +17,7 @@ import atlanticoDesktopImg from "../../public/imgs/projects/atlantico/desktop.jp
 import pipinaDesktopImg from "../../public/imgs/projects/pipina/desktop.jpg"
 import angularDesktopImg from "../../public/imgs/projects/angular/desktop.jpg"
 import busesuyDesktopImg from "../../public/imgs/projects/busesuy/desktop.jpg"
+import tutiDesktopImg from "../../public/imgs/projects/tuti/desktop.png"
 import crabeDesktopImg from "../../public/imgs/projects/crabe/desktop.jpg"
 import arboladoDesktopImg from "../../public/imgs/projects/arbolado/desktop.jpg"
 import papelappDesktopImg from "../../public/imgs/projects/papelapp/desktop.jpg"
@@ -29,6 +30,7 @@ import atlanticoMobileImg from "../../public/imgs/projects/atlantico/mobile.png"
 import pipinaMobileImg from "../../public/imgs/projects/pipina/mobile.png"
 import angularMobileImg from "../../public/imgs/projects/angular/mobile.png"
 import busesuyMobileImg from "../../public/imgs/projects/busesuy/mobile.png"
+import tutiMobileImg from "../../public/imgs/projects/tuti/mobile.png"
 import crabeMobileImg from "../../public/imgs/projects/crabe/mobile.png"
 import arboladoMobileImg from "../../public/imgs/projects/arbolado/mobile.png"
 import papelappMobileImg from "../../public/imgs/projects/papelapp/mobile.png"
@@ -138,6 +140,17 @@ const personalProjects: Project[] = [
       desktop: { src: "/vids/busesuy/desktop.webm", poster: "/imgs/projects/busesuy/poster-desktop.png" },
       mobile: { src: "/vids/busesuy/mobile.webm", poster: "/imgs/projects/busesuy/poster-mobile.png" },
     },
+  },
+  {
+    id: "tuti",
+    title: "Tuti",
+    images: { desktop: tutiDesktopImg, mobile: tutiMobileImg },
+    desc: "Sections.Projects.projects.tuti",
+    stores: { apple: "https://apps.apple.com/app/tuti/id6753868166", google: "https://play.google.com/store/apps/details?id=uy.tuti.twa" },
+    links: [
+      { url: "https://tuti.uy", label: "Labels.try-it", rel: "" },
+    ],
+    technologies: ["reactRouter", "react", "html", "typescript", "tailwindcss", "css", "vitest", "postgresql", "android", "apple", "linux", "git", "pwa", "cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
   },
   {
     id: "crabe",

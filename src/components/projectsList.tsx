@@ -29,7 +29,7 @@ export type Project = {
   links: { url: string, label: TranslationKey, icon?: IconDefinition, rel?: string }[]
   stores: { microsoft?: string, google?: string, apple?: string }
   technologies: TechnologyKey[],
-  videos: Videos,
+  videos?: Videos,
 }
 
 interface ProjectsListProps { id: string, title: string, intro: string, projects: Project[] }
@@ -96,7 +96,7 @@ function ProjectsList({ id, title, intro, projects }: ProjectsListProps) {
       <Modal id="project" title={selectedProject?.title} labelledBy="modal-project-title" onClose={() => setSelectedProject(undefined)} open={!!selectedProject}>
         {selectedProject && (
           <>
-            <VideoPlayer videos={selectedProject.videos} />
+            {selectedProject.videos ? <VideoPlayer videos={selectedProject.videos} /> : <Image className="project__img project__img--modal" src={displayMode === "desktop" ? selectedProject.images.desktop : selectedProject.images.mobile} alt="" />}
             <p className="project__paragraph">
               {t(selectedProject.desc)}
             </p>

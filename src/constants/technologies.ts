@@ -60,6 +60,7 @@ const technologies = {
   vite: { icon: "/icons/vite.svg", title: "Vite", iconSize },
   vitest: { icon: "/icons/vitest.svg", title: "Vitest", iconSize },
   leaflet: { icon: "/icons/leaflet.svg", title: "Leaflet", iconSize },
+  reactRouter: { icon: "/icons/reactrouter.svg", title: "React Router", iconSize },
 }
 
 type TechnologyKey = keyof typeof technologies
