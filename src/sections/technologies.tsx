@@ -15,7 +15,7 @@ const technologiesList: { title: TranslationKey, list: TechnologyKey[] }[] = [
   },
   {
     title: "Labels.frameworks",
-    list: ["next", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap"],
+    list: ["next", "reactRouter", "react", "angular", "vue", "webcomponents", "nodejs", "wordpress", "laravel", "django", "tailwindcss", "bootstrap"],
   },
   {
     title: "Labels.e-commerce",
