@@ -1,3 +1,5 @@
+import { randomUUID } from "crypto"
+
 import nodemailer from "nodemailer"
 
 import { render } from "@react-email/components"
@@ -10,7 +12,7 @@ function createTransport() {
   return nodemailer.createTransport({
     host: MAIL_HOST,
     port: Number(MAIL_PORT),
-    secure: true,
+    secure: MAIL_PORT === "465",
     auth: { user: MAIL_USERNAME, pass: MAIL_PASSWORD },
   })
 }
@@ -24,5 +26,6 @@ export async function sendContactEmail({ name, email, message }: { name?: string
     subject: "Contacto Web Ares",
     text: `Nombre: ${name}\nEmail: ${email}\nMensaje:\n${message}`,
     html: await render(<ContactEmail email={email} message={message} name={name} />),
+    references: [`<${randomUUID()}@tuti.uy>`], // Make sure gmail does not group all contact form messages
   })
 }
