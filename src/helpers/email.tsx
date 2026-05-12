@@ -2,7 +2,7 @@ import { randomUUID } from "crypto"
 
 import nodemailer from "nodemailer"
 
-import { render } from "@react-email/components"
+import { render } from "react-email"
 
 import ContactEmail from "@/components/email/contactEmail"
 

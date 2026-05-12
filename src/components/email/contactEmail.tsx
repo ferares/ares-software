@@ -1,6 +1,6 @@
 import { type CSSProperties } from "react"
 
-import { Link, Text } from "@react-email/components"
+import { Link, Text } from "react-email"
 
 import { escapeHtml } from "@/helpers/strings"
 

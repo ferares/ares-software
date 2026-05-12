@@ -1,6 +1,6 @@
 import { type CSSProperties, type ReactNode } from "react"
 
-import { Html, Head, Body, Container, Text, Heading } from "@react-email/components"
+import { Html, Head, Body, Container, Text, Heading } from "react-email"
 
 const styles: Record<string, CSSProperties> = {
   body: {
