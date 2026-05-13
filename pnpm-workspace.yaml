@@ -1,5 +1,25 @@
 blockExoticSubdeps: true
 minimumReleaseAge: 10080
+# Skip minimum release age checks for these packages
+# This can be removed at 2026-05-15
+minimumReleaseAgeExclude:
+  - next@16.2.6
+  - eslint-config-next@16.2.6
+  - "@next/third-parties@16.2.6"
+  - "@next/swc-linux-arm64-musl@16.2.6"
+  - "@next/swc-linux-x64-musl@16.2.6"
+  - "@next/swc-darwin-x64@16.2.6"
+  - "@next/swc-linux-x64-gnu@16.2.6"
+  - "@next/swc-linux-arm64-gnu@16.2.6"
+  - "@next/eslint-plugin-next@16.2.6"
+  - "@next/swc-win32-x64-msvc@16.2.6"
+  - "@next/swc-darwin-arm64@16.2.6"
+  - "@next/swc-win32-arm64-msvc@16.2.6"
+  - "@next/env@16.2.6"
+  - "next-intl@4.11.2"
+  - "next-intl-swc-plugin-extractor@4.11.2"
+  - "icu-minify@4.11.2"
+  - "use-intl@4.11.2"
 allowBuilds:
   "@parcel/watcher": true
   "@swc/core": true
