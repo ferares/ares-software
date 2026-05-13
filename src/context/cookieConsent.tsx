@@ -25,21 +25,21 @@ const CookieConsentContext = createContext<CookieConsentContextProps>({
 
 const COOKIE_NAME = "cookieConsent"
 
+function getInitialConsent(): boolean | null {
+  if (typeof window === "undefined") return null
+  const saved = localStorage.getItem(COOKIE_NAME)
+  if (saved === null) return null
+  return saved === "true"
+}
+
 export function CookieConsentProvider({ children }: { children: React.ReactNode }) {
-  const [consentGiven, setConsentGiven] = useState<boolean | null>(null)
-  const [showAlert, setShowAlert] = useState(false)
+  const [consentGiven, setConsentGiven] = useState<boolean | null>(getInitialConsent)
+  const [showAlert, setShowAlert] = useState(() => {
+    if (typeof window === "undefined") return false
+    return localStorage.getItem(COOKIE_NAME) === null
+  })
   const router = useRouter()
   const t = useTranslations()
-
-  useEffect(() => {
-    const savedConsent = localStorage.getItem(COOKIE_NAME)
-    if (savedConsent) {
-      setConsentGiven(savedConsent === "true")
-    } else {
-      setShowAlert(true)
-      setConsentGiven(null)
-    }
-  }, [])
 
   useEffect(() => {
     if (consentGiven !== null) {
