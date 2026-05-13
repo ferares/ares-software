@@ -57,7 +57,6 @@ export function AlertsProvider({ children }: { children: React.ReactNode }) {
 
   // Screen reader alerts
   const pushScreenReaderAlert = useCallback((type: ScreenReaderAlert["type"], content: string) => {
-    console.log("pushScreenReaderAlert", content)
     const newScreenReaderAlert: ScreenReaderAlert = { id: alertId++, type, content, timeout: 500 }
     setScreenReaderAlerts((prevAlerts) => [...prevAlerts, newScreenReaderAlert])
   }, [])
