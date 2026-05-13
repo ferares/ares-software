@@ -6,7 +6,7 @@ import Link from "next/link"
 
 import { useTranslations } from "next-intl"
 
-import { type  TranslationKey } from "@/i18n/request"
+import { type TranslationKey } from "@/i18n/request"
 
 import { scrollIntoView } from "@/helpers/scroll"
 
@@ -36,7 +36,7 @@ function Menu() {
     const clickOnMenuBtn = document.querySelector("[aria-controls='main-menu']")?.contains(target)
     if (ref.current && !ref.current.contains(target) && !clickOnMenuBtn) close()
   }, [open, close])
-  
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside)
     return () => document.removeEventListener("mousedown", handleClickOutside)
@@ -66,7 +66,7 @@ function Menu() {
             return (
               <li key={index}>
                 <Link href={link.target} className="menu__link" onClick={(event) => handleClick(event, link.target)}>
-                  { t(link.label) }
+                  {t(link.label)}
                 </Link>
               </li>
             )

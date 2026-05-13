@@ -41,7 +41,7 @@ function VideoPlayer({ videos }: VideoPlayerProps) {
         <Image className="video__frame" src={mobileView ? iphoneImage : macbookImage} height={700} width={700} alt="" />
         <video key={mobileView ? "mobile" : "desktop"} controls className="video__player" poster={videos[mobileView ? "mobile" : "desktop"].poster} autoPlay={!prefersReducedMotion} muted loop>
           <source src={videos[mobileView ? "mobile" : "desktop"].src} type="video/webm" />
-        </video> 
+        </video>
       </div>
     </div>
   )

@@ -24,7 +24,7 @@ export function PrefersReducedMotionProvider({ children }: { children: React.Rea
     mediaQuery?.addEventListener("change", handlePrefersReducedMotionChange)
     return () => mediaQuery?.removeEventListener("change", handlePrefersReducedMotionChange)
   }, [handlePrefersReducedMotionChange, mediaQuery])
-  
+
   const value = { prefersReducedMotion }
   return (
     <PrefersReducedMotionContext.Provider value={value}>

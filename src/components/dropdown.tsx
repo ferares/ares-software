@@ -20,7 +20,7 @@ export default function Dropdown({ children, open, onOpen, onClose, togglerRef, 
     const target = event.target as HTMLElement
     if (ref.current && !ref.current.contains(target) && togglerRef.current && (!togglerRef.current.contains(target))) onClose?.()
   }, [onClose, togglerRef, open])
-  
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside)
     return () => document.removeEventListener("mousedown", handleClickOutside)
@@ -35,7 +35,7 @@ export default function Dropdown({ children, open, onOpen, onClose, togglerRef, 
     }
     return () => onClose && removeCallOnEsc(onClose)
   }, [open, onClose, onOpen, handleClickOutside, pushCallOnEsc, removeCallOnEsc])
-  
+
   return (
     <div ref={ref} className={`dropdown-menu ${open ? "show" : ""}`} role="" aria-hidden={!open} {...props}>
       {children}

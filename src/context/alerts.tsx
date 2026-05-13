@@ -78,7 +78,7 @@ export function AlertsProvider({ children }: { children: React.ReactNode }) {
       )
     }
   }, [currentScreenReaderAlert, removeScreenReaderAlert])
-  
+
   const value = { pushAlert, pushScreenReaderAlert }
   return (
     <AlertsContext.Provider value={value}>

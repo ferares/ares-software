@@ -11,7 +11,7 @@
 
 .bg-image::before {
   background-color: var(--bg-color-intro);
-  content: '';
+  content: "";
   inset: 0;
   position: absolute;
   transition: all .5s ease-in-out;

@@ -16,7 +16,7 @@ export function LoaderProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<{ active: boolean, message?: string }>({ active: false })
 
   const setLoading = useCallback((active: boolean, message?: string) => { setState({ active, message }) }, [])
-  
+
   const value = { setLoading }
   return (
     <LoaderContext.Provider value={value}>

@@ -18,7 +18,7 @@ function NextBtn({ target }: NextBtnProps) {
     event.preventDefault()
     scrollIntoView(target)
   }, [target])
-  
+
   return (
     <a href={target} className="next-btn" onClick={handleClick} aria-label={t("scroll-down")}>
       <FontAwesomeIcon className="scroll-down" icon={faChevronDown} />

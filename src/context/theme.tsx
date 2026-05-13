@@ -23,7 +23,7 @@ export function ThemeProvider({ children, initialTheme }: { children: React.Reac
 
   const toggleTheme = useCallback(() => {
     setTheme((current) => {
-      const newTheme = current === "dark" ? "light": "dark"
+      const newTheme = current === "dark" ? "light" : "dark"
       setCookie("theme", newTheme)
       return newTheme
     })

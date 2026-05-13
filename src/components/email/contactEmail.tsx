@@ -41,7 +41,6 @@ export default function ContactEmail({ name, email, message }: ContactEmailProps
           <Text style={styles.label}>
             <strong style={styles.label}>Nombre</strong>: {name}
           </Text>
-          
         </div>
       )}
       <div style={styles.detailContainer}>
@@ -56,8 +55,8 @@ export default function ContactEmail({ name, email, message }: ContactEmailProps
         <Text style={styles.label}>
           <strong style={styles.strong}>Mensaje</strong>:
         </Text>
-        <Text style={styles.text} dangerouslySetInnerHTML={{ __html: escapeHtml(message).replace(/\n/g, '<br>') }} />
+        <Text style={styles.text} dangerouslySetInnerHTML={{ __html: escapeHtml(message).replace(/\n/g, "<br>") }} />
       </div>
     </EmailLayout>
-  );
+  )
 }

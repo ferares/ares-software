@@ -31,7 +31,7 @@ function Footer() {
           <div className="footer__developed">
             <FontAwesomeIcon className="footer__icon" icon={faCode} aria-label={t("developed")} />
             <span className="footer__text">
-              {t("in")} La Paloma, Rocha, Uruguay 
+              {t("in")} La Paloma, Rocha, Uruguay
             </span>
           </div>
           <ul className="footer__menu">

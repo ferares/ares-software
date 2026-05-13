@@ -11,7 +11,7 @@ interface ContextProps {
 }
 
 const BackgroundContext = createContext<ContextProps>({ newBackground: () => null, bg: undefined, loadingBg: true })
- 
+
 export function BackgroundProvider({ children }: { children: React.ReactNode }) {
   const [bg, setBg] = useState<string>()
   const [loadingBg, setLoadingBg] = useState<boolean>(true)

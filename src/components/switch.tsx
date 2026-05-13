@@ -16,7 +16,7 @@ interface SwitchProps {
 
 function Switch({ className, ariaLabel, leftIcon, rightIcon, onChange, state }: SwitchProps) {
   const btnRef = useRef<HTMLButtonElement>(null)
-  
+
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (
       ((event.key === "ArrowLeft") && (state === "right")) ||
