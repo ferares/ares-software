@@ -40,11 +40,12 @@ const AlertsContext = createContext<AlertsContextProps>({
 export function AlertsProvider({ children }: { children: React.ReactNode }) {
   // Visible alerts
   const [alerts, setAlerts] = useState<Alert[]>([])
-  const [currentAlert, setCurrentAlert] = useState<Alert>()
   // Screen reader alerts
   const [screenReaderAlerts, setScreenReaderAlerts] = useState<ScreenReaderAlert[]>([])
-  const [currentScreenReaderAlert, setCurrentScreenReaderAlert] = useState<ScreenReaderAlert>()
   const currentScreenReaderTimeout = useRef<NodeJS.Timeout | null>(null)
+
+  const currentAlert = alerts[0]
+  const currentScreenReaderAlert = screenReaderAlerts[0]
 
   // Visible alerts
   const pushAlert = useCallback((type: Alert["type"], content: string, timeout?: number) => {
@@ -54,17 +55,9 @@ export function AlertsProvider({ children }: { children: React.ReactNode }) {
 
   const removeAlert = useCallback(() => setAlerts((prevAlerts) => prevAlerts.slice(1)), [])
 
-  useEffect(() => {
-    if ((alerts.length > 0)) {
-      const alert = alerts[0]
-      setCurrentAlert(alert)
-    } else {
-      setCurrentAlert(undefined)
-    }
-  }, [alerts, removeAlert])
-
   // Screen reader alerts
   const pushScreenReaderAlert = useCallback((type: ScreenReaderAlert["type"], content: string) => {
+    console.log("pushScreenReaderAlert", content)
     const newScreenReaderAlert: ScreenReaderAlert = { id: alertId++, type, content, timeout: 500 }
     setScreenReaderAlerts((prevAlerts) => [...prevAlerts, newScreenReaderAlert])
   }, [])
@@ -78,16 +71,13 @@ export function AlertsProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   useEffect(() => {
-    if (!currentScreenReaderTimeout.current) {
-      if ((screenReaderAlerts.length > 0)) {
-        const screenReaderAlert = screenReaderAlerts[0]
-        currentScreenReaderTimeout.current = setTimeout(removeScreenReaderAlert, screenReaderAlert.timeout)
-        setCurrentScreenReaderAlert(screenReaderAlert)
-      } else {
-        setCurrentScreenReaderAlert(undefined)
-      }
+    if (currentScreenReaderAlert && !currentScreenReaderTimeout.current) {
+      currentScreenReaderTimeout.current = setTimeout(
+        removeScreenReaderAlert,
+        currentScreenReaderAlert.timeout
+      )
     }
-  }, [screenReaderAlerts, removeScreenReaderAlert])
+  }, [currentScreenReaderAlert, removeScreenReaderAlert])
   
   const value = { pushAlert, pushScreenReaderAlert }
   return (
