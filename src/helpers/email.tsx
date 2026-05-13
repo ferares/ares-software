@@ -26,6 +26,6 @@ export async function sendContactEmail({ name, email, message }: { name?: string
     subject: "Contacto Web Ares",
     text: `Nombre: ${name}\nEmail: ${email}\nMensaje:\n${message}`,
     html: await render(<ContactEmail email={email} message={message} name={name} />),
-    references: [`<${randomUUID()}@tuti.uy>`], // Make sure gmail does not group all contact form messages
+    references: [`<${randomUUID()}@ares.uy>`], // Make sure gmail does not group all contact form messages
   })
 }
