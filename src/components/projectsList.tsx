@@ -113,21 +113,21 @@ function ProjectsList({ id, title, intro, projects }: ProjectsListProps) {
                 {selectedProject.stores.apple && (
                   <li className="project__store">
                     <a className="project__store__link" href={selectedProject.stores.apple}>
-                      <img className="project__store__img" src={t("Stores.apple.image")} alt={t("Stores.apple.label")} />
+                      <Image className="project__store__img" src={t("Stores.apple.image")} alt={t("Stores.apple.label")} width={0} height={0} />
                     </a>
                   </li>
                 )}
                 {selectedProject.stores.google && (
                   <li className="project__store">
                     <a className="project__store__link" href={selectedProject.stores.google}>
-                      <img className="project__store__img" src={t("Stores.google.image")} alt={t("Stores.google.label")} />
+                      <Image className="project__store__img" src={t("Stores.google.image")} alt={t("Stores.google.label")} width={0} height={0} />
                     </a>
                   </li>
                 )}
                 {selectedProject.stores.microsoft && (
                   <li className="project__store">
                     <a className="project__store__link" href={selectedProject.stores.microsoft}>
-                      <img className="project__store__img" src={t("Stores.microsoft.image")} alt={t("Stores.microsoft.label")} />
+                      <Image className="project__store__img" src={t("Stores.microsoft.image")} alt={t("Stores.microsoft.label")} width={0} height={0} />
                     </a>
                   </li>
                 )}

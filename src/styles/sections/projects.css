@@ -38,6 +38,7 @@
 
 .project__store__img {
   height: 70px;
+  width: 100%;
 }
 
 @media (width < 576px) {
