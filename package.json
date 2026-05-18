@@ -2,7 +2,10 @@
   "name": "ares-software",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": "24.15.0"
+  },
+  "packageManager": "pnpm@11.1.2",
   "scripts": {
     "dev": "next dev --turbopack -H 0.0.0.0",
     "build": "next build",
@@ -22,13 +25,13 @@
     "next": "16.2.6",
     "next-intl": "4.11.2",
     "nodemailer": "8.0.7",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
-    "react-email": "6.0.8"
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-email": "6.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
-    "@types/node": "25.5.0",
+    "@types/node": "24.12.2",
     "@types/nodemailer": "8.0.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
