@@ -49,7 +49,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: Locale
       card: "summary_large_image",
       title,
       description,
-      images: `${appUrl}/imgs/share-card.jpg"`
+      images: `${appUrl}/imgs/share-card.jpg`
     },
     openGraph: {
       type: "website",
