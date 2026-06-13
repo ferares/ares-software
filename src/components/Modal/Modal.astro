@@ -1,0 +1,35 @@
+---
+import { X } from "@lucide/astro";
+
+import { useTranslations } from "../../i18n/utils";
+import type { Locale } from "../../i18n/config";
+
+interface Props {
+  id: string;
+  className?: string;
+}
+
+const { id, className } = Astro.props;
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<ares-modal id={id}>
+  <dialog data-js="dialog" class={`modal ${className ?? ""}`}>
+    <div class="modal__content" data-js="content">
+      <button
+        type="button"
+        class="modal__close"
+        aria-label={t("Labels.close")}
+        data-js="close"
+      >
+        <X />
+      </button>
+      <div class="modal__header" data-js="header">
+        <slot name="title" />
+      </div>
+      <div class="modal__body" data-js="body">
+        <slot />
+      </div>
+    </div>
+  </dialog>
+</ares-modal>

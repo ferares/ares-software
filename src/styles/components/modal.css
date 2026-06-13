@@ -6,7 +6,7 @@
   max-height: 100%;
   max-width: 100%;
   opacity: 1;
-  transition: all .3s;
+  transition: all 0.3s;
   width: 100%;
 }
 
@@ -16,17 +16,17 @@
   justify-content: center;
 }
 
-.modal.hide{
+.modal.hide {
   opacity: 0;
 }
 
 .modal.hide::backdrop {
-  animation: background-fade-out .3s ease;
+  animation: background-fade-out 0.3s ease;
   background: transparent;
 }
 
-.modal.show::backdrop {
-  animation: background-fade-in .3s ease;
+.modal[open]::backdrop {
+  animation: background-fade-in 0.3s ease;
   background: rgb(0 0 0 / 60%);
 }
 
@@ -81,17 +81,17 @@
 }
 
 .modal .modal__content::-webkit-scrollbar-thumb {
-  background-color: #CCC;
+  background-color: #ccc;
   border: none;
   border-radius: 5px;
 }
 
 .modal .modal__content::-webkit-scrollbar-thumb:hover {
-  background-color: #CCC;
+  background-color: #ccc;
 }
 
 .modal .action-buttons {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
@@ -103,15 +103,8 @@
 }
 
 @media (prefers-reduced-motion) {
-  /* .modal {
-    transition: none
-  } */
-  
-  .modal.hide::backdrop {
-    animation: none;
-  }
-  
-  .modal.show::backdrop {
+  .modal.hide::backdrop,
+  .modal[open]::backdrop {
     animation: none;
   }
 }

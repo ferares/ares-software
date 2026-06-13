@@ -6,13 +6,17 @@
   color: var(--color-text-dark);
   font-size: 1.5rem;
   line-height: 1;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   width: 6.8rem;
 }
 
 .theme-light .switch {
   background-color: var(--color-text);
   color: var(--color-text);
+}
+
+.theme-light .switch__indicator {
+  background-color: var(--color-text-dark);
 }
 
 .switch__indicator {
@@ -22,16 +26,34 @@
   display: flex;
   height: 2.4rem;
   justify-content: center;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 2.4rem;
-}
-
-.theme-light .switch__indicator {
-  background-color: var(--color-text-dark);
 }
 
 .switch__indicator--right {
   transform: translateX(100%);
+}
+
+.switch__indicator__icon-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.switch__indicator .switch__indicator__icon-wrapper:first-child {
+  display: none;
+}
+
+.switch__indicator--right .switch__indicator__icon-wrapper:first-child {
+  display: flex;
+}
+
+.switch__indicator--right .switch__indicator__icon-wrapper:last-child {
+  display: none;
+}
+
+.switch__indicator--right .switch__indicator {
+  background-color: var(--color-text-dark);
 }
 
 @media (prefers-reduced-motion) {

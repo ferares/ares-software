@@ -1,0 +1,30 @@
+---
+interface Props {
+  id?: string;
+  className?: string;
+  ariaLabels?: { left: string; right: string };
+}
+const { className, ariaLabels, id } = Astro.props;
+---
+
+<ares-switch
+  id={id}
+  data-label-right={ariaLabels?.right}
+  data-label-left={ariaLabels?.left}
+>
+  <button
+    type="button"
+    class={`switch ${className ?? ""}`}
+    aria-label={ariaLabels?.left}
+    data-js="toggle"
+  >
+    <span class="switch__indicator switch__indicator--left" data-js="indicator">
+      <span class="switch__indicator__icon-wrapper">
+        <slot name="icon-left" />
+      </span>
+      <span class="switch__indicator__icon-wrapper">
+        <slot name="icon-right" />
+      </span>
+    </span>
+  </button>
+</ares-switch>

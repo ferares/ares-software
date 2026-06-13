@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  small?: boolean;
+  size: number;
+  icon: ImageMetadata;
+  title: string;
+}
+
+const { icon, size, title, small } = Astro.props;
+---
+
+<div class={`badge ${small ? "badge--small" : ""}`}>
+  <Image class="badge__icon" src={icon} alt="" height={size} width={size} />
+  <span class="badge__label">{title}</span>
+</div>

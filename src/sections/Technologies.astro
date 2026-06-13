@@ -1,0 +1,138 @@
+---
+import type { Locale } from "../i18n/config";
+import { useTranslations, type TranslationKey } from "../i18n/utils";
+
+import { type TechnologyKey, technologies } from "../constants/technologies";
+
+import Badge from "../components/Badge.astro";
+
+const technologiesList: { title: TranslationKey; list: TechnologyKey[] }[] = [
+  {
+    title: "Labels.languages",
+    list: [
+      "typescript",
+      "javascript",
+      "go",
+      "liquid",
+      "python",
+      "php",
+      "sass",
+      "html",
+      "css",
+    ],
+  },
+  {
+    title: "Labels.frameworks",
+    list: [
+      "next",
+      "reactRouter",
+      "astro",
+      "react",
+      "angular",
+      "vue",
+      "webcomponents",
+      "nodejs",
+      "wordpress",
+      "laravel",
+      "django",
+      "tailwindcss",
+      "bootstrap",
+    ],
+  },
+  {
+    title: "Labels.e-commerce",
+    list: ["shopify", "woocommerce", "paypal", "mercado"],
+  },
+  {
+    title: "Labels.databases",
+    list: [
+      "graphql",
+      "postgresql",
+      "mongodb",
+      "redis",
+      "valkey",
+      "drizzle",
+      "prisma",
+      "mysql",
+      "mariadb",
+      "sqlite",
+    ],
+  },
+  {
+    title: "Labels.infrastructure",
+    list: [
+      "docker",
+      "nginx",
+      "aws",
+      "cloudflare",
+      "digitalocean",
+      "heroku",
+      "git",
+      "bash",
+      "websocket",
+    ],
+  },
+  {
+    title: "Labels.platforms",
+    list: ["apple", "android", "linux", "windows", "pwa"],
+  },
+  {
+    title: "Labels.tools",
+    list: [
+      "analytics",
+      "tagmanager",
+      "vite",
+      "vitest",
+      "postman",
+      "figma",
+      "maplibre",
+      "leaflet",
+      "jwt",
+      "turnstile",
+      "recaptcha",
+    ],
+  },
+];
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<section id="technologies" class="tech">
+  <div class="tech__content">
+    <h2 class="section-title">
+      {t("Sections.Technologies.title")}
+    </h2>
+    <p class="tech__intro">
+      {t("Sections.Technologies.intro")}
+    </p>
+    {
+      technologiesList.map((category) => (
+        <div class="tech__category">
+          <h3
+            id={`tech-category-${category.title}`}
+            class="tech__category__title"
+          >
+            {t(category.title)}
+          </h3>
+          <ul
+            class="tech__category__list"
+            aria-labelledby={`tech-category-${category.title}`}
+          >
+            {category.list.map((techKey) => {
+              const technology = technologies[techKey];
+              return (
+                <li class="tech__category__item">
+                  <Badge
+                    icon={technology.icon}
+                    size={technology.iconSize}
+                    title={technology.title}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

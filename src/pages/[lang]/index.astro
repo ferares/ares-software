@@ -1,0 +1,113 @@
+---
+import "../../styles/main.css";
+
+import { Font } from "astro:assets";
+
+import { defaultLocale, locales, type Locale } from "../../i18n/config";
+import {
+  getLocalizedUrl,
+  getRouteKeyFromPath,
+  useTranslations,
+} from "../../i18n/utils";
+
+import Intro from "../../sections/Intro.astro";
+import About from "../../sections/About.astro";
+import Projects from "../../sections/Projects.astro";
+import Technologies from "../../sections/Technologies.astro";
+import Contact from "../../sections/Contact.astro";
+
+import Header from "../../components/Header.astro";
+import Menu from "../../components/Menu/Menu.astro";
+import Footer from "../../components/Footer.astro";
+import Loader from "../../components/Loader/Loader.astro";
+import App from "../../components/App/App.astro";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+const currentPath = Astro.url.pathname;
+const currentPageKey = getRouteKeyFromPath(Astro.url.pathname);
+const title = "Ares Software";
+const shareCardImg = "https://ares.uy/imgs/share-card.jpg";
+
+export function getStaticPaths() {
+  return locales.flatMap((lang) => ({
+    params: { lang },
+  }));
+}
+---
+
+<html lang={Astro.currentLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <meta name="theme-color" content="black" />
+    <meta name="color-scheme" content="dark light" />
+    <title>{title}</title>
+    <meta name="description" content={t("Metadata.description")} />
+    <link rel="author" href="https://ares.uy" />
+    <meta name="author" content={title} />
+    <meta name="robots" content="index,follow" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={t("Metadata.description")} />
+    <meta property="og:image" content={shareCardImg} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={t("Metadata.description")} />
+    <meta name="twitter:image" content={shareCardImg} />
+    <Font cssVariable="--font-figtree" preload />
+    <Font cssVariable="--font-open-sans" preload />
+    <link rel="canonical" href={new URL(currentPath, Astro.site)} />
+    {
+      locales
+        .filter((locale) => locale !== Astro.currentLocale)
+        .map((locale) => (
+          <link
+            rel="alternate"
+            hreflang={locale}
+            href={new URL(getLocalizedUrl(currentPageKey, locale), Astro.site)}
+          />
+        ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(getLocalizedUrl(currentPageKey, defaultLocale), Astro.site)}
+    />
+    <!-- GTM -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GTM-WFGFHHZW"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GTM-WFGFHHZW");
+    </script>
+    <script is:inline define:vars={{ currentLocale: Astro.currentLocale }}>
+      window.Astro = { currentLocale };
+    </script>
+    <script>
+      import "../../scripts/main.ts";
+    </script>
+  </head>
+  <body>
+    <App>
+      <Header />
+      <Menu />
+      <main id="main" class="main">
+        <Intro />
+        <About />
+        <Projects />
+        <Technologies />
+        <Contact />
+      </main>
+      <Footer />
+      <Loader />
+    </App>
+  </body>
+</html>

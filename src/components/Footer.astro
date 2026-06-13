@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+
+import { Code, Mail, Cookie } from "@lucide/astro";
+
+import { useTranslations } from "../i18n/utils";
+import type { Locale } from "../i18n/config";
+
+import GitHubLogoDark from "../assets/github_dark.svg";
+import GitHubLogoLight from "../assets/github_light.svg";
+import LinkedInLogoDark from "../assets/linkedin_dark.svg";
+import LinkedInLogoLight from "../assets/linkedin_light.svg";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+
+const GITHUB_LINK = "";
+const LINKEDIN_LINK = "";
+---
+
+<footer class="footer">
+  <div class="max-width">
+    <div class="footer__content">
+      <div class="footer__developed">
+        <Code class="footer__icon" aria-label={t("Labels.developed")} />
+        <span class="footer__text">
+          {t("Labels.in")} La Paloma, Rocha, Uruguay
+        </span>
+      </div>
+      <ul class="footer__menu">
+        <li class="footer__menu__item">
+          <a
+            class="footer__menu__link"
+            target="_blank"
+            rel="noreferrer nofollow noopener"
+            href={GITHUB_LINK}
+            aria-label="GitHub"
+          >
+            <Image
+              src={GitHubLogoDark}
+              alt="GitHub"
+              class="footer__menu__icon footer__menu__icon--dark"
+            />
+            <Image
+              src={GitHubLogoLight}
+              alt="GitHub"
+              class="footer__menu__icon footer__menu__icon--light"
+            />
+          </a>
+        </li>
+        <li class="footer__menu__item">
+          <a
+            class="footer__menu__link"
+            target="_blank"
+            rel="noreferrer nofollow noopener"
+            href={LINKEDIN_LINK}
+            aria-label="LinkedIn"
+          >
+            <Image
+              src={LinkedInLogoDark}
+              alt="LinkedIn"
+              class="footer__menu__icon footer__menu__icon--dark"
+            />
+            <Image
+              src={LinkedInLogoLight}
+              alt="LinkedIn"
+              class="footer__menu__icon footer__menu__icon--light"
+            />
+          </a>
+        </li>
+        <li class="footer__menu__item">
+          <a
+            class="footer__menu__link"
+            target="_blank"
+            rel="noreferrer nofollow noopener"
+            href="#contact"
+            onClick={(event) => handleContactClick(event)}
+            aria-label={t("Labels.contact-me")}
+          >
+            <Mail class="footer__menu__icon" />
+          </a>
+        </li>
+        <li class="footer__menu__item">
+          <button
+            type="button"
+            class="footer__menu__link"
+            onClick={() => showCookieConsentAlert()}
+            aria-label={t("Labels.cookie-settings")}
+          >
+            <Cookie class="footer__menu__icon" />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

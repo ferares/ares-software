@@ -1,4 +1,4 @@
-.next-btn {
+ares-next-button {
   animation: jump 1.25s ease-in-out infinite;
   background-color: transparent;
   border: 0;
@@ -9,12 +9,12 @@
   position: absolute;
 }
 
-.next-btn:hover {
+ares-next-button:hover {
   animation-play-state: paused;
 }
 
 @media (prefers-reduced-motion) {
-  .next-btn {
+  ares-next-button {
     animation: none;
   }
 }

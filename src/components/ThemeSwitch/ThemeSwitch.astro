@@ -1,0 +1,21 @@
+---
+import { Moon, Sun } from "@lucide/astro";
+
+import type { Locale } from "../../i18n/config";
+import { useTranslations } from "../../i18n/utils";
+import Switch from "../Switch/Switch.astro";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<ares-theme-switch>
+  <Switch
+    ariaLabels={{
+      left: t("Labels.switch-dark"),
+      right: t("Labels.switch-light"),
+    }}
+  >
+    <Sun slot="icon-left" />
+    <Moon slot="icon-right" />
+  </Switch>
+</ares-theme-switch>

@@ -29,7 +29,7 @@
   position: static;
   top: 0;
   transform: translateY(-100%);
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
 }
 
@@ -47,8 +47,9 @@
 }
 
 .menu-toggle-btn {
-  background-color: #0000;
+  background-color: transparent;
   border: 0;
+  /* display: block; */
   height: 1rem;
   padding: 0;
   width: 1.4rem;
@@ -63,13 +64,13 @@
 
 .icon-hamburger__line {
   background-color: var(--color-text);
-  height: .1rem;
-  transition: all .3s;
+  height: 0.1rem;
+  transition: all 0.3s;
   width: 100%;
 }
 
 .menu-toggle-btn.open .icon-hamburger__line:nth-child(1) {
-  transform: translateY(.5rem) rotate(-45deg);
+  transform: translateY(0.5rem) rotate(-45deg);
 }
 
 .menu-toggle-btn.open .icon-hamburger__line:nth-child(2) {
@@ -77,7 +78,7 @@
 }
 
 .menu-toggle-btn.open .icon-hamburger__line:nth-child(3) {
-  transform: translateY(-.4rem) rotate(45deg);
+  transform: translateY(-0.4rem) rotate(45deg);
 }
 
 @media (prefers-reduced-motion) {

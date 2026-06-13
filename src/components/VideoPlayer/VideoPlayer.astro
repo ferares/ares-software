@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+
+import { Monitor, Smartphone } from "@lucide/astro";
+
+import type { Videos } from "../../constants/projects";
+
+import { useTranslations } from "../../i18n/utils";
+import type { Locale } from "../../i18n/config";
+
+import Switch from "../Switch/Switch.astro";
+
+import macbookImage from "../../assets/macbook.png";
+import iphoneImage from "../../assets/iphone.png";
+
+interface Props {
+  videos: Videos;
+}
+
+const { videos } = Astro.props;
+
+const prefersReducedMotion = false;
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<ares-video-player class="video video--mobile">
+  <Switch
+    className="video__switch"
+    ariaLabels={{
+      left: t("Labels.show-desktop-video"),
+      right: t("Labels.show-mobile-video"),
+    }}
+  >
+    <Monitor slot="icon-left" />
+    <Smartphone slot="icon-right" />
+  </Switch>
+  <div class="video__wrapper">
+    <Image class="video__frame video__frame--mobile" src={iphoneImage} alt="" />
+    <Image
+      class="video__frame video__frame--desktop"
+      src={macbookImage}
+      alt=""
+    />
+    <video
+      controls
+      class="video__player video__player--mobile"
+      poster={videos.mobile.poster}
+      autoplay={!prefersReducedMotion}
+      muted
+      loop
+    >
+      <source src={videos.mobile.src} type="video/webm" />
+    </video>
+    <video
+      controls
+      class="video__player video__player--desktop"
+      poster={videos.desktop.poster}
+      autoplay={!prefersReducedMotion}
+      muted
+      loop
+    >
+      <source src={videos.desktop.src} type="video/webm" />
+    </video>
+  </div>
+</ares-video-player>

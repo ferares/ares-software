@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+
+import { Link } from "@lucide/astro";
+
+import { clientProjects, personalProjects } from "../../../constants/projects";
+import { technologies } from "../../../constants/technologies";
+
+import { locales, type Locale } from "../../../i18n/config";
+import { useTranslations } from "../../../i18n/utils";
+
+import Badge from "../../../components/Badge.astro";
+import VideoPlayer from "../../../components/VideoPlayer/VideoPlayer.astro";
+
+import GitHubLogoDark from "../../../assets/github_dark.svg";
+import GitHubLogoLight from "../../../assets/github_light.svg";
+
+export const partial = true;
+
+export function getStaticPaths() {
+  const projects = clientProjects.concat(personalProjects);
+  return locales.flatMap((lang) =>
+    projects.map((project) => ({
+      params: { lang, id: project.id },
+      props: { project },
+    })),
+  );
+}
+
+const { project } = Astro.props;
+
+const displayMode = "desktop";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+{
+  project.videos ? (
+    <VideoPlayer videos={project.videos} />
+  ) : (
+    <Image
+      class="project__img project__img--modal project__img--desktop"
+      src={project.images.desktop}
+      alt=""
+    />
+    <Image
+      class="project__img project__img--modal project__img--mobile"
+      src={project.images.mobile}
+      alt=""
+    />
+  )
+}
+<p class="project__paragraph">{t(project.desc)}</p>
+<div id={`project-${project.id}-links`} class="project__links">
+  {
+    project.links.map((link) => (
+      <a
+        class="project__btn btn"
+        href={link.url}
+        target="_blank"
+        rel={link.rel ?? "noopener noreferrer nofollow"}
+      >
+        {t(link.label)}
+        {link.gitHub ? <Image src={GitHubLogoDark} alt="" /> : <Link />}
+      </a>
+    ))
+  }
+</div>
+{
+  project.stores && (
+    <ul class="project__stores">
+      {/* {project.stores.apple && (
+        <li class="project__store">
+          <a class="project__store__link" href={project.stores.apple}>
+            <Image
+              class="project__store__img"
+              src={t("Stores.apple.image")}
+              alt={t("Stores.apple.label")}
+              width={0}
+              height={0}
+            />
+          </a>
+        </li>
+      )}
+      {project.stores.google && (
+        <li class="project__store">
+          <a class="project__store__link" href={project.stores.google}>
+            <Image
+              class="project__store__img"
+              src={t("Stores.google.image")}
+              alt={t("Stores.google.label")}
+              width={0}
+              height={0}
+            />
+          </a>
+        </li>
+      )}
+      {project.stores.microsoft && (
+        <li class="project__store">
+          <a class="project__store__link" href={project.stores.microsoft}>
+            <Image
+              class="project__store__img"
+              src={t("Stores.microsoft.image")}
+              alt={t("Stores.microsoft.label")}
+              width={0}
+              height={0}
+            />
+          </a>
+        </li>
+      )} */}
+    </ul>
+  )
+}
+<h3 class="project__tech-title">{t("Labels.developed-using")}</h3>
+<ul class="project__technologies">
+  {
+    project.technologies.map((tech) => {
+      const technology = technologies[tech];
+      return (
+        <li>
+          <Badge
+            icon={technology.icon}
+            size={technology.iconSize}
+            title={technology.title}
+            small
+          />
+        </li>
+      );
+    })
+  }
+</ul>

@@ -13,7 +13,7 @@
 .footer__developed {
   align-items: center;
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   justify-content: center;
 }
 
@@ -43,7 +43,7 @@
   font-size: 2rem;
   padding: 0;
   text-decoration: none;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .footer__menu__link:hover {
@@ -53,6 +53,19 @@
 .footer__menu__icon {
   display: block;
   height: 2rem;
+  width: auto;
+}
+
+.footer__menu__icon--light {
+  display: none;
+}
+
+.theme-light .footer__menu__icon--light {
+  display: block;
+}
+
+.theme-light .footer__menu__icon--dark {
+  display: none;
 }
 
 @media (width < 576px) {

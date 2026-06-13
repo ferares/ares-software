@@ -1,0 +1,14 @@
+---
+interface Props {
+  id?: string;
+  labelledById?: string;
+}
+
+const { labelledById, id } = Astro.props;
+---
+
+<ares-carousel class="embla" id={id}>
+  <ul class="embla__container" aria-labelledby={labelledById}>
+    <slot />
+  </ul>
+</ares-carousel>

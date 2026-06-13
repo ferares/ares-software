@@ -1,0 +1,83 @@
+---
+import type { Locale } from "../i18n/config";
+import { useTranslations } from "../i18n/utils";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<section id="contact" class="contact">
+  <div class="max-width contact__content">
+    <h2 class="section-title">
+      {t("Sections.Contact.title")}
+    </h2>
+    <p class="contact__intro">
+      {t("Sections.Contact.intro")}
+    </p>
+    <form
+      novalidate
+      class={`contact__form ${"wasValidated" ? "was-validated" : ""}`}
+      onSubmit={}
+    >
+      <div class="contact__form__row">
+        <label class="contact__form__label" for="name">{t("Labels.name")}</label
+        >
+        <input
+          class="contact__form__input"
+          type="text"
+          id="name"
+          value={"name"}
+          onChange={}
+        />
+      </div>
+      <div class="contact__form__row">
+        <label class="contact__form__label" for="email"
+          >{t("Labels.email")} ({t("Labels.required")})</label
+        >
+        <input
+          class="contact__form__input"
+          type="email"
+          id="email"
+          value={"email"}
+          required
+          pattern={"emailPattern"}
+          onChange={}
+        />
+        <div class="contact__form__invalid-feedback">
+          {t("Messages.input-an-email")}
+        </div>
+      </div>
+      <div class="contact__form__row">
+        <label class="contact__form__label" for="message"
+          >{t("Labels.message")} ({t("Labels.required")})</label
+        >
+        <textarea
+          class="contact__form__input"
+          id="message"
+          rows={6}
+          required
+          value={"message"}
+          onChange={}></textarea>
+        <div class="contact__form__invalid-feedback">
+          {t("Messages.input-a-message")}
+        </div>
+      </div>
+      <div class="contact__form__row">
+        <!-- <HCaptcha ref={captchaRef} sitekey={captchaSiteKey} onVerify={setCaptchaToken} languageOverride={locale} /> -->
+      </div>
+      {
+        (
+          <div
+            class={`contact__form__invalid-feedback ${!"captchaToken" ? "show" : ""}`}
+          >
+            {t("Messages.invalid-captcha")}
+          </div>
+        )
+      }
+      <div class="contact__form__submit-row">
+        <button type="submit" class="btn btn-primary">
+          {t("Labels.send")}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

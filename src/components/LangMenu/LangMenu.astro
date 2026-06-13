@@ -1,0 +1,44 @@
+---
+import { Languages } from "@lucide/astro";
+
+import { useTranslations } from "../../i18n/utils";
+import { labels, locales, type Locale } from "../../i18n/config";
+
+import Dropdown from "../Dropdown/Dropdown.astro";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<ares-lang-menu>
+  <button
+    id="button-lang"
+    type="button"
+    aria-controls="dropdown-lang"
+    title={t("Labels.change-language")}
+    class="language-button"
+    aria-expanded="false"
+    data-js="toggler"
+  >
+    <Languages class="navbar__menu__icon" />
+  </button>
+  <Dropdown id="dropdown-lang">
+    <ul role="menu" aria-labelledby="button-lang">
+      {
+        locales.map((localeOption) => {
+          if (localeOption === Astro.currentLocale) return null;
+          return (
+            <li role="menuitem">
+              <button
+                type="button"
+                data-locale={localeOption}
+                lang={localeOption}
+              >
+                {labels[localeOption]}
+              </button>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </Dropdown>
+</ares-lang-menu>

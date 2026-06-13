@@ -1,0 +1,25 @@
+---
+import { useTranslations } from "../i18n/utils";
+import type { Locale } from "../i18n/config";
+
+import LangMenu from "./LangMenu/LangMenu.astro";
+import Avatar from "./Avatar/Avatar.astro";
+import MenuToggle from "./MenuToggle/MenuToggle.astro";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<header class="header">
+  <nav class="navbar max-width">
+    <a class="skip-main visually-hidden-focusable" href="#main">
+      {t("Labels.skip-to-content")}
+    </a>
+    <div class="navbar__content">
+      <Avatar />
+      <div class="navbar__content__right">
+        <LangMenu />
+        <MenuToggle />
+      </div>
+    </div>
+  </nav>
+</header>

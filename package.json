@@ -1,47 +1,20 @@
 {
   "name": "ares-software",
-  "version": "1.0.0",
-  "private": true,
+  "type": "module",
+  "version": "2.0.0",
   "engines": {
-    "node": "24.15.0"
+    "node": "24"
   },
-  "packageManager": "pnpm@11.1.2",
   "scripts": {
-    "dev": "next dev --turbopack -H 0.0.0.0",
-    "build": "next build",
-    "compile": "tsc --noEmit",
-    "start": "next start",
-    "lint": "eslint ."
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "7.2.0",
-    "@fortawesome/free-brands-svg-icons": "7.2.0",
-    "@fortawesome/free-solid-svg-icons": "7.2.0",
-    "@fortawesome/react-fontawesome": "3.3.1",
-    "@hcaptcha/react-hcaptcha": "2.0.2",
-    "@next/third-parties": "16.2.6",
-    "embla-carousel": "8.6.0",
-    "embla-carousel-react": "8.6.0",
-    "next": "16.2.6",
-    "next-intl": "4.11.2",
-    "nodemailer": "8.0.7",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
-    "react-email": "6.1.1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "3.3.5",
-    "@types/node": "24.12.2",
-    "@types/nodemailer": "8.0.0",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@typescript-eslint/eslint-plugin": "8.59.2",
-    "@typescript-eslint/parser": "8.59.2",
-    "eslint": "9.39.4",
-    "eslint-config-next": "16.2.6",
-    "stylelint": "17.11.0",
-    "stylelint-config-standard": "40.0.0",
-    "stylelint-order": "8.1.1",
-    "typescript": "6.0.3"
+    "@lucide/astro": "1.17.0",
+    "astro": "6.4.4",
+    "embla-carousel": "8.6.0",
+    "sharp": "0.34.5"
   }
 }

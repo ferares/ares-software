@@ -1,0 +1,35 @@
+---
+import type { Locale } from "../../i18n/config";
+import { useTranslations, type TranslationKey } from "../../i18n/utils";
+
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch.astro";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+const links: { label: TranslationKey; target: string }[] = [
+  { label: "Sections.About.title", target: "#about" },
+  { label: "Labels.projects", target: "#projects" },
+  { label: "Sections.Technologies.title", target: "#technologies" },
+  { label: "Sections.Contact.title", target: "#contact" },
+];
+---
+
+<ares-menu class="menu-wrapper">
+  <nav id="main-menu" class="menu" data-js="nav" aria-label={t("Labels.menu")}>
+    <ul class="menu__content">
+      {
+        links.map((link) => {
+          return (
+            <li>
+              <a href={link.target} class="menu__link" data-js="nav-link">
+                {t(link.label)}
+              </a>
+            </li>
+          );
+        })
+      }
+      <li>
+        <ThemeSwitch />
+      </li>
+    </ul>
+  </nav>
+</ares-menu>

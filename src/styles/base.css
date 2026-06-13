@@ -25,7 +25,12 @@ img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-title);
   font-family: var(--font-titles);
   font-weight: 500;
@@ -38,7 +43,7 @@ p {
 
 a {
   color: var(--color-text);
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -46,7 +51,8 @@ a:hover {
   text-decoration: underline;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -102,7 +108,7 @@ button {
   line-height: 1;
   padding: 1rem 1.6rem;
   text-decoration: none;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .btn:hover {
@@ -112,6 +118,7 @@ button {
 }
 
 .main {
+  flex-grow: 1;
   overflow: auto;
 }
 

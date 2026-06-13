@@ -45,9 +45,21 @@
   right: 0;
 }
 
+.project__img {
+  display: none;
+}
+
 .project__carousel--mobile .project__img {
   max-width: 300px;
   width: 100%;
+}
+
+.project__carousel--mobile .project__img--mobile {
+  display: block;
+}
+
+.project__carousel--desktop .project__img--desktop {
+  display: block;
 }
 
 .project__img--modal {
@@ -81,7 +93,7 @@
 
 .projects__slide {
   flex: 0 0 28%;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 .project__carousel--mobile .projects__slide {
@@ -119,7 +131,7 @@
 .project__btn {
   align-items: center;
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   justify-content: center;
   width: 100%;
 }
@@ -142,7 +154,7 @@
   .projects__title {
     font-size: 2rem;
   }
-  
+
   .projects__slide {
     flex: 0 0 50%;
   }

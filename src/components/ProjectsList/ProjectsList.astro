@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+import { ChevronLeft, ChevronRight, Monitor, Smartphone } from "@lucide/astro";
+
+import type { Locale } from "../../i18n/config";
+import { useTranslations } from "../../i18n/utils";
+
+import { type Project } from "../../constants/projects";
+
+import Switch from "../Switch/Switch.astro";
+import Modal from "../Modal/Modal.astro";
+import Carousel from "../Carousel/Carousel.astro";
+
+interface Props {
+  id: string;
+  title: string;
+  intro: string;
+  projects: Project[];
+}
+
+const t = useTranslations(Astro.currentLocale as Locale);
+const { id, intro, title, projects } = Astro.props;
+---
+
+<ares-projects-list data-id={id}>
+  <div class="projects__title-wrapper">
+    <h3 id={id} class="projects__title">
+      {title}
+    </h3>
+    <Switch
+      id={`${id}-switch`}
+      ariaLabels={{
+        left: t("Labels.show-desktop-screenshots"),
+        right: t("Labels.show-mobile-screenshots"),
+      }}
+    >
+      <Smartphone slot="icon-left" />
+      <Monitor slot="icon-right" />
+    </Switch>
+  </div>
+  <p class="projects-list__intro">
+    {intro}
+  </p>
+  <div class="project__carousel project__carousel--desktop" data-js="wrapper">
+    <button
+      type="button"
+      class="project__carousel__arrow project__carousel__arrow--left"
+      data-js="prev"
+      aria-label={t("Labels.previous")}
+    >
+      <ChevronLeft class="project__carousel__arrow__icon" />
+    </button>
+    <button
+      type="button"
+      class="project__carousel__arrow project__carousel__arrow--right"
+      data-js="next"
+      aria-label={t("Labels.next")}
+    >
+      <ChevronRight class="project__carousel__arrow__icon" />
+    </button>
+    <Carousel labelledById={id} id={`${id}-carousel`}>
+      {
+        projects.map((project) => (
+          <li class="embla__slide projects__slide">
+            <button
+              type="button"
+              class="project"
+              data-project-id={project.id}
+              data-project-title={project.title}
+            >
+              <Image
+                class="project__img project__img--desktop"
+                src={project.images.desktop}
+                alt=""
+              />
+              <Image
+                class="project__img project__img--mobile"
+                src={project.images.mobile}
+                alt=""
+              />
+              <h4 class="project__title">{project.title}</h4>
+            </button>
+          </li>
+        ))
+      }
+    </Carousel>
+  </div>
+  <Modal id={`${id}-modal`} />
+</ares-projects-list>
