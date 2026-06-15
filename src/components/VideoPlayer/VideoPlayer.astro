@@ -64,3 +64,64 @@ const t = useTranslations(Astro.currentLocale as Locale);
     </video>
   </div>
 </ares-video-player>
+
+<style>
+  .video {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .video__wrapper {
+    position: relative;
+  }
+
+  .video--mobile .video__wrapper {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .video--desktop .video__wrapper {
+    max-width: 750px;
+  }
+
+  .video__frame {
+    display: none;
+    margin: auto;
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .video--mobile .video__frame--mobile {
+    display: block;
+  }
+
+  .video--desktop .video__frame--desktop {
+    display: block;
+  }
+
+  .video__player {
+    display: none;
+    left: 12.4%;
+    position: absolute;
+    top: 5.7%;
+    width: 75.4%;
+  }
+
+  .video--mobile .video__player--mobile {
+    display: block;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    left: 5.7%;
+    overflow: hidden;
+    top: 8.5%;
+    width: 89.5%;
+  }
+
+  .video--desktop .video__player--desktop {
+    display: block;
+  }
+</style>

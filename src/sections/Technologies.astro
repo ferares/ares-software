@@ -136,3 +136,65 @@ const t = useTranslations(Astro.currentLocale as Locale);
     }
   </div>
 </section>
+
+<style>
+  .tech {
+    background-color: var(--bg-color-technologies);
+  }
+
+  .tech .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .tech__intro {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+  }
+
+  .tech__category {
+    margin-bottom: 4rem;
+  }
+
+  .tech__category__title {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+
+  .tech__category__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech__category__item {
+    flex: 0 0 auto;
+    font-size: 4rem;
+    height: 170px;
+    width: 170px;
+  }
+
+  @media (width < 992px) {
+    .tech__category {
+      margin-bottom: 2rem;
+    }
+
+    .tech__category__title {
+      font-size: 2rem;
+    }
+
+    .tech__category__item {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  @media (width < 576px) {
+    .tech .section-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>

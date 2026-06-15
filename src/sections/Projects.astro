@@ -35,3 +35,60 @@ const t = useTranslations(Astro.currentLocale as Locale);
     </button>
   </div>
 </section>
+
+<style>
+  .projects {
+    background-color: var(--bg-color-projects);
+    padding: 2rem 0;
+  }
+
+  .projects .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .projects__intro {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .projects__content {
+    height: 100%;
+  }
+
+  .projects__contact {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+
+  .projects__btn {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .project__stores {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .project__store__img {
+    height: 70px;
+    width: 100%;
+  }
+
+  @media (width < 576px) {
+    .projects {
+      padding: 2rem 0;
+    }
+
+    .projects .section-title {
+      font-size: 2.5rem;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>

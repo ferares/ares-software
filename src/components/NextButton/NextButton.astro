@@ -22,3 +22,26 @@ const t = useTranslations(Astro.currentLocale as Locale);
     <ChevronDown class="scroll-down" size={60} />
   </a>
 </ares-next-button>
+
+<style>
+  ares-next-button {
+    animation: jump 1.25s ease-in-out infinite;
+    background-color: transparent;
+    border: 0;
+    bottom: 1rem;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 2.5rem;
+    position: absolute;
+  }
+
+  ares-next-button:hover {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion) {
+    ares-next-button {
+      animation: none;
+    }
+  }
+</style>

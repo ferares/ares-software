@@ -62,13 +62,6 @@ button {
   cursor: pointer;
 }
 
-.app {
-  color: var(--color-text);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 .visually-hidden {
   border: 0;
   height: 1px;

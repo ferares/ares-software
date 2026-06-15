@@ -33,3 +33,59 @@ const links: { label: TranslationKey; target: string }[] = [
     </ul>
   </nav>
 </ares-menu>
+
+<style>
+  .menu-wrapper {
+    position: relative;
+  }
+
+  .menu {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .menu.show {
+    visibility: visible;
+  }
+
+  .menu__content {
+    align-items: center;
+    background: var(--bg-color-menu);
+    box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    left: 0;
+    margin-left: 0;
+    padding: 2rem;
+    position: static;
+    top: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    width: 100%;
+  }
+
+  .menu.show .menu__content {
+    transform: translateY(0);
+  }
+
+  .menu__link {
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  .menu__link:hover {
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion) {
+    .menu__content {
+      transition: none;
+    }
+  }
+</style>
