@@ -3,8 +3,6 @@
  *
  * Content and title are set programmatically via {@link setContent}.
  * Closing is triggered by the close button or clicking the backdrop.
- *
- * @element ares-modal
  */
 export class Modal extends HTMLElement {
   private content: HTMLElement;
@@ -90,5 +88,9 @@ export class Modal extends HTMLElement {
   public open = () => {
     this.dialog.showModal();
     this.content.scrollTo({ top: 0 })
+  };
+
+  public close = () => {
+    this.startHiding();
   };
 }

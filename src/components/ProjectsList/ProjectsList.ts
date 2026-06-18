@@ -18,8 +18,6 @@ export class ProjectsList extends HTMLElement {
    * a desktop/mobile layout switch, and a modal for viewing project details.
    *
    * Project detail content is fetched on demand when a project button is clicked.
-   *
-   * @element ares-projects-list
    */
   constructor() {
     super();

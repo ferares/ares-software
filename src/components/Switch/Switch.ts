@@ -7,7 +7,6 @@ import type { SwitchState } from "../../scripts/types";
  * that toggle between states automatically. Emits an `ares:switch` event
  * on every state change.
  *
- * @element ares-switch
  * @fires ares:switch - Dispatched on state change.
  */
 export class Switch extends HTMLElement {

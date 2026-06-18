@@ -21,6 +21,9 @@ import Menu from "../../components/Menu/Menu.astro";
 import Footer from "../../components/Footer.astro";
 import Loader from "../../components/Loader/Loader.astro";
 import App from "../../components/App/App.astro";
+import Alerts from "../../components/Alerts/Alerts.astro";
+import GoogleTagManager from "../../components/GoogleTagManager/GoogleTagManager.astro";
+import CookiesBar from "../../components/CookiesBar/CookiesBar.astro";
 
 const t = useTranslations(Astro.currentLocale as Locale);
 const currentPath = Astro.url.pathname;
@@ -75,19 +78,6 @@ export function getStaticPaths() {
       hreflang="x-default"
       href={new URL(getLocalizedUrl(currentPageKey, defaultLocale), Astro.site)}
     />
-    <!-- GTM -->
-    <script
-      is:inline
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GTM-WFGFHHZW"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "GTM-WFGFHHZW");
-    </script>
     <script is:inline define:vars={{ currentLocale: Astro.currentLocale }}>
       window.Astro = { currentLocale };
     </script>
@@ -96,6 +86,7 @@ export function getStaticPaths() {
     </script>
   </head>
   <body>
+    <GoogleTagManager />
     <App>
       <Header />
       <Menu />
@@ -106,8 +97,10 @@ export function getStaticPaths() {
         <Technologies />
         <Contact />
       </main>
+      <CookiesBar />
       <Footer />
       <Loader />
+      <Alerts />
     </App>
   </body>
 </html>

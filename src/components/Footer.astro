@@ -6,10 +6,13 @@ import { Code, Mail, Cookie } from "@lucide/astro";
 import { useTranslations } from "../i18n/utils";
 import type { Locale } from "../i18n/config";
 
+import ContactButton from "../components/ContactButton/ContactButton.astro";
+
 import GitHubLogoDark from "../assets/github_dark.svg";
 import GitHubLogoLight from "../assets/github_light.svg";
 import LinkedInLogoDark from "../assets/linkedin_dark.svg";
 import LinkedInLogoLight from "../assets/linkedin_light.svg";
+import CookiesButton from "./CookiesButton/CookiesButton.astro";
 
 const t = useTranslations(Astro.currentLocale as Locale);
 
@@ -68,33 +71,24 @@ const LINKEDIN_LINK = "";
           </a>
         </li>
         <li class="footer__menu__item">
-          <a
-            class="footer__menu__link"
-            target="_blank"
-            rel="noreferrer nofollow noopener"
-            href="#contact"
-            onClick={(event) => handleContactClick(event)}
-            aria-label={t("Labels.contact-me")}
-          >
-            <Mail class="footer__menu__icon" />
-          </a>
+          <ContactButton>
+            <span
+              class="footer__menu__link"
+              aria-label={t("Labels.contact-me")}
+            >
+              <Mail class="footer__menu__icon" />
+            </span>
+          </ContactButton>
         </li>
         <li class="footer__menu__item">
-          <button
-            type="button"
-            class="footer__menu__link"
-            onClick={() => showCookieConsentAlert()}
-            aria-label={t("Labels.cookie-settings")}
-          >
-            <Cookie class="footer__menu__icon" />
-          </button>
+          <CookiesButton />
         </li>
       </ul>
     </div>
   </div>
 </footer>
 
-<style>
+<style is:global>
   .footer {
     background-color: var(--bg-color-footer);
     padding: 1rem;

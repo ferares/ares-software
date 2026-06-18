@@ -6,7 +6,6 @@ import type { AresLoadingEvent } from "../../scripts/types";
  * Listens for `ares:loading` events on `document` to show or hide itself,
  * toggling visibility and updating ARIA attributes for accessibility.
  *
- * @element ares-loader
  * @listens ares:loading - Shows the loader when `loading` is true, hides it otherwise.
  */
 export class Loader extends HTMLElement {

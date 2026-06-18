@@ -6,7 +6,6 @@ import type { AresThemeEvent, Theme } from "../../scripts/types";
  * Applies a `theme-{name}` class to itself and updates the `<meta name="theme-color">`
  * tag to match, keeping the browser in sync with the selected theme.
  *
- * @element ares-app
  * @listens ares:theme - Updates the theme when dispatched by other components.
  */
 export class App extends HTMLElement {
@@ -15,7 +14,7 @@ export class App extends HTMLElement {
 
   connectedCallback() {
     this.themeColorMeta = document.querySelector("[name=theme-color]");
-    this.setTheme(window.Ares.theme);
+    this.setTheme(window.Ares.getTheme());
     document.addEventListener("ares:theme", this.themeEventHandler);
   }
 
@@ -23,7 +22,7 @@ export class App extends HTMLElement {
     document.removeEventListener("ares:theme", this.themeEventHandler);
   }
 
-  /** Syncs the theme state when another component dispatches `ares:theme`. */
+  /** Syncs the theme state when `ares:theme` is dispatched. */
   private themeEventHandler = (event: AresThemeEvent) => {
     this.setTheme(event.detail.theme);
   };

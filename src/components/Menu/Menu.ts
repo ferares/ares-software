@@ -6,7 +6,6 @@ import type { AresMenuEvent } from "../../scripts/types";
  * Listens for `ares:menu` events on `document` to sync state, and closes
  * the menu when a click occurs outside the element or on a nav link.
  *
- * @element ares-menu
  * @listens ares:menu - Opens/closes the menu.
  * @fires ares:menu - Dispatched when the menu is closed.
  */
@@ -24,6 +23,7 @@ export class Menu extends HTMLElement {
 
   connectedCallback() {
     document.addEventListener("click", this.documentClickHandler);
+    document.addEventListener("keydown", this.keydownHandler);
     document.addEventListener("ares:menu", this.menuEventHandler);
     // Don't re-attach nav link listeners on reconnection alone
     if (!this.initialized) {
@@ -40,7 +40,12 @@ export class Menu extends HTMLElement {
 
   disconnectedCallback() {
     document.removeEventListener("click", this.documentClickHandler);
+    document.removeEventListener("keydown", this.keydownHandler);
     document.removeEventListener("ares:menu", this.menuEventHandler);
+  }
+
+  private keydownHandler = (event: KeyboardEvent) => {
+    if (event.key === "Escape") this.close()
   }
 
   /**

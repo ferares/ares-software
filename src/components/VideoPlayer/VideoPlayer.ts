@@ -11,6 +11,7 @@ export class VideoPlayer extends HTMLElement {
 
   connectedCallback() {
     this.switch.addEventListener("ares:switch", this.switchHandler);
+    this.querySelectorAll("video").forEach(videoElement => videoElement.autoplay = !window.Ares.prefersReducedMotion)
   }
 
   disconnectedCallback() {
@@ -18,7 +19,6 @@ export class VideoPlayer extends HTMLElement {
   }
 
   private switchHandler = (event: AresSwitchEvent) => {
-    console.log(event);
     const isDesktop = event.detail.state === "right";
     this.classList.toggle("video--mobile", !isDesktop);
     this.classList.toggle("video--desktop", isDesktop);

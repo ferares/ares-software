@@ -2,11 +2,16 @@ import type { AresEventMap, Theme } from "./types";
 
 import type { Locale } from "../i18n/config";
 
+import { Alerts, type Alert, type ScreenReaderAlert } from "../components/Alerts/Alerts.ts";
 import { App } from "../components/App/App.ts";
 import { Avatar } from "../components/Avatar/Avatar.ts";
 import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage.ts";
 import { Carousel } from "../components/Carousel/Carousel.ts";
+import { ContactButton } from "../components/ContactButton/ContactButton.ts";
+import { CookiesBar } from "../components/CookiesBar/CookiesBar.ts";
+import { CookiesButton } from "../components/CookiesButton/CookiesButton.ts";
 import { Dropdown } from "../components/Dropdown/Dropdown.ts";
+import { GoogleTagManager } from "../components/GoogleTagManager/GoogleTagManager.ts";
 import { LangMenu } from "../components/LangMenu/LangMenu.ts";
 import { Loader } from "../components/Loader/Loader.ts";
 import { Menu } from "../components/Menu/Menu.ts";
@@ -26,44 +31,38 @@ declare global {
   interface Window {
     Ares: Ares,
     Astro: { currentLocale: Locale }
+    // GTM
+    dataLayer: unknown[]
+    gtag: (...args: unknown[]) => void
   }
   interface ElementEventMap extends AresEventMap { }
   interface DocumentEventMap extends AresEventMap { }
 }
 
 export class Ares {
+  private static readonly COOKIE_CONSENT_STORAGE_KEY = "cookieConsent"
+  private static readonly THEME_STORAGE_KEY = "theme"
   public readonly prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  public readonly theme: Theme = Ares.getInitialTheme()
 
-  private static getInitialTheme(): Theme {
-    const localStorageTheme = localStorage?.getItem("theme") ?? "";
-    if (["dark", "light"].includes(localStorageTheme)) {
-      return localStorageTheme as Theme;
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  }
-
-  public ready(fn: () => any) {
+  public ready = (fn: () => any) => {
     document.addEventListener('DOMContentLoaded', fn)
   }
 
-  public emitEvent<T extends keyof HTMLElementEventMap>(element: Node, name: T, ...data: OptionalArg<EventDetail<HTMLElementEventMap[T]>>) {
+  public emitEvent = <T extends keyof HTMLElementEventMap>(element: Node, name: T, ...data: OptionalArg<EventDetail<HTMLElementEventMap[T]>>) => {
     element.dispatchEvent(new CustomEvent(name, { detail: data[0] }))
   }
 
-  public setLoading(loading: boolean, message?: string) {
+  public setLoading = (loading: boolean, message?: string) => {
     this.emitEvent(document, 'ares:loading', { loading, message })
   }
 
-  public scrollIntoView(target: string | null) {
+  public scrollIntoView = (target: string | null, event?: MouseEvent) => {
     if (!target) return
+    event?.preventDefault()
     document.querySelector(target)?.scrollIntoView({ behavior: this.prefersReducedMotion ? "instant" : "smooth" })
   }
 
-  public async loadImage(url: string) {
+  public loadImage = async (url: string) => {
     return new Promise((resolve, reject) => {
       const imgElement = document.createElement("img")
       imgElement.addEventListener("load", () => resolve(url))
@@ -72,7 +71,7 @@ export class Ares {
     })
   }
 
-  public async switchBackground() {
+  public switchBackground = async () => {
     window.Ares.emitEvent(document, "ares:background", { state: "loading" });
     try {
       const response = (await fetch("https://postales.ares.uy/random").then(
@@ -90,21 +89,69 @@ export class Ares {
       console.error("Error fetching background image", error);
     }
   }
+
+  public pushAlert = (alert: Alert) => {
+    const alerts = document.querySelector("ares-alerts") as Alerts | undefined
+    if (!alerts) return
+    alerts.push(alert)
+  }
+
+  public pushScreenReaderAlert = (alert: ScreenReaderAlert) => {
+    const alerts = document.querySelector("ares-alerts") as Alerts | undefined
+    if (!alerts) return
+    alerts.pushScreenReader(alert)
+  }
+
+  public setTheme = (theme: Theme) => {
+    localStorage.setItem("theme", theme);
+    this.emitEvent(document, "ares:theme", { theme });
+  }
+
+  public getTheme(): Theme {
+    const localStorageTheme = localStorage?.getItem(Ares.THEME_STORAGE_KEY) ?? "";
+    if (["dark", "light"].includes(localStorageTheme)) {
+      return localStorageTheme as Theme;
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  }
+
+  public setCookieConsent = (consentGiven: boolean | null) => {
+    if (consentGiven === null) {
+      localStorage.removeItem(Ares.COOKIE_CONSENT_STORAGE_KEY)
+    } else {
+      localStorage.setItem(Ares.COOKIE_CONSENT_STORAGE_KEY, String(consentGiven))
+    }
+    this.emitEvent(document, "ares:cookies", { consentGiven })
+  }
+
+  public getCookieConsent() {
+    const saved = localStorage.getItem(Ares.COOKIE_CONSENT_STORAGE_KEY)
+    if (saved === null) return null
+    return saved === "true"
+  }
 }
 
 window.Ares = new Ares();
 
 window.Ares.ready(() => {
+  customElements.define("ares-modal", Modal);
+  customElements.define("ares-alerts", Alerts);
   customElements.define("ares-app", App);
   customElements.define("ares-avatar", Avatar);
   customElements.define("ares-background-image", BackgroundImage);
   customElements.define("ares-carousel", Carousel);
+  customElements.define("ares-contact-button", ContactButton);
+  customElements.define("ares-cookies-bar", CookiesBar);
+  customElements.define("ares-cookies-button", CookiesButton);
   customElements.define("ares-dropdown", Dropdown);
+  customElements.define("ares-gtm", GoogleTagManager);
   customElements.define("ares-lang-menu", LangMenu);
   customElements.define("ares-loader", Loader);
   customElements.define("ares-menu", Menu);
   customElements.define("ares-menu-toggle", MenuToggle);
-  customElements.define("ares-modal", Modal);
   customElements.define("ares-next-button", NextButton);
   customElements.define("ares-projects-list", ProjectsList);
   customElements.define("ares-switch", Switch);

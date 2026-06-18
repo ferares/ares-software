@@ -3,8 +3,6 @@
  *
  * Clicking the avatar scrolls the main content area back to the top
  * and triggers a background switch via {@link window.Ares.switchBackground}.
- *
- * @element ares-avatar
  */
 export class Avatar extends HTMLElement {
   private mainElement: Element | null = null;

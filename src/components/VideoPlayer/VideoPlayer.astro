@@ -19,8 +19,6 @@ interface Props {
 
 const { videos } = Astro.props;
 
-const prefersReducedMotion = false;
-
 const t = useTranslations(Astro.currentLocale as Locale);
 ---
 
@@ -46,7 +44,6 @@ const t = useTranslations(Astro.currentLocale as Locale);
       controls
       class="video__player video__player--mobile"
       poster={videos.mobile.poster}
-      autoplay={!prefersReducedMotion}
       muted
       loop
     >
@@ -56,7 +53,6 @@ const t = useTranslations(Astro.currentLocale as Locale);
       controls
       class="video__player video__player--desktop"
       poster={videos.desktop.poster}
-      autoplay={!prefersReducedMotion}
       muted
       loop
     >
@@ -65,7 +61,7 @@ const t = useTranslations(Astro.currentLocale as Locale);
   </div>
 </ares-video-player>
 
-<style>
+<style is:inline>
   .video {
     align-items: center;
     display: flex;

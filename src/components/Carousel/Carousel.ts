@@ -6,7 +6,6 @@ import embla, { type EmblaCarouselType } from "embla-carousel";
  * Initializes the carousel when connected to the DOM and destroys
  * it on disconnection to prevent memory leaks.
  *
- * @element ares-carousel
  * @see https://www.embla-carousel.com
  */
 export class Carousel extends HTMLElement {

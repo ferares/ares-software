@@ -1,3 +1,4 @@
+import type { AresDropdownEvent } from "../../scripts/types.ts";
 import type { Dropdown } from "../Dropdown/Dropdown.ts";
 
 /**
@@ -5,8 +6,9 @@ import type { Dropdown } from "../Dropdown/Dropdown.ts";
  *
  * Toggles an `ares-dropdown` open/closed via a button, and navigates
  * to the selected locale's root path when a locale option is chosen.
+ * Listens for `ares:dropdown` events on its dropdown to keep its open state in sync.
  *
- * @element ares-lang-menu
+ * @listens ares:dropdown - Updates the open state when a the dropdown opens/closes on its own.
  */
 export class LangMenu extends HTMLElement {
   private isOpen = false;
@@ -25,6 +27,7 @@ export class LangMenu extends HTMLElement {
   }
 
   connectedCallback() {
+    this.dropdown.addEventListener("ares:dropdown", this.dropdownEventHandler)
     this.toggler.addEventListener("click", this.toggleClickHandler);
     if (!this.initialized) {
       this.localeButtons.forEach((optionBtn) => {
@@ -37,7 +40,13 @@ export class LangMenu extends HTMLElement {
   }
 
   disconnectedCallback() {
+    this.dropdown.removeEventListener("ares:dropdown", this.dropdownEventHandler)
     this.toggler.removeEventListener("click", this.toggleClickHandler);
+  }
+
+  /** Sync the open or closed state whenever the dropdown changes on its own. */
+  private dropdownEventHandler = (event: AresDropdownEvent) => {
+    if (event.detail.open !== this.isOpen) this.toggleClickHandler()
   }
 
   /** Toggles the dropdown open or closed on each button click. */

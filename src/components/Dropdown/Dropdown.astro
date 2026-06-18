@@ -9,24 +9,19 @@ const { id } = Astro.props;
   <slot />
 </ares-dropdown>
 
-<style>
-  .dropdown-menu-wrapper {
-    position: relative;
-  }
-
+<style is:global>
   .dropdown-menu {
     background: var(--bg-color-menu);
     border-radius: 10px;
     box-shadow: 0 0 6px rgb(0 0 0 / 20%);
-    left: 0;
+    right: 0;
     max-height: 0;
     opacity: 0;
     overflow: hidden auto;
     padding: 1rem;
     position: absolute;
-    top: 50px;
+    top: 80px;
     visibility: hidden;
-    width: 100%;
     z-index: 10;
   }
 

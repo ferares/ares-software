@@ -1,0 +1,50 @@
+---
+import { useTranslations } from "../../i18n/utils";
+import type { Locale } from "../../i18n/config";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<ares-cookies-bar
+  role="region"
+  aria-live="polite"
+  aria-atomic="true"
+  class="cookie-alert"
+>
+  <Fragment set:html={t("Messages.cookies")} />
+  <div class="cookie-alert__btns">
+    <button class="cookie-alert__btn btn" data-js="reject">
+      {t("Labels.reject-optional")}
+    </button>
+    <button class="cookie-alert__btn btn" data-js="accept">
+      {t("Labels.accept")}
+    </button>
+  </div>
+</ares-cookies-bar>
+
+<style>
+  .cookie-alert {
+    background-color: var(--bg-color-footer);
+    border-bottom: 1px solid black;
+    display: none;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .cookie-alert.show {
+    display: block;
+  }
+
+  .cookie-alert__btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .cookie-alert__btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+</style>

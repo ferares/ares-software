@@ -8,7 +8,6 @@ import type { AresMenuEvent } from "../../scripts/types";
  * Listens for `ares:menu` events on `document` to sync state, and toggles
  * the menu when the user clicks on the toggle button.
  *
- * @element ares-menu-toggle
  * @listens ares:menu - To update its state.
  * @fires ares:menu - Dispatched when the button is clicked.
  */

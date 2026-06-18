@@ -31,8 +31,8 @@ const { id, intro, title, projects } = Astro.props;
     <Switch
       id={`${id}-switch`}
       ariaLabels={{
-        left: t("Labels.show-desktop-screenshots"),
-        right: t("Labels.show-mobile-screenshots"),
+        left: t("Labels.show-mobile-screenshots"),
+        right: t("Labels.show-desktop-screenshots"),
       }}
     >
       <Smartphone slot="icon-left" />
@@ -190,46 +190,6 @@ const { id, intro, title, projects } = Astro.props;
 
   .project__carousel--mobile .projects__slide {
     flex: 0 0 25%;
-  }
-
-  /* Project modal */
-
-  .project__paragraph {
-    color: var(--color-text);
-    margin: 2rem auto;
-    max-width: 50rem;
-  }
-
-  .project__tech-title {
-    font-family: var(--font-texts);
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .project__technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .project__links {
-    display: flex;
-    gap: 1rem;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    max-width: 500px;
-  }
-
-  .project__btn {
-    align-items: center;
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .project__btn .small {
-    font-size: 1.1rem;
   }
 
   @media (width < 1100px) {

@@ -1,4 +1,4 @@
-import type { AresSwitchEvent, Theme } from "../../scripts/types";
+import type { AresSwitchEvent, AresThemeEvent, Theme } from "../../scripts/types";
 import type { Switch } from "../Switch/Switch.ts";
 
 /**
@@ -8,11 +8,9 @@ import type { Switch } from "../Switch/Switch.ts";
  * and persists theme changes to `localStorage` while notifying other
  * components via an `ares:theme` event.
  *
- * @element ares-theme-switch
- * @fires ares:theme - Dispatched on theme change.
+ * @listens ares:switch - On its Switch element to trigger a theme change.
  */
 export class ThemeSwitch extends HTMLElement {
-  private theme: Theme = window.Ares.theme;
   private switchElement: Switch;
 
   constructor() {
@@ -21,7 +19,7 @@ export class ThemeSwitch extends HTMLElement {
   }
 
   connectedCallback() {
-    this.switchElement.set(this.theme === "dark" ? "left" : "right");
+    this.switchElement.set(window.Ares.getTheme() === "dark" ? "left" : "right");
     this.switchElement.addEventListener("ares:switch", this.switchHandler);
   }
 
@@ -30,12 +28,10 @@ export class ThemeSwitch extends HTMLElement {
   }
 
   /**
-   * Updates the active theme in response to an `ares:switch` state change,
-   * persists the selection to `localStorage`, and notifies other components.
+   * Updates the active theme in response to an `ares:switch` state change.
    */
   private switchHandler = (event: AresSwitchEvent) => {
-    this.theme = event.detail.state === "left" ? "dark" : "light";
-    localStorage.setItem("theme", this.theme);
-    window.Ares.emitEvent(document, "ares:theme", { theme: this.theme });
+    const theme = event.detail.state === "left" ? "dark" : "light";
+    window.Ares.setTheme(theme)
   };
 }

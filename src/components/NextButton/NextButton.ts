@@ -1,8 +1,6 @@
 /**
  * Custom element that wraps a "next section" anchor link,
  * replacing default navigation with a smooth scroll to the target.
- *
- * @element ares-next-button
  */
 export class NextButton extends HTMLElement {
   private anchor: HTMLAnchorElement;
