@@ -1,13 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
-import { Download, Mail } from "@lucide/astro";
+import { Mail } from "@lucide/astro";
 
 import type { Locale } from "../i18n/config";
 import { useTranslations } from "../i18n/utils";
 
 import NextButton from "../components/NextButton/NextButton.astro";
 import ContactButton from "../components/ContactButton/ContactButton.astro";
+import CVButton from "../components/CVButton/CVButton.astro";
 
 import aboutImg from "../assets/about.jpg";
 
@@ -23,10 +24,7 @@ const t = useTranslations(Astro.currentLocale as Locale);
     <div class="about__paragraphs">
       <div set:html={t("Sections.About.content")} />
       <div class="about__btns">
-        <button type="button" class="btn about__btn" onclick={}>
-          <Download />
-          {t("Labels.download-cv")}
-        </button>
+        <CVButton />
         <ContactButton>
           <span class="btn about__btn">
             <Mail />

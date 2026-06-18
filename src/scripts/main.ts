@@ -10,6 +10,7 @@ import { Carousel } from "../components/Carousel/Carousel.ts";
 import { ContactButton } from "../components/ContactButton/ContactButton.ts";
 import { CookiesBar } from "../components/CookiesBar/CookiesBar.ts";
 import { CookiesButton } from "../components/CookiesButton/CookiesButton.ts";
+import { CVButton } from "../components/CVButton/CVButton.ts";
 import { Dropdown } from "../components/Dropdown/Dropdown.ts";
 import { GoogleTagManager } from "../components/GoogleTagManager/GoogleTagManager.ts";
 import { LangMenu } from "../components/LangMenu/LangMenu.ts";
@@ -146,6 +147,7 @@ window.Ares.ready(() => {
   customElements.define("ares-contact-button", ContactButton);
   customElements.define("ares-cookies-bar", CookiesBar);
   customElements.define("ares-cookies-button", CookiesButton);
+  customElements.define("ares-cv-button", CVButton);
   customElements.define("ares-dropdown", Dropdown);
   customElements.define("ares-gtm", GoogleTagManager);
   customElements.define("ares-lang-menu", LangMenu);

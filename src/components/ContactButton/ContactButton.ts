@@ -21,5 +21,6 @@ export class ContactButton extends HTMLElement {
   private clickHandler = (event: PointerEvent) => {
     event.preventDefault()
     window.Ares.scrollIntoView("#contact")
+    // TODO: focus on the section
   };
 }
