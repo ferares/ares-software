@@ -133,6 +133,7 @@ const LINKEDIN_LINK = "";
     display: block;
     font-size: 2rem;
     padding: 0;
+    position: relative;
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -145,18 +146,21 @@ const LINKEDIN_LINK = "";
     display: block;
     height: 2rem;
     width: auto;
+    transition: opacity 0.3s;
   }
 
   .footer__menu__icon--light {
-    display: none;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
   }
 
   .theme-light .footer__menu__icon--light {
-    display: block;
+    opacity: 1;
   }
 
   .theme-light .footer__menu__icon--dark {
-    display: none;
+    opacity: 0;
   }
 
   @media (width < 576px) {

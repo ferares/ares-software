@@ -12,7 +12,6 @@ import { useTranslations } from "../../../i18n/utils";
 import Badge from "../../../components/Badge.astro";
 import VideoPlayer from "../../../components/VideoPlayer/VideoPlayer.astro";
 
-import GitHubLogoDark from "../../../assets/github_dark.svg";
 import GitHubLogoLight from "../../../assets/github_light.svg";
 
 export const partial = true;
@@ -32,22 +31,7 @@ const { project } = Astro.props;
 const t = useTranslations(Astro.currentLocale as Locale);
 ---
 
-{
-  project.videos ? (
-    <VideoPlayer videos={project.videos} />
-  ) : (
-    <Image
-      class="project__img project__img--modal project__img--desktop"
-      src={project.images.desktop}
-      alt=""
-    />
-    <Image
-      class="project__img project__img--modal project__img--mobile"
-      src={project.images.mobile}
-      alt=""
-    />
-  )
-}
+<VideoPlayer videos={project.videos} />
 <p class="project__paragraph">{t(project.desc)}</p>
 <div id={`project-${project.id}-links`} class="project__links">
   {
@@ -59,7 +43,11 @@ const t = useTranslations(Astro.currentLocale as Locale);
         rel={link.rel ?? "noopener noreferrer nofollow"}
       >
         {t(link.label)}
-        {link.gitHub ? <Image src={GitHubLogoDark} alt="" /> : <Link />}
+        {link.gitHub ? (
+          <Image class="project__btn__img" src={GitHubLogoLight} alt="" />
+        ) : (
+          <Link />
+        )}
       </a>
     ))
   }
@@ -67,45 +55,51 @@ const t = useTranslations(Astro.currentLocale as Locale);
 {
   project.stores && (
     <ul class="project__stores">
-      {/* {project.stores.apple && (
+      {project.stores.apple && (
         <li class="project__store">
-          <a class="project__store__link" href={project.stores.apple}>
-            <Image
+          <a
+            class="project__store__link"
+            href={project.stores.apple}
+            target="_blank"
+          >
+            <img
               class="project__store__img"
               src={t("Stores.apple.image")}
               alt={t("Stores.apple.label")}
-              width={0}
-              height={0}
             />
           </a>
         </li>
       )}
       {project.stores.google && (
         <li class="project__store">
-          <a class="project__store__link" href={project.stores.google}>
-            <Image
+          <a
+            class="project__store__link"
+            href={project.stores.google}
+            target="_blank"
+          >
+            <img
               class="project__store__img"
               src={t("Stores.google.image")}
               alt={t("Stores.google.label")}
-              width={0}
-              height={0}
             />
           </a>
         </li>
       )}
       {project.stores.microsoft && (
         <li class="project__store">
-          <a class="project__store__link" href={project.stores.microsoft}>
-            <Image
+          <a
+            class="project__store__link"
+            href={project.stores.microsoft}
+            target="_blank"
+          >
+            <img
               class="project__store__img"
               src={t("Stores.microsoft.image")}
               alt={t("Stores.microsoft.label")}
-              width={0}
-              height={0}
             />
           </a>
         </li>
-      )} */}
+      )}
     </ul>
   )
 }
@@ -167,6 +161,24 @@ const t = useTranslations(Astro.currentLocale as Locale);
     font-size: 1.1rem;
   }
 
+  .project__btn__img {
+    height: auto;
+    width: 30px;
+  }
+
+  .project__stores {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .project__store__img {
+    height: 70px;
+    width: 100%;
+  }
 
   @media (width < 768px) {
     .project__links {

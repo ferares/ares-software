@@ -13,7 +13,7 @@ import NextButton from "../components/NextButton/NextButton.astro";
   </div>
 </BackgroundImage>
 
-<style>
+<style is:global>
   .intro {
     align-items: center;
     display: flex;
@@ -39,6 +39,10 @@ import NextButton from "../components/NextButton/NextButton.astro";
     font-size: 2rem;
     font-style: italic;
     padding: 0 0.25rem;
+  }
+
+  .theme-light .intro .scroll-down {
+    color: var(--color-text-dark);
   }
 
   @media (width < 450px) {

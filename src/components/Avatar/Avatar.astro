@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import { useTranslations } from "../../i18n/utils";
 import type { Locale } from "../../i18n/config";
 
-import meImg from "../../assets/me.jpg";
+import headerImg from "../../assets/header.jpg";
 
 const t = useTranslations(Astro.currentLocale as Locale);
 ---
@@ -16,7 +16,7 @@ const t = useTranslations(Astro.currentLocale as Locale);
     title={t("Labels.change-background")}
     data-js="button"
   >
-    <Image class="avatar__img" src={meImg} alt="" height={48} width={48} />
+    <Image class="avatar__img" src={headerImg} alt="" height={48} width={48} />
   </button>
 </ares-avatar>
 

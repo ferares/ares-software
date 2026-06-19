@@ -37,6 +37,7 @@ import busesuyDesktopVideo from "../assets/projects/busesuy/desktop.webm"
 import crabeDesktopVideo from "../assets/projects/crabe/desktop.webm"
 import papelappDesktopVideo from "../assets/projects/papelapp/desktop.webm"
 import ecouterDesktopVideo from "../assets/projects/ecouter/desktop.webm"
+import tutiDesktopVideo from "../assets/projects/tuti/desktop.webm"
 import arboladoDesktopVideo from "../assets/projects/arbolado/desktop.webm"
 
 import salamMobileVideo from "../assets/projects/salam/mobile.webm"
@@ -49,6 +50,7 @@ import busesuyMobileVideo from "../assets/projects/busesuy/mobile.webm"
 import crabeMobileVideo from "../assets/projects/crabe/mobile.webm"
 import papelappMobileVideo from "../assets/projects/papelapp/mobile.webm"
 import ecouterMobileVideo from "../assets/projects/ecouter/mobile.webm"
+import tutiMobileVideo from "../assets/projects/tuti/mobile.webm"
 import arboladoMobileVideo from "../assets/projects/arbolado/mobile.webm"
 
 import salamDesktopPoster from "../assets/projects/salam/poster-desktop.png"
@@ -61,6 +63,7 @@ import busesuyDesktopPoster from "../assets/projects/busesuy/poster-desktop.png"
 import crabeDesktopPoster from "../assets/projects/crabe/poster-desktop.png"
 import papelappDesktopPoster from "../assets/projects/papelapp/poster-desktop.png"
 import ecouterDesktopPoster from "../assets/projects/ecouter/poster-desktop.png"
+import tutiDesktopPoster from "../assets/projects/tuti/poster-desktop.png"
 import arboladoDesktopPoster from "../assets/projects/arbolado/poster-desktop.png"
 
 import salamMobilePoster from "../assets/projects/salam/poster-mobile.png"
@@ -73,6 +76,7 @@ import busesuyMobilePoster from "../assets/projects/busesuy/poster-mobile.png"
 import crabeMobilePoster from "../assets/projects/crabe/poster-mobile.png"
 import papelappMobilePoster from "../assets/projects/papelapp/poster-mobile.png"
 import ecouterMobilePoster from "../assets/projects/ecouter/poster-mobile.png"
+import tutiMobilePoster from "../assets/projects/tuti/poster-mobile.png"
 import arboladoMobilePoster from "../assets/projects/arbolado/poster-mobile.png"
 
 type Video = { src: string, poster: string }
@@ -87,7 +91,7 @@ export type Project = {
   links: { url: string, label: TranslationKey, gitHub?: boolean, rel?: string }[]
   stores: { microsoft?: string, google?: string, apple?: string }
   technologies: TechnologyKey[],
-  videos?: Videos,
+  videos: Videos,
 }
 
 export const clientProjects: Project[] = [
@@ -127,9 +131,7 @@ export const clientProjects: Project[] = [
     images: { desktop: atlanticoDesktopImg, mobile: atlanticoMobileImg },
     desc: "Sections.Projects.projects.atlantico",
     stores: {},
-    links: [
-      { url: "https://atlanticodesarrollos.uy/", label: "Labels.visit-site" },
-    ],
+    links: [],
     technologies: ["php", "html", "sass", "bootstrap", "javascript", "git"],
     videos: {
       desktop: { src: atlanticoDesktopVideo, poster: atlanticoDesktopPoster.src },
@@ -185,7 +187,7 @@ export const personalProjects: Project[] = [
     title: "BusesUY",
     images: { desktop: busesuyDesktopImg, mobile: busesuyMobileImg },
     desc: "Sections.Projects.projects.busesuy",
-    stores: { microsoft: "https://apps.microsoft.com/detail/9PKB1P5DDLHW?mode=direct", apple: "https://apps.apple.com/app/id6746334736", google: "https://play.google.com/store/apps/details?id=uy.buses.twa" },
+    stores: { microsoft: "https://apps.microsoft.com/detail/9PKB1P5DDLHW?mode=direct", apple: "https://apps.apple.com/app/busesuy/id6746334736", google: "https://play.google.com/store/apps/details?id=uy.buses.twa" },
     links: [
       { url: "https://buses.uy", label: "Labels.try-it", rel: "" },
     ],
@@ -204,6 +206,10 @@ export const personalProjects: Project[] = [
     links: [
       { url: "https://tuti.uy", label: "Labels.try-it", rel: "" },
     ],
+    videos: {
+      desktop: { src: tutiDesktopVideo, poster: tutiDesktopPoster.src },
+      mobile: { src: tutiMobileVideo, poster: tutiMobilePoster.src },
+    },
     technologies: ["reactRouter", "react", "html", "typescript", "tailwindcss", "css", "vitest", "postgresql", "android", "apple", "linux", "git", "pwa", "cloudflare", "digitalocean", "docker", "bash", "analytics", "tagmanager"],
   },
   {
@@ -227,7 +233,7 @@ export const personalProjects: Project[] = [
     title: "Papelapp",
     images: { desktop: papelappDesktopImg, mobile: papelappMobileImg },
     desc: "Sections.Projects.projects.papelapp",
-    stores: { apple: "https://apps.apple.com/app/id6747598740", google: "https://play.google.com/store/apps/details?id=uy.ares.papelapp.twa" },
+    stores: { apple: "https://apps.apple.com/app/papelapp/id6747598740", google: "https://play.google.com/store/apps/details?id=uy.ares.papelapp.twa" },
     links: [
       { url: "https://papelapp.ares.uy", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/ferares/papelapp", label: "Labels.view-project", gitHub: true },
@@ -258,7 +264,7 @@ export const personalProjects: Project[] = [
     title: "Arbolado Urbano",
     images: { desktop: arboladoDesktopImg, mobile: arboladoMobileImg },
     desc: "Sections.Projects.projects.arbolado",
-    stores: { apple: "https://apps.apple.com/app/id6747365722", google: "https://play.google.com/store/apps/details?id=com.arboladourbano.twa" },
+    stores: { apple: "https://apps.apple.com/app/arbolado-urbano/id6747365722", google: "https://play.google.com/store/apps/details?id=com.arboladourbano.twa" },
     links: [
       { url: "https://arboladourbano.com", label: "Labels.try-it", rel: "" },
       { url: "https://github.com/Arbolado-Urbano", label: "Labels.view-project", gitHub: true },
