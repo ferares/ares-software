@@ -24,6 +24,7 @@ import App from "../../components/App/App.astro";
 import Alerts from "../../components/Alerts/Alerts.astro";
 import GoogleTagManager from "../../components/GoogleTagManager/GoogleTagManager.astro";
 import CookiesBar from "../../components/CookiesBar/CookiesBar.astro";
+import Captcha from "../../components/Captcha/Captcha.astro";
 
 const t = useTranslations(Astro.currentLocale as Locale);
 const currentPath = Astro.url.pathname;
@@ -102,5 +103,6 @@ export function getStaticPaths() {
       <Loader />
       <Alerts />
     </App>
+    <Captcha />
   </body>
 </html>

@@ -1,9 +1,8 @@
-import type { Locale } from "../../i18n/config"
 import { useTranslations } from "../../i18n/utils"
 
 export class CVButton extends HTMLElement {
   private button: HTMLButtonElement
-  private t = useTranslations(window.Astro.currentLocale as Locale)
+  private t = useTranslations(window.Astro.currentLocale)
 
   constructor() {
     super()

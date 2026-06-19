@@ -1,0 +1,18 @@
+<ares-captcha data-sitekey={import.meta.env.PUBLIC_CAPTCHA_SITE_KEY}
+></ares-captcha>
+
+<style is:global>
+  ares-captcha {
+    display: none;
+  }
+
+  ares-captcha.show {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

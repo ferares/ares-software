@@ -45,7 +45,7 @@
   "Messages": {
     "changing-bg-img": "Cambiando imagen de fondo",
     "bg-img-changed": "Imagen de fondo cambiada",
-    "input-an-email": "Ingrese un correo electrónico",
+    "input-an-email": "Ingrese un correo electrónico válido",
     "input-a-message": "Ingrese un mensaje",
     "invalid-captcha": "Error de verificación de captcha, por favor realice la verificación",
     "invalid-form": "Error al enviar el formulario. Revise los campos requeridos",

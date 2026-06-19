@@ -6,8 +6,10 @@ import { Alerts, type Alert, type ScreenReaderAlert } from "../components/Alerts
 import { App } from "../components/App/App.ts";
 import { Avatar } from "../components/Avatar/Avatar.ts";
 import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage.ts";
+import { Captcha } from "../components/Captcha/Captcha.ts";
 import { Carousel } from "../components/Carousel/Carousel.ts";
 import { ContactButton } from "../components/ContactButton/ContactButton.ts";
+import { ContactForm } from "../components/ContactForm/ContactForm.ts";
 import { CookiesBar } from "../components/CookiesBar/CookiesBar.ts";
 import { CookiesButton } from "../components/CookiesButton/CookiesButton.ts";
 import { CVButton } from "../components/CVButton/CVButton.ts";
@@ -32,6 +34,8 @@ declare global {
   interface Window {
     Ares: Ares,
     Astro: { currentLocale: Locale }
+    turnstile: Turnstile.Turnstile,
+    captchaOnLoadCallBack?: () => void
     // GTM
     dataLayer: unknown[]
     gtag: (...args: unknown[]) => void
@@ -108,7 +112,7 @@ export class Ares {
     this.emitEvent(document, "ares:theme", { theme });
   }
 
-  public getTheme(): Theme {
+  public getTheme = (): Theme => {
     const localStorageTheme = localStorage?.getItem(Ares.THEME_STORAGE_KEY) ?? "";
     if (["dark", "light"].includes(localStorageTheme)) {
       return localStorageTheme as Theme;
@@ -128,7 +132,7 @@ export class Ares {
     this.emitEvent(document, "ares:cookies", { consentGiven })
   }
 
-  public getCookieConsent() {
+  public getCookieConsent = () => {
     const saved = localStorage.getItem(Ares.COOKIE_CONSENT_STORAGE_KEY)
     if (saved === null) return null
     return saved === "true"
@@ -143,8 +147,10 @@ window.Ares.ready(() => {
   customElements.define("ares-app", App);
   customElements.define("ares-avatar", Avatar);
   customElements.define("ares-background-image", BackgroundImage);
+  customElements.define("ares-captcha", Captcha);
   customElements.define("ares-carousel", Carousel);
   customElements.define("ares-contact-button", ContactButton);
+  customElements.define("ares-contact-form", ContactForm);
   customElements.define("ares-cookies-bar", CookiesBar);
   customElements.define("ares-cookies-button", CookiesButton);
   customElements.define("ares-cv-button", CVButton);

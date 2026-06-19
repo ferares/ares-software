@@ -1,6 +1,5 @@
 import type { AresBackgroundEvent } from "../../scripts/types";
 
-import type { Locale } from "../../i18n/config";
 import { useTranslations } from "../../i18n/utils";
 
 /**
@@ -14,7 +13,7 @@ import { useTranslations } from "../../i18n/utils";
 export class BackgroundImage extends HTMLElement {
   private section: HTMLElement;
   private firstLoad = true
-  private t = useTranslations(window.Astro.currentLocale as Locale);
+  private t = useTranslations(window.Astro.currentLocale);
 
   constructor() {
     super();

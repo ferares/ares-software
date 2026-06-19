@@ -1,0 +1,141 @@
+---
+import type { Locale } from "../../i18n/config";
+import { useTranslations } from "../../i18n/utils";
+
+const t = useTranslations(Astro.currentLocale as Locale);
+---
+
+<ares-contact-form>
+  <form novalidate class="contact__form" data-js="form">
+    <div class="contact__form__row">
+      <label class="contact__form__label" for="name">{t("Labels.name")}</label>
+      <input class="contact__form__input" type="text" id="name" name="name" />
+    </div>
+    <div class="contact__form__row">
+      <label class="contact__form__label" for="email"
+        >{t("Labels.email")} ({t("Labels.required")})</label
+      >
+      <input
+        class="contact__form__input"
+        type="email"
+        id="email"
+        name="email"
+        required
+        pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}"
+      />
+      <div class="contact__form__invalid-feedback">
+        {t("Messages.input-an-email")}
+      </div>
+    </div>
+    <div class="contact__form__row">
+      <label class="contact__form__label" for="message"
+        >{t("Labels.message")} ({t("Labels.required")})</label
+      >
+      <textarea
+        class="contact__form__input"
+        id="message"
+        name="message"
+        rows={6}
+        required></textarea>
+      <div class="contact__form__invalid-feedback">
+        {t("Messages.input-a-message")}
+      </div>
+    </div>
+    <div class="contact__form__submit-row">
+      <button type="submit" class="btn btn-primary">
+        {t("Labels.send")}
+      </button>
+    </div>
+  </form>
+</ares-contact-form>
+
+<style>
+  .contact__content {
+    width: 100%;
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .contact__form__label {
+    color: var(--color-text);
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .contact__form__input {
+    background-color: var(--color-text);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: var(--color-text-dark);
+    font-family: var(--font-nunito);
+    font-size: 1.25rem;
+    line-height: 1.3;
+    padding: 10px;
+    resize: none;
+    transition: border 0.3s;
+    width: 100%;
+  }
+
+  .contact__form__input:focus {
+    border: 1px solid #a1a9c3;
+  }
+
+  .contact__form__input::placeholder {
+    opacity: 0.67;
+  }
+
+  .contact__form__input:hover {
+    border: 1px solid #a1a9c3;
+  }
+
+  .contact__form__invalid-feedback {
+    color: #ff9496;
+    display: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .theme-light .contact__form__invalid-feedback {
+    color: #86292b;
+  }
+
+  .was-validated *:invalid + .contact__form__invalid-feedback,
+  .was-validated .contact__form__invalid-feedback.show,
+  .was-validated *[aria-invalid="true"] + .contact__form__invalid-feedback {
+    display: block;
+    max-height: unset;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .contact__form__submit-row {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .contact__form__email {
+    align-items: center;
+    color: var(--color-text);
+    display: flex;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion) {
+    .contact__form__input {
+      transition: none;
+    }
+  }
+</style>

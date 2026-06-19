@@ -1,0 +1,13 @@
+{
+    "name": "fermin/ares-software",
+    "require": {
+        "php": ">=8.5",
+        "phpmailer/phpmailer": "7.1.1"
+    },
+    "authors": [
+        {
+            "name": "Ferares",
+            "email": "fermin@ares.uy"
+        }
+    ]
+}

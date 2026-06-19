@@ -1,7 +1,7 @@
 import type { AresCookieConsentEvent } from "../../scripts/types"
 
 export class GoogleTagManager extends HTMLElement {
-  private static GTM_ID = "GTM-WFGFHHZW"
+  private static GTM_ID = import.meta.env.PUBLIC_GTM_ID
 
   connectedCallback() {
     const consent = window.Ares.getCookieConsent()

@@ -1,5 +1,7 @@
-import { defaultLocale } from "../../i18n/config";
 import type { AresSwitchEvent } from "../../scripts/types";
+
+import { defaultLocale } from "../../i18n/config";
+
 import type { Carousel } from "../Carousel/Carousel.ts";
 import type { Modal } from "../Modal/Modal.ts";
 import type { Switch } from "../Switch/Switch.ts";

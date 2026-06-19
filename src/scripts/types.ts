@@ -8,6 +8,7 @@ export type AresThemeEvent = CustomEvent<{ theme: Theme }>
 export type AresSwitchEvent = CustomEvent<{ state: SwitchState }>
 export type AresDropdownEvent = CustomEvent<{ open: boolean }>
 export type AresCookieConsentEvent = CustomEvent<{ consentGiven: boolean | null }>
+export type AresCaptchaEvent = CustomEvent<{ token: string }>
 
 export type AresEventMap = {
   'ares:background': AresBackgroundEvent
@@ -17,4 +18,5 @@ export type AresEventMap = {
   'ares:switch': AresSwitchEvent
   'ares:dropdown': AresDropdownEvent
   'ares:cookies': AresCookieConsentEvent
+  'ares:captcha': AresCaptchaEvent
 }

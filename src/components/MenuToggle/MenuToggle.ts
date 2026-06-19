@@ -1,6 +1,6 @@
-import type { Locale } from "../../i18n/config";
-import { useTranslations } from "../../i18n/utils";
 import type { AresMenuEvent } from "../../scripts/types";
+
+import { useTranslations } from "../../i18n/utils";
 
 /**
  * Custom element that manages the navigation menu's toggle butotn.
@@ -14,7 +14,7 @@ import type { AresMenuEvent } from "../../scripts/types";
 export class MenuToggle extends HTMLElement {
   private button: HTMLButtonElement;
   private isOpen = false;
-  private t = useTranslations(window.Astro.currentLocale as Locale);
+  private t = useTranslations(window.Astro.currentLocale);
 
   constructor() {
     super();
