@@ -33,7 +33,8 @@ export class ContactForm extends HTMLElement {
       window.Ares.setLoading(true, this.t("Messages.contact-submitting"))
       const body = new FormData(this.form)
       body.set("token", token)
-      const response = await fetch("http://localhost:8000/contact.php", { method: "POST", body })
+      const contactEndpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT
+      const response = await fetch(contactEndpoint, { method: "POST", body })
       if (!response.ok) {
         window.Ares.pushAlert({ type: "danger", content: this.t("Messages.error") })
       } else {
