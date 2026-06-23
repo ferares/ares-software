@@ -1,43 +1,29 @@
-# Astro Starter Kit: Minimal
+# [Ares Software](https://ares.uy)
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Work portfolio/presentation
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Developed using [Astro](https://astro.build) + [WebComponents](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) and [PHP](https://php.net) for a backend script to handle contact form submissions.
 
-## 🚀 Project Structure
+## Top level dependencies
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Node.js](https://nodejs.org)
+- [pnpm](https://pnpm.io)
+- [PHP](https://php.net)
+- [Composer](https://getcomposer.org/)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Development
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. Create a copy of `.env.example` and name it `.env` replacing the variables values where needed.
+1. Install dependencies `pnpm i` & `composer install`.
+1. Run the development server `pnpm dev` & `composer run-script dev`.
+1. Open [http://localhost:4321](http://localhost:4321) with your browser to see the site.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Commands
 
-Any static assets, like images, can be placed in the `public/` directory.
+The following commands are available once you install [Node.js](https://nodejs.org) & [pnpm](https://pnpm.io):
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `pnpm dev` - Runs the development server.
+- `pnpm build` - Builds the project for production.
+- `pnpm preview` - Previews the production build.
+- `pnpm astro` - Run Astro commands.
+- `composer run-script dev` - Run a PHP development server for the contact form submission handler.
